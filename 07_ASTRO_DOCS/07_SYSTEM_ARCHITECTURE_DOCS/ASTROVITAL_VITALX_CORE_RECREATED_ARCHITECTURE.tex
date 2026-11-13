@@ -1,0 +1,178 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\textbf{ASTROVITAL AI : VITALX CORE (RECREATED)}}
+\lhead{Aerospace Architectural Specification}
+\rfoot{Page \thepage}
+
+\definecolor{spaceblue}{RGB}{10, 25, 47}
+\definecolor{alertred}{RGB}{200, 30, 30}
+\definecolor{safegreen}{RGB}{34, 139, 34}
+\definecolor{cautionamber}{RGB}{218, 165, 32}
+
+\title{\textbf{\LARGE ASTROVITAL AI : VITALX CORE (RECREATED V1)}\\[0.3em]
+\Large An Aerospace-Grade Autonomous Clinical Decision Support Architecture\\
+\large Inspired by Safety-Critical Deterministic Principles of DO-178C \& ARP4754A}
+\author{\textbf{Gourgopal Mohapatra} \\ Independent Aerospace Systems Researcher \\ Lead Architect, Team VITALX CORE}
+\date{November 11, 2026}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+\begin{abstract}
+Long-duration spaceflight exposes human crews to prolonged microgravity, isolation, elevated ambient $CO_2$, and cosmic radiation, inducing cephalad fluid shifts, neuro-ocular syndrome (SANS), bone demineralization, and cardiovascular deconditioning. In deep-space environments (lunar vicinity and interplanetary transit to Mars), real-time ground-based clinical telemedicine is rendered obsolete by relativistic electromagnetic propagation delays (ranging from 2.5 seconds to 24 minutes one-way) and communication blackouts. Conventional machine learning systems relying on probabilistic neural representations introduce unbounded stochastic risks and opaque ``black-box'' failure modes, rendering them inherently uncertifiable under strict aerospace safety guidelines. This document formalizes the architectural specification for \textbf{ASTROVITAL AI : VITALX CORE (RECREATED V1)}. The system implements a partitioned \textbf{80/20 Hybrid Deterministic Architecture}: an adaptive auxiliary layer (20\%) dedicated exclusively to telemetry stabilization and high-frequency motion artifact rejection, bounded by a formal Mathematical Sanity Gate, feeding into an 80\% Supreme First-Principles Biophysical Core that executes deterministic, white-box clinical triage.
+\end{abstract}
+
+\section{System Architectural Overview \& Design Philosophy}
+
+The core design philosophy enforces absolute separation of concerns between \textit{untrusted telemetry conditioning} and \textit{life-critical diagnostic determination}. 
+
+\begin{itemize}
+    \item \textbf{No Black-Box Clinical Arbiters:} Machine learning models are strictly prohibited from evaluating patient pathology or commanding critical medical interventions.
+    \item \textbf{Mathematical Sanity Bounding:} All adaptive filters are governed by physiological conservation laws. In the event of sensor detachment or divergence, the system fails deterministically to historical baseline projections rather than corrupting clinical states.
+    \item \textbf{First-Principles Primacy:} Clinical decisions are governed by closed-form hydrodynamic, metabolic, and hemodynamic physical equations.
+    \item \textbf{Auditable White-Box Logic:} Every diagnostic transition from Nominal (Green) to Compensatory (Amber) or Critical (Red) is deterministically traceable to exact mathematical threshold violations.
+\end{itemize}
+
+\section{Four-Layer Architectural Specification}
+
+The system architecture is structured into four sequentially gated, strictly bounded layers.
+
+\subsection{Layer 0: Ingestion \& Telemetry Vector ($\mathbf{X}_{\text{raw}}$)}
+The system ingests a 12-dimensional physiological and habitat telemetry vector $\mathbf{X}(t) \in \mathbb{R}^{12}$:
+\begin{enumerate}
+    \item \textbf{Cardiovascular Subsystem:} Heart Rate ($\text{HR}$, bpm), Systolic Blood Pressure ($\text{SBP}$, mmHg), Diastolic Blood Pressure ($\text{DBP}$, mmHg), Heart Rate Variability Root Mean Square of Successive Differences ($\text{RMSSD}$, ms).
+    \item \textbf{Metabolic \& Respiratory Subsystem:} Peripheral Blood Oxygen Saturation ($\text{SpO}_2$, \%), Core Body Temperature ($T_c$, $^\circ$C), Blood Glucose Concentration ($G$, mg/dL).
+    \item \textbf{Neurological \& Circadian Subsystem:} Cumulative Sleep Deficit ($\Delta t_{\text{sleep}}$, hours), Psychomotor Reaction Latency ($\tau_{\text{react}}$, ms).
+    \item \textbf{Habitat \& Gravitational Stressors:} Cumulative Microgravity Exposure Duration ($t_{\mu g}$, days), Ambient Spacecraft Cabin Carbon Dioxide Partial Pressure ($P_{\text{ambient}}^{CO_2}$, mmHg), Tri-axial Motion Artifact Intensity ($\|\vec{a}_{\text{accel}}\|$, g).
+\end{enumerate}
+
+\subsection{Layer 1: The 20\% Adaptive Auxiliary Layer (Telemetry Stabilization)}
+Operating as an unprivileged auxiliary service, Layer 1 isolates physical signal from microgravity-induced artifacts (sweat droplet dielectric shift, sensor motion decoupling, and skin-electrode impedance variations).
+
+\subsubsection{Innovation 3: Signal Stabilizer \& Sensor Drift Compensator}
+Let $S_i(t)$ be the measured sensor stream for channel $i$. The measured signal is modeled as:
+\begin{equation}
+S_i(t) = S_i^{\text{true}}(t) + \delta_i^{\text{drift}}(t) + \eta_i^{\text{motion}}(\vec{a}, t) + \epsilon(t)
+\end{equation}
+An adaptive multivariate regression and ensemble noise estimator extracts the stabilized physiological state:
+\begin{equation}
+\hat{S}_i(t) = \mathcal{F}_{\text{adapt}}\left(S_i(t), \vec{a}_{\text{accel}}(t), \Delta T_c\right)
+\end{equation}
+where $\mathcal{F}_{\text{adapt}}$ maps high-frequency accelerometric noise vectors to baseline physiological waveforms.
+
+\subsubsection{Innovation 6: Biomarker Sensitivity \& Multi-System Stress Weighting}
+Layer 1 dynamically ranks the leading divergence indicator across physiological subsystems using a localized sensitivity gradient:
+\begin{equation}
+\vec{W}_{\text{bio}}(t) = \nabla_{\mathbf{X}} \mathcal{L}_{\text{divergence}}\left(\hat{\mathbf{X}}(t), \mathbf{X}_{\text{baseline}}\right)
+\end{equation}
+This vector ranks which sub-modality (e.g., autonomic withdrawal vs. respiratory fatigue) exhibits the earliest pre-symptomatic divergence without issuing clinical diagnoses.
+
+\subsection{Layer 2: The Formal Mathematical Sanity \& Boundary Gate}
+Before any telemetry packet from Layer 1 enters the supreme diagnostic layer, it must pass through an aerospace-inspired formal bounding box.
+
+\begin{equation}
+\mathbf{\Omega}_{\text{bio}} = \left\{ \mathbf{X} \in \mathbb{R}^{12} \; \middle| \;
+\begin{aligned}
+30 &\le \text{HR} \le 220 \\
+50 &\le \text{SpO}_2 \le 100 \\
+34.0 &\le T_c \le 42.0 \\
+\left| \frac{d(\text{SpO}_2)}{dt} \right| &\le \lambda_{\text{bio\_max}}
+\end{aligned}
+\right\}
+\end{equation}
+
+\subsubsection{Deterministic Fallback Protocol}
+\begin{equation}
+\mathbf{X}_{\text{sanitized}}(t) = 
+\begin{cases}
+\hat{\mathbf{X}}(t), & \text{if } \hat{\mathbf{X}}(t) \in \mathbf{\Omega}_{\text{bio}} \land \text{Residual}(\mathcal{F}_{\text{adapt}}) < \gamma_{\text{crit}} \\
+\mathbf{X}_{\text{projected}}(t) \cup \{\text{FLAG: HARDWARE\_SENSOR\_DECOUPLED}\}, & \text{otherwise}
+\end{cases}
+\end{equation}
+If sensor decoupling or numerical corruption is detected, the AI output is explicitly discarded. The system projects from verified rolling historical baselines and alerts the astronaut to inspect physical hardware interfaces.
+
+\subsection{Layer 3: The 80\% Supreme Biophysical Core (Innovation 1: White-Box CDSS)}
+The diagnostic authority resides completely within closed-form analytical biophysical models and deterministic decision logic.
+
+\subsubsection{Biophysical Model 1: Cephalad Hydrodynamic Fluid Shift \& ICP Index}
+In microgravity, the hydrostatic gradient $\rho \cdot g \cdot h$ ceases. Venous blood redistributes towards the cephalad region, elevating central venous pressure and intracranial pressure (ICP), triggering Spaceflight-Associated Neuro-ocular Syndrome (SANS):
+\begin{equation}
+I_{\text{ICP}}(t) = \alpha_1 \cdot \left(\frac{\text{SBP}(t) + 2\text{DBP}(t)}{3}\right) + \alpha_2 \cdot \log\left(1 + t_{\mu g}\right) + \alpha_3 \cdot P_{\text{ambient}}^{CO_2}(t) - \alpha_4 \cdot \text{RMSSD}(t)
+\end{equation}
+where $\alpha_1, \alpha_2, \alpha_3, \alpha_4$ are verified physiological coupling coefficients.
+
+\subsubsection{Biophysical Model 2: Cardiovascular Deconditioning \& Stroke Volume Index}
+Cardiac output ($CO$) regulation under autonomic microgravity adaptation is computed as:
+\begin{equation}
+CO(t) = \text{HR}(t) \times SV(t), \quad SV(t) = SV_0 \cdot \exp\left(-\kappa_{\text{atrophy}} \cdot t_{\mu g}\right) \cdot \left[1 + \beta \cdot \text{ExerciseMetric}(t)\right]
+\end{equation}
+
+\subsubsection{Deterministic State Transition Logic (White-Box Triage)}
+The system outputs a deterministic clinical classification $C \in \{\text{GREEN}, \text{AMBER}, \text{RED}\}$ governed by transparent, closed-form decision boundaries:
+\begin{itemize}
+    \item \textbf{STATE GREEN (Nominal Physiological Equilibrium):}
+    \begin{equation}
+    \forall j \in \{1,\dots,12\}, \quad \left| \frac{X_j - \mu_j^{\text{baseline}}}{\sigma_j^{\text{baseline}}} \right| \le 1.5 \quad \land \quad I_{\text{ICP}} < I_{\text{ICP}}^{\text{nominal}}
+    \end{equation}
+    Operational guidance: Standard mission schedule, baseline nutrition and exercise.
+
+    \item \textbf{STATE AMBER (Compensatory Physiological Stress / Pre-Pathological):}
+    \begin{equation}
+    1.5 < \left| \frac{X_k - \mu_k^{\text{baseline}}}{\sigma_k^{\text{baseline}}} \right| \le 3.0 \quad \lor \quad I_{\text{ICP}}^{\text{nominal}} \le I_{\text{ICP}} < I_{\text{ICP}}^{\text{crit}} \quad \lor \quad \Delta t_{\text{sleep}} \ge 16.0\,\text{hrs}
+    \end{equation}
+    Operational guidance: Autonomous Countermeasure Deck Alpha (Cabin lighting spectrum adjustment, 45-minute ergometer resistance, 500 mL targeted electrolyte hydration).
+
+    \item \textbf{STATE RED (Acute Critical Threat / Immediate Decompensation):}
+    \begin{equation}
+    I_{\text{ICP}} \ge I_{\text{ICP}}^{\text{crit}} \quad \lor \quad \left(\text{SpO}_2 < 88\% \land \text{HR} > 125\,\text{bpm}\right) \quad \lor \quad \text{SBP} \ge 165\,\text{mmHg}
+    \end{equation}
+    Operational guidance: Critical Protocol Omega (Emergency deployment of Lower Body Negative Pressure [LBNP] suit, immediate 100\% oxygen delivery, immediate suspension of EVA/high-G maneuvers).
+\end{itemize}
+
+\subsection{Layer 4: Astronaut Autonomous Cockpit Interface}
+The human-machine interface satisfies the \textbf{3-Second Non-Physician Rule}:
+\begin{enumerate}
+    \item \textbf{Single-Glance HUD:} High-contrast tri-color risk banner (Green / Amber / Red).
+    \item \textbf{Mathematical Audit Trail:} Direct natural language translation of the violated physical threshold (e.g., \textit{``RED ALERT: Cephalad Fluid Shift Index (2.14) exceeded critical boundary (1.85) driven by elevated cabin CO2 (4.2 mmHg) and 48hr sleep deficit''}).
+    \item \textbf{Direct Countermeasure Deck:} Discrete checklist of physical actions required by the crew without medical jargon.
+\end{enumerate}
+
+\section{Summary of Design Invariants}
+
+\begin{table}[h!]
+\centering
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Architectural Domain} & \textbf{Assigned Subsystem} & \textbf{Authority / Constraint} \\ \midrule
+Sensor Cleaning & 20\% Adaptive AI (Inno 3) & Zero clinical rights; filtered by Layer 2 \\
+Biomarker Discovery & 20\% Dynamic Sensitivity (Inno 6) & Relative ranking only; no state transitions \\
+Boundary Verification & Layer 2 Mathematical Sanity Gate & Hard rejection of non-physical vectors \\
+Clinical Diagnostic Core & 80\% Biophysical Physics (Inno 1) & First-principles equations; 100\% deterministic \\
+Safety Certification Standard & Design Philosophy & Strict adherence to DO-178C determinism \& MC/DC trace \\ \bottomrule
+\end{tabular}
+\caption{System Design Invariants and Separation of Authority}
+\end{table}
+
+\vfill
+\noindent\rule{\textwidth}{0.4pt}
+\begin{center}
+\footnotesize \textbf{ASTROVITAL AI : VITALX CORE RECREATED} --- Official Architectural Specification Document \\
+Certified for Implementation: Team VITALX CORE $\cdot$ November 11, 2026
+\end{center}
+
+\end{document}
