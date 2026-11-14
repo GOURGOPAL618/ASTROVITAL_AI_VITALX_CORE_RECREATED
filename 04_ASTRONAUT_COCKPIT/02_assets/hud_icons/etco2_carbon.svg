@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="#2979FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="6" y="8" width="36" height="32" rx="4" stroke="#2979FF" stroke-width="2.5" />
+  <!-- Capnography Square Waveform -->
+  <path d="M10 32h6l2-16h10l2 16h8" stroke="#00E5FF" stroke-width="2.5" />
+  <circle cx="34" cy="14" r="2" fill="#00E5FF" />
+</svg>

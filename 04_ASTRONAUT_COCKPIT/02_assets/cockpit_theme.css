@@ -1,0 +1,541 @@
+/* =============================================================================
+   ASTROVITAL AI : VITALX CORE RECREATED V1
+   Subsystem: 04_ASTRONAUT_COCKPIT / Design System & Visual Standards
+   Asset: cockpit_theme.css
+   Specification: NASA Orion Flight Deck / Crew Dragon High-Contrast HUD Theme
+   Author: Gourgopal Mohapatra (Lead Architect & Sole Developer, Team VITALX CORE)
+   Compliance: DO-178C Human-Machine Interface Guidelines / MIL-STD-1472H
+   ============================================================================= */
+
+/* -------------------------------------------------------------------------
+   1. CSS ROOT VARIABLES & AEROSPACE COLOR PALETTE
+   ------------------------------------------------------------------------- */
+:root {
+  /* Space Void & Frame Colors */
+  --space-void: #05070e;
+  --cockpit-bg: #090d18;
+  --cockpit-surface: rgba(14, 21, 38, 0.78);
+  --cockpit-surface-elevated: rgba(20, 30, 54, 0.85);
+  --cockpit-border: rgba(0, 229, 255, 0.22);
+  --cockpit-border-strong: rgba(0, 229, 255, 0.55);
+
+  /* Tactical Primary & Accent Colors */
+  --hud-cyan: #00e5ff;
+  --hud-cyan-glow: rgba(0, 229, 255, 0.35);
+  --hud-blue: #2979ff;
+  --hud-blue-glow: rgba(41, 121, 255, 0.3);
+  --hud-gold: #ffd700;
+
+  /* State Colors & Alarm Badges */
+  --state-green: #00e676;
+  --state-green-glow: rgba(0, 230, 118, 0.4);
+  --state-green-bg: rgba(0, 230, 118, 0.12);
+
+  --state-amber: #ffb800;
+  --state-amber-glow: rgba(255, 184, 0, 0.45);
+  --state-amber-bg: rgba(255, 184, 0, 0.14);
+
+  --state-red: #ff1e27;
+  --state-red-glow: rgba(255, 30, 39, 0.6);
+  --state-red-bg: rgba(255, 30, 39, 0.18);
+
+  /* Typography Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #a0aec0;
+  --text-muted: #5e6e87;
+  --text-hud: #00e5ff;
+
+  /* Typography Fonts */
+  --font-mono: "SF Mono", "Roboto Mono", "Consolas", "Courier New", monospace;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
+
+  /* Radii & Transitions */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* -------------------------------------------------------------------------
+   2. GLOBAL STREAMLIT APP SURFACE & BACKGROUND RESET
+   ------------------------------------------------------------------------- */
+html, body, [data-testid="stAppViewContainer"] {
+  background-color: var(--space-void) !important;
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(41, 121, 255, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(0, 229, 255, 0.06) 0%, transparent 45%),
+    linear-gradient(180deg, #05070e 0%, #090d18 100%) !important;
+  background-attachment: fixed !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-sans) !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+[data-testid="stHeader"] {
+  background: transparent !important;
+}
+
+[data-testid="stToolbar"] {
+  right: 1.5rem !important;
+}
+
+/* Custom Cockpit Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--space-void);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 229, 255, 0.3);
+  border-radius: var(--radius-sm);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hud-cyan);
+  box-shadow: 0 0 10px var(--hud-cyan-glow);
+}
+
+/* -------------------------------------------------------------------------
+   3. SIDEBAR STYLING: ORION FLIGHT DECK NAVIGATION
+   ------------------------------------------------------------------------- */
+[data-testid="stSidebar"] {
+  background: linear-gradient(180deg, rgba(8, 12, 22, 0.98), rgba(4, 7, 14, 0.98)) !important;
+  border-right: 1px solid var(--cockpit-border) !important;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.6) !important;
+}
+
+[data-testid="stSidebar"] hr {
+  border-color: rgba(0, 229, 255, 0.15) !important;
+  margin: 1rem 0 !important;
+}
+
+.sidebar-title-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: rgba(0, 229, 255, 0.1);
+  border: 1px solid var(--hud-cyan);
+  border-radius: var(--radius-sm);
+  color: var(--hud-cyan);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+/* -------------------------------------------------------------------------
+   4. 3-SECOND COCKPIT TOP ALERT BANNER (RED / AMBER / GREEN)
+   ------------------------------------------------------------------------- */
+.hud-banner-container {
+  width: 100%;
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* STATE GREEN - Nominal Homeostasis */
+.hud-banner-green {
+  background: linear-gradient(90deg, rgba(0, 230, 118, 0.15) 0%, rgba(14, 21, 38, 0.9) 100%);
+  border: 2px solid var(--state-green);
+  box-shadow: 0 0 25px var(--state-green-glow), inset 0 0 15px rgba(0, 230, 118, 0.1);
+}
+
+/* STATE AMBER - Compensatory Stress Alert (1.0 Hz Pulse) */
+.hud-banner-amber {
+  background: linear-gradient(90deg, rgba(255, 184, 0, 0.18) 0%, rgba(14, 21, 38, 0.9) 100%);
+  border: 2px solid var(--state-amber);
+  animation: amberPulse 1.0s infinite ease-in-out;
+}
+
+@keyframes amberPulse {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 184, 0, 0.3);
+    border-color: rgba(255, 184, 0, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 35px var(--state-amber-glow), inset 0 0 20px rgba(255, 184, 0, 0.2);
+    border-color: var(--state-amber);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(255, 184, 0, 0.3);
+    border-color: rgba(255, 184, 0, 0.6);
+  }
+}
+
+/* STATE RED - Critical Emergency Klaxon (2.0 Hz Strobe) */
+.hud-banner-red {
+  background: linear-gradient(90deg, rgba(255, 30, 39, 0.24) 0%, rgba(14, 21, 38, 0.95) 100%);
+  border: 2px solid var(--state-red);
+  animation: redStrobe 0.5s infinite ease-in-out;
+}
+
+@keyframes redStrobe {
+  0% {
+    box-shadow: 0 0 20px rgba(255, 30, 39, 0.4);
+    border-color: rgba(255, 30, 39, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 50px var(--state-red-glow), inset 0 0 30px rgba(255, 30, 39, 0.35);
+    border-color: #ffffff;
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 30, 39, 0.4);
+    border-color: rgba(255, 30, 39, 0.7);
+  }
+}
+
+.banner-left-section {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.banner-icon-badge {
+  font-size: 2.2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.banner-title-text {
+  font-family: var(--font-mono);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.banner-sub-text {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+  letter-spacing: 0.5px;
+}
+
+.banner-right-badges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4rem;
+}
+
+.acoustic-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* -------------------------------------------------------------------------
+   5. GLASSMORPHIC COCKPIT TELEMETRY CARDS & METRIC WIDGETS
+   ------------------------------------------------------------------------- */
+.hud-panel {
+  background: var(--cockpit-surface) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid var(--cockpit-border) !important;
+  border-radius: var(--radius-md) !important;
+  padding: 1.25rem !important;
+  margin-bottom: 1.25rem !important;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+  transition: border-color var(--transition-normal);
+}
+
+.hud-panel:hover {
+  border-color: var(--cockpit-border-strong) !important;
+}
+
+/* High-Tech HUD Corner Accents */
+.hud-panel::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid var(--hud-cyan);
+  border-left: 2px solid var(--hud-cyan);
+  pointer-events: none;
+}
+
+.hud-panel::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 12px;
+  height: 12px;
+  border-bottom: 2px solid var(--hud-cyan);
+  border-right: 2px solid var(--hud-cyan);
+  pointer-events: none;
+}
+
+.panel-header-title {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: var(--hud-cyan);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 229, 255, 0.15);
+  padding-bottom: 0.5rem;
+}
+
+/* Telemetry Mini Card */
+.vital-metric-card {
+  background: rgba(10, 16, 30, 0.7);
+  border: 1px solid rgba(0, 229, 255, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem;
+  text-align: left;
+  transition: all var(--transition-fast);
+}
+
+.vital-metric-card:hover {
+  background: rgba(14, 23, 44, 0.85);
+  border-color: var(--hud-cyan);
+  transform: translateY(-2px);
+}
+
+.vital-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-secondary);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.vital-value {
+  font-family: var(--font-mono);
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.vital-unit {
+  font-size: 0.72rem;
+  color: var(--hud-cyan);
+  font-weight: 500;
+  margin-left: 3px;
+}
+
+/* -------------------------------------------------------------------------
+   6. PHYSICAL EQUIPMENT LOCKER REGISTRY (L1 to L5)
+   ------------------------------------------------------------------------- */
+.locker-card {
+  background: rgba(12, 18, 34, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  position: relative;
+  margin-bottom: 0.75rem;
+  transition: all var(--transition-fast);
+}
+
+.locker-card-active {
+  border: 1px solid var(--hud-cyan);
+  background: rgba(0, 229, 255, 0.08);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+}
+
+.locker-id-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+
+.locker-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.locker-items-list {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+  line-height: 1.4;
+}
+
+/* -------------------------------------------------------------------------
+   7. WHITE-BOX DO-178C AUDIT TERMINAL
+   ------------------------------------------------------------------------- */
+.audit-terminal-box {
+  background: #020408 !important;
+  border: 1px solid rgba(0, 229, 255, 0.3) !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 1rem !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.8rem !important;
+  color: #a0c4ff !important;
+  line-height: 1.6 !important;
+  overflow-x: auto !important;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8) !important;
+  position: relative;
+}
+
+.audit-terminal-box::before {
+  content: "DO-178C LEVEL C // AUDIT TRAIL STREAM";
+  position: absolute;
+  top: 6px;
+  right: 12px;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  color: rgba(0, 229, 255, 0.4);
+}
+
+.audit-timestamp {
+  color: var(--text-muted);
+  margin-right: 8px;
+}
+
+.audit-rule-highlight {
+  color: var(--state-amber);
+  font-weight: 700;
+}
+
+.audit-metric-highlight {
+  color: var(--hud-cyan);
+  font-weight: 700;
+}
+
+.audit-citation {
+  color: #7986cb;
+  font-style: italic;
+}
+
+/* -------------------------------------------------------------------------
+   8. INTERACTIVE CHECKLIST DECK & ACTION BUTTONS
+   ------------------------------------------------------------------------- */
+.action-deck-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: rgba(14, 22, 40, 0.7);
+  border-left: 3px solid var(--hud-cyan);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 0.5rem;
+  transition: background var(--transition-fast);
+}
+
+.action-deck-row:hover {
+  background: rgba(20, 32, 58, 0.85);
+}
+
+.action-step-num {
+  font-family: var(--font-mono);
+  font-weight: 800;
+  color: var(--hud-cyan);
+  font-size: 0.85rem;
+  margin-right: 0.75rem;
+}
+
+/* Streamlit Button Customization as Tactical Push-Buttons */
+div.stButton > button {
+  background: linear-gradient(180deg, #101c34 0%, #0a1122 100%) !important;
+  color: var(--hud-cyan) !important;
+  border: 1px solid var(--hud-cyan) !important;
+  border-radius: var(--radius-sm) !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  padding: 0.6rem 1.25rem !important;
+  transition: all var(--transition-fast) !important;
+  box-shadow: 0 4px 14px rgba(0, 229, 255, 0.15) !important;
+}
+
+div.stButton > button:hover {
+  background: linear-gradient(180deg, #162648 0%, #0e1932 100%) !important;
+  box-shadow: 0 0 20px var(--hud-cyan-glow) !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) !important;
+}
+
+div.stButton > button:active {
+  transform: translateY(1px) !important;
+  box-shadow: 0 0 10px var(--hud-cyan-glow) !important;
+}
+
+/* -------------------------------------------------------------------------
+   9. SOVEREIGN CREW MEDICAL OFFICER (CMO) OVERRIDE DIALOG
+   ------------------------------------------------------------------------- */
+.cmo-override-banner {
+  background: linear-gradient(90deg, rgba(255, 215, 0, 0.18) 0%, rgba(14, 21, 38, 0.95) 100%);
+  border: 2px solid var(--hud-gold);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.25);
+}
+
+.cmo-badge-icon {
+  font-size: 1.8rem;
+  color: var(--hud-gold);
+}
+
+.cmo-title {
+  font-family: var(--font-mono);
+  font-weight: 800;
+  color: var(--hud-gold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+/* -------------------------------------------------------------------------
+   10. PLOTLY CHART CONTAINER OPTIMIZATIONS
+   ------------------------------------------------------------------------- */
+.js-plotly-plot .plotly .main-svg {
+  background: transparent !important;
+}
+
+.plotly-graph-div {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}

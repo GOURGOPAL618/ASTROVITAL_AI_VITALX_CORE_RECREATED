@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Sovereign Shield -->
+  <path d="M24 4L8 10v14c0 10 7 16 16 20 9-4 16-10 16-20V10L24 4z" fill="rgba(255, 215, 0, 0.12)" stroke="#FFD700" stroke-width="2.5" />
+  <!-- Staff of Asclepius / Star of Life Cross -->
+  <path d="M24 14v18M18 20h12" stroke="#FFD700" stroke-width="3" stroke-linecap="square" />
+  <circle cx="24" cy="23" r="1.5" fill="#FFFFFF" />
+  <path d="M20 16c2-1 6-1 8 0M20 30c2 1 6 1 8 0" stroke="#00E5FF" stroke-width="1.5" />
+</svg>
