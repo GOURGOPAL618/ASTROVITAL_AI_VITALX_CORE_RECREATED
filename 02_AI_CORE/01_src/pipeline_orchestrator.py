@@ -91,6 +91,7 @@ class PipelineExecutionRecord:
     cockpit_payload: CockpitActionPayload
     execution_latency_ms: float
     config_sha256: str
+    cmo_override_details: Optional[Dict[str, Any]] = None
 
     def to_dict(self) -> Dict[str, Any]:
         """Serializes the record into an auditable Python dictionary."""
@@ -114,6 +115,7 @@ class PipelineExecutionRecord:
             "cockpit_payload": self.cockpit_payload.to_dict(),
             "execution_latency_ms": round(self.execution_latency_ms, 3),
             "config_sha256": self.config_sha256,
+            "cmo_override_details": self.cmo_override_details,
         }
 
     def get_executive_summary(self) -> str:
@@ -318,6 +320,7 @@ class AstroVitalPipelineOrchestrator:
             cockpit_payload=cockpit_payload,
             execution_latency_ms=elapsed_ms,
             config_sha256=self.config_sha256,
+            cmo_override_details=decision_packet.cmo_override if is_cmo_overridden else None,
         )
 
         # Maintain rolling audit buffer

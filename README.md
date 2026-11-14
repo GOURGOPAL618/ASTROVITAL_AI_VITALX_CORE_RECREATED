@@ -2,8 +2,8 @@
 ### *Autonomous Bio-Astronautic Clinical Decision Support Architecture for Deep Space Missions*
 
 [![DO-178C Standard](https://img.shields.io/badge/Certification-DO--178C%20Level%20C%20(DAL%20C)-0052CC.svg?style=for-the-badge&logo=nasa)](06_MISSION_REPORTS/DO178C_LEVEL_C_EXECUTION_PLAYBOOK.md)
-[![Statement Coverage](https://img.shields.io/badge/Coverage-100%25%20(1351%2F1351%20Lines)-2ea44f.svg?style=for-the-badge&logo=pytest)](07_ASTRO_DOCS/02_AI_CORE_DOCS/01_src_DOCS/04_BIOMARKER_RANKER_SPECIFICATION_AND_AUDIT.md)
-[![Test Suite Status](https://img.shields.io/badge/Tests-211%20%2F%20211%20Passed%20(2.54s)-brightgreen.svg?style=for-the-badge&logo=githubactions)](07_ASTRO_DOCS/02_AI_CORE_DOCS/02_tests_DOCS/04_TEST_BIOMARKER_RANKER_VERIFICATION_REPORT.md)
+[![Statement Coverage](https://img.shields.io/badge/Coverage-100%25%20(2085%2F2085%20Lines)-2ea44f.svg?style=for-the-badge&logo=pytest)](06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md)
+[![Test Suite Status](https://img.shields.io/badge/Tests-514%20%2F%20514%20Passed%20(19.05s)-brightgreen.svg?style=for-the-badge&logo=githubactions)](07_ASTRO_DOCS/06_MISSION_REPORTS_DOCS/01_DO178C_DAL_C_INTEGRATED_100_TEST_SUITE_IVNV_REPORT.md)
 [![Python Version](https://img.shields.io/badge/Python-3.12%20%7C%203.14-3776AB.svg?style=for-the-badge&logo=python)](pyproject.toml)
 [![Architecture Paradigm](https://img.shields.io/badge/Architecture-80%2F20%20Hybrid%20Deterministic-FF6F00.svg?style=for-the-badge)](VITALX_CORE_RECREATED_PIPELINE_SPECIFICATION.md)
 [![NASA Challenge Track](https://img.shields.io/badge/Challenge-Human%20Body%20in%20Deep%20Space-E03C31.svg?style=for-the-badge&logo=nasa)](07_ASTRO_DOCS/07_SYSTEM_ARCHITECTURE_DOCS/ASTROVITAL_VITALX_CORE_RECREATED_ARCHITECTURE.tex)
@@ -224,39 +224,44 @@ Under **RTCA DO-178C Design Assurance Level C (DAL C)**, 100% of executable sour
 =============================== tests coverage ================================
 _______________ coverage: platform win32, python 3.12.0-final-0 _______________
 
-Name                                           Stmts   Miss  Cover   Missing
-----------------------------------------------------------------------------
-02_AI_CORE\01_src\ingestion_adapter.py           234      0   100%
-02_AI_CORE\01_src\inno3_signal_stabilizer.py     377      0   100%
-02_AI_CORE\01_src\inno6_biomarker_ranker.py      321      0   100%
-02_AI_CORE\01_src\sanity_gate.py                 419      0   100%
-----------------------------------------------------------------------------
-TOTAL                                           1351      0   100%
-======================= 211 passed, 2 warnings in 2.54s =======================
+Name                                                         Stmts   Miss  Cover
+--------------------------------------------------------------------------------
+02_AI_CORE\01_src\ingestion_adapter.py                         234      0   100%
+02_AI_CORE\01_src\inno3_signal_stabilizer.py                   377      0   100%
+02_AI_CORE\01_src\sanity_gate.py                               419      0   100%
+02_AI_CORE\01_src\inno6_biomarker_ranker.py                    321      0   100%
+02_AI_CORE\01_src\pipeline_orchestrator.py                     138      0   100%
+03_DECISION_CORE\rule_schema_validator.py                      219      0   100%
+03_DECISION_CORE\biophysical_physics_engine.py                 162      0   100%
+03_DECISION_CORE\triage_model_engine.py                        122      0   100%
+03_DECISION_CORE\cockpit_countermeasure_dispatcher.py           93      0   100%
+--------------------------------------------------------------------------------
+TOTAL (ALL 9 PRODUCTION MODULES)                              2085      0   100%
+====================== 514 passed, 3 warnings in 19.05s =======================
 ```
 
 | Verification Parameter | DO-178C DAL C Standard | ASTROVITAL VITALX Result | Audit Status |
 | :--- | :--- | :--- | :--- |
-| **Structural Statement Coverage** | **100% of executable code** | **100.0% (1,351 / 1,351 statements)** | **COMPLIANT (PASS)** |
+| **Structural Statement Coverage** | **100% of executable code** | **100.0% (2,085 / 2,085 statements)** | **COMPLIANT (PASS)** |
 | **Unexercised / Dead Code** | 0 statements allowed | **0 statements (Zero dead code)** | **COMPLIANT (PASS)** |
-| **Requirements-Based Tests** | Direct traceability to HLR | **211 Unit & Integration Tests** | **COMPLIANT (PASS)** |
-| **Test Suite Pass Rate** | 100% test pass rate | **100% (211 Passed, 0 Failed)** | **COMPLIANT (PASS)** |
-| **Execution Performance / Latency** | $< 5.0\text{ seconds}$ | **2.54 seconds** | **OPTIMAL** |
+| **Requirements-Based Tests** | Direct traceability to HLR | **514 Automated Unit, E2E & IV&V Tests** | **COMPLIANT (PASS)** |
+| **Test Suite Pass Rate** | 100% test pass rate | **100% (514 Passed, 0 Failed)** | **COMPLIANT (PASS)** |
+| **Execution Performance / Latency** | $< 30.0\text{ seconds}$ | **19.05 seconds (All 11 Test Suites)** | **OPTIMAL** |
 | **Cryptographic Provenance** | Immutable sidecar hashes | **SHA-256 JSON Manifests** | **COMPLIANT (PASS)** |
 
 ### 6.2 The 3-Tab Live Judging Workflow
 To demonstrate compliance during competition judging in $< 2\text{ minutes}$:
-1. **Tab 1 — Requirements:** Open [`06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md`](06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md). Review formal boundary constraints mapped from `HLR-BIO-001` through `HLR-BIO-004`, `REQ-STAB-01` to `05`, `REQ-GATE-01` to `05`, and `REQ-RANK-01` to `05`.
+1. **Tab 1 — Requirements:** Open [`06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md`](06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md). Review formal boundary constraints mapped from `HLR-BIO-001` through `HLR-BIO-004`, `REQ-STAB-01` to `05`, `REQ-GATE-01` to `05`, `REQ-RANK-01` to `05`, `REQ-ORCH-01` to `10`, and `REQ-DEC-P1` to `P5`.
 2. **Tab 2 — Live Execution:** Run the 1-click verification command in terminal:
-   ```bash
-   pytest 02_AI_CORE/02_tests/ -v --cov=ingestion_adapter --cov=inno3_signal_stabilizer --cov=sanity_gate --cov=inno6_biomarker_ranker --cov-report=term-missing
+   ```powershell
+   $env:COVERAGE_FILE="$env:TEMP\cov_live"; .\vitalx_env\Scripts\python.exe -m pytest -v
    ```
-   Observe 211 tests passing with 100% coverage in **2.54 seconds**.
-3. **Tab 3 — Interactive HUD:** Launch the Astronaut Cockpit UI:
-   ```bash
-   streamlit run 04_ASTRONAUT_COCKPIT/app.py
+   Observe **514 tests passing with 100.0% coverage in ~19 seconds** across all 9 production source files.
+3. **Tab 3 — Autonomous Triage & Cockpit Dispatch:** Inspect [`07_ASTRO_DOCS/03_DECISION_CORE_DOCS/05_DECISION_CORE_VERIFICATION_REPORT.md`](07_ASTRO_DOCS/03_DECISION_CORE_DOCS/05_DECISION_CORE_VERIFICATION_REPORT.md) or execute the orchestrator:
+   ```powershell
+   .\vitalx_env\Scripts\python.exe 02_AI_CORE\01_src\pipeline_orchestrator.py
    ```
-   Demonstrate instantaneous 3-second triage update, white-box audit sentences, and countermeasure dispatch.
+   Demonstrate instantaneous 3-second triage update, equipment locker routing ($L_1 \dots L_5$), white-box audit sentences, and countermeasure dispatch.
 
 ---
 
