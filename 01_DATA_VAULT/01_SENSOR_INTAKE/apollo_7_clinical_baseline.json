@@ -1,0 +1,10 @@
+{
+  "apollo_resting_hr_mean": 66.4,
+  "apollo_resting_hr_std": 5.2,
+  "apollo_resting_sbp_mean": 116.8,
+  "apollo_resting_sbp_std": 6.4,
+  "apollo_resting_dbp_mean": 74.2,
+  "apollo_resting_dbp_std": 4.8,
+  "apollo_nominal_oral_temp_c": 36.8,
+  "apollo_blood_glucose_mean_mgdl": 92.5
+}
