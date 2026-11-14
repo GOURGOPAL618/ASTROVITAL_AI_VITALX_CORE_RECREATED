@@ -119,6 +119,20 @@ def test_03_resolve_active_locker_id_branches():
     )
     assert CountermeasureDeckRenderer.resolve_active_locker_id([step_unmatched]) is None
 
+    # Sleep bunk rest station mapping
+    step_sleep = SequencedActionStep(
+        step_number=3,
+        action_id="ACT_03",
+        protocol="Mandatory Rest Buffer",
+        priority=1,
+        time_to_execute_sec=300,
+        equipment_location="Crew Sleep Bunk Compartment",
+        verification_step="Rest timer set",
+        subsystem_lead="COMMANDER",
+        is_critical_path=False,
+    )
+    assert CountermeasureDeckRenderer.resolve_active_locker_id([step_sleep]) == "PHYS-01"
+
 
 def test_04_render_locker_bay_active_and_standby():
     """Verifies rendering the 5 physical Orion lockers with active target highlight."""

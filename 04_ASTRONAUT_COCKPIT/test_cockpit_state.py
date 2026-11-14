@@ -182,6 +182,7 @@ def test_09_inject_all_canonical_scenarios():
 
     rec_06 = mgr.inject_scenario("SCENARIO_06_EXTREME_SLEEP_DEBT_FATIGUE")
     assert rec_06.triage_state == "AMBER"
+    assert rec_06.matched_rule_id == "RULE_AMBER_005_EXTREME_SLEEP_DEBT_FATIGUE"
 
     with pytest.raises(KeyError, match="Unknown scenario ID"):
         mgr.inject_scenario("SCENARIO_NON_EXISTENT")

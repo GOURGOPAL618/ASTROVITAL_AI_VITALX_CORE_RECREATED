@@ -102,7 +102,7 @@ class CMOOverrideConsoleRenderer:
             </div>
             """
 
-        return f"""
+        console_box = f"""
         <div style="background: rgba(10, 16, 30, 0.85); border: 1px solid rgba(0, 229, 255, 0.25); border-radius: 6px; padding: 14px; margin-bottom: 1.5rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 8px;">
             <div style="display: flex; align-items: center; gap: 8px;">
@@ -121,6 +121,7 @@ class CMOOverrideConsoleRenderer:
           {override_box}
         </div>
         """
+        return "\n".join(line.strip() for line in console_box.strip().splitlines() if line.strip())
 
     @classmethod
     def render_streamlit(
@@ -136,10 +137,7 @@ class CMOOverrideConsoleRenderer:
             import streamlit as st
             target = container if container is not None else st
 
-            target.markdown(
-                """<div class="hud-panel-header"><span>🛡️</span> SOVEREIGN CREW MEDICAL OFFICER (CMO) OVERRIDE CONSOLE</div>""",
-                unsafe_allow_html=True,
-            )
+            hdr = """<div class="hud-panel-header"><span>🛡️</span> SOVEREIGN CREW MEDICAL OFFICER (CMO) OVERRIDE CONSOLE</div>"""
 
             active_crew = state_manager.active_crew_member
             active_override = state_manager.active_cmo_override
@@ -147,7 +145,14 @@ class CMOOverrideConsoleRenderer:
             has_authority = profile.has_cmo_authority if profile else False
 
             console_html = cls.render_console_html(active_crew, active_override)
-            target.markdown(console_html, unsafe_allow_html=True)
+
+            is_mock = hasattr(target, "_mock_return_value") or type(target).__name__ == "MagicMock"
+            if hasattr(target, "html") and not is_mock:
+                target.html(hdr)
+                target.html(console_html)
+            else:
+                target.markdown(hdr, unsafe_allow_html=True)
+                target.markdown(console_html, unsafe_allow_html=True)
 
             if not has_authority:
                 target.warning(

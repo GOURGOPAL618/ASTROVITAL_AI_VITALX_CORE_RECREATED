@@ -1,398 +1,370 @@
-# 🚀 ASTROVITAL AI : VITALX CORE (RECREATED V1)
-### *Autonomous Bio-Astronautic Clinical Decision Support Architecture for Deep Space Missions*
+<div align="center">
 
-[![DO-178C Standard](https://img.shields.io/badge/Certification-DO--178C%20Level%20C%20(DAL%20C)-0052CC.svg?style=for-the-badge&logo=nasa)](06_MISSION_REPORTS/DO178C_LEVEL_C_EXECUTION_PLAYBOOK.md)
-[![Statement Coverage](https://img.shields.io/badge/Coverage-100%25%20(2085%2F2085%20Lines)-2ea44f.svg?style=for-the-badge&logo=pytest)](06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md)
-[![Test Suite Status](https://img.shields.io/badge/Tests-514%20%2F%20514%20Passed%20(19.05s)-brightgreen.svg?style=for-the-badge&logo=githubactions)](07_ASTRO_DOCS/06_MISSION_REPORTS_DOCS/01_DO178C_DAL_C_INTEGRATED_100_TEST_SUITE_IVNV_REPORT.md)
-[![Python Version](https://img.shields.io/badge/Python-3.12%20%7C%203.14-3776AB.svg?style=for-the-badge&logo=python)](pyproject.toml)
-[![Architecture Paradigm](https://img.shields.io/badge/Architecture-80%2F20%20Hybrid%20Deterministic-FF6F00.svg?style=for-the-badge)](VITALX_CORE_RECREATED_PIPELINE_SPECIFICATION.md)
-[![NASA Challenge Track](https://img.shields.io/badge/Challenge-Human%20Body%20in%20Deep%20Space-E03C31.svg?style=for-the-badge&logo=nasa)](07_ASTRO_DOCS/07_SYSTEM_ARCHITECTURE_DOCS/ASTROVITAL_VITALX_CORE_RECREATED_ARCHITECTURE.tex)
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,10:030712,25:0b192c,45:1e1b4b,65:0f172a,85:022c43,100:000000&height=320&section=header&text=ASTROVITAL%20AI%20%E2%80%A2%20VITALX%20CORE&fontSize=70&fontColor=00f2fe&animation=fadeIn&fontAlignY=33&desc=DO-178C%20DAL%20C%20%E2%80%A2%20AUTONOMOUS%20BIO-ASTRONAUTIC%20FLIGHT%20DECISION%20ENGINE&descAlignY=54&descSize=16&descColor=38bdf8" width="100%"/>
 
----
+<img src="https://readme-typing-svg.demolab.com/?lines=%3E+FLIGHT+STATUS+%3A+TRL-7+OPERATIONAL+LOCK+(14+NOV+2026+%40+20%3A30%3A00+IST);%3E+DO-178C+DAL+C+AUDIT+%3A+11%2F11+SUITES+%E2%80%A2+514%2F514+TESTS+PASSED+(100.0%25);%3E+STRUCTURAL+COVERAGE+%3A+2%2C085%2F2%2C085+STATEMENTS+AT+100.0%25+(ZERO+DEAD+CODE);%3E+SAFETY+ARCHITECTURE+%3A+80%25+BIOPHYSICAL+HEAD+%2B+20%25+ADAPTIVE+AI+AUXILIARY;%3E+3-SECOND+COCKPIT+HUD+%3A+12+CANONICAL+RULES+%E2%80%A2+LOCKER+ROUTING+(L1-L5);%3E+COMMAND+AUTHORITY+%3A+COMMANDER+GOURAGOPAL+MOHAPATRA+%E2%80%A2+JCC+CAMPUS+3;%3E+CONSECRATED+TO+THE+LOTUS+FEET+OF+MAHAPRABHU+SHRI+JAGANNATH&font=Fira+Code&size=16&duration=2200&pause=600&color=00F2FE&center=true&vCenter=true&width=1000&height=55" />
 
-```
-==================================================================================================
- MISSION DESIGNATOR   : ASTROVITAL AI : VITALX CORE (RECREATED V1)
- DEPLOYMENT TARGET    : ARTEMIS DEEP SPACE HABITAT / MARS TRANSIT VEHICLE (MTV)
- PRIMARY DOMAIN       : BIO-ASTRONAUTICS, SANS PREVENTION, CARDIOVASCULAR DECONDITIONING
- SAFETY PHILOSOPHY    : FIRST-PRINCIPLES BIOPHYSICS (80%) + ADAPTIVE AI CONDITIONING (20%)
- VERIFICATION HARNESS : RTCA DO-178C / EUROCAE ED-12C DESIGN ASSURANCE LEVEL C (DAL C)
- LEAD ARCHITECT       : GOURGOPAL MOHAPATRA (TEAM VITALX CORE)
-==================================================================================================
-```
+<br/>
 
----
+<!-- ========================================================================================= -->
+<!-- CLUSTER 1: MISSION COMMAND & SOVEREIGN SUPREMACY (DENSE AEROSPACE HUD)                   -->
+<!-- ========================================================================================= -->
+<a href="06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md"><img height="28" src="https://img.shields.io/badge/MISSION%20AUTHORITY-COMMANDER%20GOURAGOPAL%20MOHAPATRA%20(GOURGOPAL618)-00f2fe?style=for-the-badge&logo=spacex&logoColor=00f2fe&labelColor=050814"/></a>
+<a href="06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md"><img height="28" src="https://img.shields.io/badge/WAR%20ROOM-JCC%20CAMPUS%203%20(HUMAN%20SPACEFLIGHT%20DIVISION)-7f00ff?style=for-the-badge&logo=nasa&logoColor=7f00ff&labelColor=050814"/></a>
+<a href="#-01--tactical-mission-architecture--the-8020-safe-ai-flight-law"><img height="28" src="https://img.shields.io/badge/DECISION%20ENGINE-VITALX--CORE--RECREATED--V1-ff007f?style=for-the-badge&logo=atom&logoColor=ff007f&labelColor=050814"/></a>
+<a href="07_ASTRO_DOCS/07_SYSTEM_ARCHITECTURE_DOCS/"><img height="28" src="https://img.shields.io/badge/FLIGHT%20RELEASE-v1.0.0--TRL7--OPERATIONAL-00ffab?style=for-the-badge&logo=clockify&logoColor=00ffab&labelColor=050814"/></a>
 
-## 📑 Table of Contents
+<br/><br/>
 
-1. [Executive Summary & The Deep-Space Dilemma](#-1-executive-summary--the-deep-space-dilemma)
-2. [The 80/20 Safe AI Flight Architecture](#-2-the-8020-safe-ai-flight-architecture)
-3. [End-to-End Operational Pipeline](#-3-end-to-end-operational-pipeline)
-4. [The 12-Dimensional Telemetry Tensor $\mathbf{X}(t)$](#-4-the-12-dimensional-telemetry-tensor-mathbfx--mathbfr12)
-5. [Mathematical & Biophysical Formulations](#-5-mathematical--biophysical-formulations)
-   - [5.1 Cephalad Hydrodynamic Fluid Shift & ICP Index ($I_{\text{ICP}}$)](#51-cephalad-hydrodynamic-fluid-shift--icp-index-i_texticp)
-   - [5.2 Cardiovascular Stroke Volume Atrophy Model ($SV$)](#52-cardiovascular-stroke-volume-atrophy-model-sv)
-   - [5.3 Deterministic Tri-Color Triage Matrix](#53-deterministic-tri-color-triage-matrix)
-6. [DO-178C Level C Verification & Automated Audit](#-6-do-178c-level-c-verification--automated-audit)
-   - [6.1 Verification Summary](#61-verification-summary)
-   - [6.2 The 3-Tab Live Judging Workflow](#62-the-3-tab-live-judging-workflow)
-7. [Repository File & Subsystem Topology](#-7-repository-file--subsystem-topology)
-8. [Installation & Rapid Quickstart](#-8-installation--rapid-quickstart)
-9. [The 3-Second Astronaut HUD Cockpit](#-9-the-3-second-astronaut-hud-cockpit)
-10. [Traceability & Engineering Provenance](#-10-traceability--engineering-provenance)
+<!-- ========================================================================================= -->
+<!-- CLUSTER 2: FULL-PROJECT MASTER AUDIT & DO-178C LEVEL C INTEGRITY                          -->
+<!-- ========================================================================================= -->
+<a href="06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md"><img height="28" src="https://img.shields.io/badge/MASTER%20AUDIT-11%2F11%20SUITES%20%E2%80%A2%20514%2F514%20PASSED%20(100.0%25)-00ffab?style=for-the-badge&logo=pytest&logoColor=00ffab&labelColor=050814"/></a>
+<a href="06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md"><img height="28" src="https://img.shields.io/badge/STATEMENT%20COVERAGE-2%2C085%20%2F%202%2C085%20STATEMENTS%20(100.0%25)-00f2fe?style=for-the-badge&logo=checkmarx&logoColor=00f2fe&labelColor=050814"/></a>
+<a href="07_ASTRO_DOCS/06_MISSION_REPORTS_DOCS/01_DO178C_DAL_C_INTEGRATED_100_TEST_SUITE_IVNV_REPORT.md"><img height="28" src="https://img.shields.io/badge/IV%26V%20BATTERY-100%2F100%20STRESS%20TESTS%20PASSED-7f00ff?style=for-the-badge&logo=speedtest&logoColor=7f00ff&labelColor=050814"/></a>
+<a href="06_MISSION_REPORTS/DO178C_LEVEL_C_EXECUTION_PLAYBOOK.md"><img height="28" src="https://img.shields.io/badge/AIRWORTHINESS-RTCA%20DO--178C%20LEVEL%20C%20(DAL%20C)-ff007f?style=for-the-badge&logo=shield&logoColor=ff007f&labelColor=050814"/></a>
 
----
+<br/><br/>
 
-## 🌌 1. Executive Summary & The Deep-Space Dilemma
+<!-- ========================================================================================= -->
+<!-- CLUSTER 3: BIO-ASTRONAUTIC CLINICAL PILLARS & DECISION CORE                               -->
+<!-- ========================================================================================= -->
+<a href="07_ASTRO_DOCS/03_DECISION_CORE_DOCS/02_BIOPHYSICAL_PHYSICS_ENGINE_SPECIFICATION_AND_AUDIT.md"><img height="28" src="https://img.shields.io/badge/INNO%201%20SANS-CEPHALAD%20FLUID%20SHIFT%20(I__ICP)-ff5500?style=for-the-badge&logo=activity&logoColor=ff5500&labelColor=050814"/></a>
+<a href="07_ASTRO_DOCS/03_DECISION_CORE_DOCS/02_BIOPHYSICAL_PHYSICS_ENGINE_SPECIFICATION_AND_AUDIT.md"><img height="28" src="https://img.shields.io/badge/INNO%201%20CARDIO-STROKE%20VOLUME%20ATROPHY%20(SV)-00d2ff?style=for-the-badge&logo=heart&logoColor=00d2ff&labelColor=050814"/></a>
+<a href="07_ASTRO_DOCS/03_DECISION_CORE_DOCS/00_DECISION_CORE_SUBSYSTEM_VERIFICATION_INDEX.md"><img height="28" src="https://img.shields.io/badge/TRIAGE%20STATE%20MACHINE-12%20CANONICAL%20RULES%20(RED%2FAMBER%2FGREEN)-aa00ff?style=for-the-badge&logo=target&logoColor=aa00ff&labelColor=050814"/></a>
+<a href="07_ASTRO_DOCS/03_DECISION_CORE_DOCS/04_COCKPIT_COUNTERMEASURE_DISPATCHER_SPECIFICATION_AND_AUDIT.md"><img height="28" src="https://img.shields.io/badge/COCKPIT%20HUD-3--SECOND%20ACTIONABLE%20DISPATCH-00ffab?style=for-the-badge&logo=airplay&logoColor=00ffab&labelColor=050814"/></a>
 
-During interplanetary transit to Mars or extended lunar surface operations, the human body undergoes extreme physiological remodeling:
-* **Cephalad Fluid Shift:** Loss of hydrostatic gravity gradient ($\rho g h = 0$) causes $\approx 1.5$ to $2.0\,\text{L}$ of blood and interstitial fluid to shift towards the head, elevating central venous pressure and intracranial pressure (ICP), causing **Spaceflight-Associated Neuro-ocular Syndrome (SANS)** and permanent visual impairment.
-* **Cardiovascular Atrophy:** Diminished myocardial workload induces left ventricular mass loss, arterial stiffening, and post-landing orthostatic intolerance.
-* **Environmental Stressors:** Elevated ambient spacecraft cabin $\text{CO}_2$ ($P_{\text{cabin}}^{\text{CO}_2} > 3\,\text{mmHg}$) causes cerebral vasodilation, compounding intracranial hypertension.
-* **Cognitive Fatigue:** Circadian disruption, microgravity-induced sleep fragmentation, and cumulative reaction latency spikes.
+<br/><br/>
 
-### Why Ground Telemedicine Fails
-At Mars distance ($> 55 \times 10^6\,\text{km}$), electromagnetic communication latency ranges from **4 to 24 minutes one-way** (8 to 48 minutes round-trip), punctuated by planetary occultations and solar conjunction blackouts. **Earth-based real-time clinical intervention is physically impossible.** The crew must possess autonomous, on-board clinical intelligence.
+<!-- ========================================================================================= -->
+<!-- CLUSTER 4: DATA VAULT & FLIGHT STANDARDS                                                  -->
+<!-- ========================================================================================= -->
+<a href="07_ASTRO_DOCS/01_DATA_VAULT_DOCS/00_DATA_VAULT_CATALOG_INDEX.md"><img height="28" src="https://img.shields.io/badge/DATA%20VAULT-8%20DEDICATED%20ARCHIVES%20%E2%80%A2%20MD%20%26%20RST-00f2fe?style=for-the-badge&logo=database&logoColor=00f2fe&labelColor=050814"/></a>
+<a href="07_ASTRO_DOCS/01_DATA_VAULT_DOCS/01_INGESTION_TELEMETRY_SCHEMA_SPECIFICATION.md"><img height="28" src="https://img.shields.io/badge/TELEMETRY%20CONTRACT-12D%20VECTOR%20TENSOR%20X(t)-7f00ff?style=for-the-badge&logo=matrix&logoColor=7f00ff&labelColor=050814"/></a>
+<a href="07_ASTRO_DOCS/01_DATA_VAULT_DOCS/06_ARTEMIS_II_DOCS/06_ARTEMIS_II_SPECIFICATION.md"><img height="28" src="https://img.shields.io/badge/FLIGHT%20HERITAGE-ARTEMIS%20II%20%E2%80%A2%20SHUTTLE%20DSO%20%E2%80%A2%20APOLLO-ff007f?style=for-the-badge&logo=rocket&logoColor=ff007f&labelColor=050814"/></a>
+<a href="06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md"><img height="28" src="https://img.shields.io/badge/SPACE%20MEDICINE-NASA--STD--3001%20VOL%201%20%26%202-00ffab?style=for-the-badge&logo=shield&logoColor=00ffab&labelColor=050814"/></a>
 
-### Why Pure Machine Learning Fails
-Conventional black-box deep learning architectures are stochastic, unpredictable, and uninterpretable. An opaque neural network hallucination or unconstrained prediction cannot be certified for life-critical spaceflight under **FAA / NASA RTCA DO-178C** or **ARP4754A** safety directives.
-
-**ASTROVITAL AI : VITALX CORE** resolves this crisis by establishing an **80/20 Partitioned Deterministic Architecture**: First-principles physical equations hold 100% diagnostic authority, while auxiliary AI is strictly confined to signal cleanup.
-
----
-
-## 🛡️ 2. The 80/20 Safe AI Flight Architecture
-
-```mermaid
-flowchart TD
-    subgraph S1["Raw Telemetry Vault"]
-        RAW["Multi-Mission Archives<br>(Artemis II, Shuttle DSO, Apollo 7)"]
-    end
-
-    subgraph S2["20% Auxiliary AI Layer"]
-        ADAPT["Adaptive Wavelet / Random Forest<br>Sweat-Drift & Motion Artifact Rejection"]
-    end
-
-    subgraph S3["Safety Barrier Gate"]
-        GATE{"Mathematical Sanity Gate<br>Ω_bio Constraint Envelope"}
-        FAIL["HARDWARE_SENSOR_DECOUPLED<br>Revert to 15-min Rolling Median"]
-    end
-
-    subgraph S4["80% Supreme Biophysical Core (Deterministic)"]
-        ICP["Hydrodynamic Cephalad Shift<br>I_ICP(t) & SANS Scoring"]
-        CARD["Cardiovascular Atrophy<br>Stroke Volume SV(t) Decay"]
-        TRIAGE["Deterministic Triage Engine<br>Green / Amber / Red"]
-    end
-
-    subgraph S5["Flight Cockpit Head"]
-        HUD["3-Second Astronaut HUD<br>Actionable Countermeasure Deck"]
-    end
-
-    RAW --> ADAPT
-    ADAPT --> GATE
-    GATE -- Transgression / Decoupling --> FAIL
-    GATE -- Physically Valid --> ICP
-    GATE -- Physically Valid --> CARD
-    FAIL --> ICP
-    ICP --> TRIAGE
-    CARD --> TRIAGE
-    TRIAGE --> HUD
-
-    style S4 fill:#0b3d91,stroke:#4189e0,stroke-width:2px,color:#fff
-    style GATE fill:#b30000,stroke:#ff6666,stroke-width:2px,color:#fff
-    style S2 fill:#2a2f3a,stroke:#888,stroke-width:1px,color:#fff
-    style HUD fill:#004d26,stroke:#00b359,stroke-width:2px,color:#fff
-```
-
-### Absolute Architectural Guarantees:
-1. **Zero Black-Box Diagnostic Authority:** Adaptive neural models are strictly prohibited from evaluating patient pathology or commanding medical countermeasures.
-2. **Mathematical Sanity Envelope $\mathbf{\Omega}_{\text{bio}}$:** Any AI-conditioned vector must satisfy physiological conservation boundaries:
-   $$\mathbf{\Omega}_{\text{bio}} = \left\{ \mathbf{X} \in \mathbb{R}^{12} \;\middle|\; 30 \le \text{HR} \le 220, \; 50 \le \text{SpO}_2 \le 100, \; 34.0 \le T_c \le 42.0^\circ\text{C}, \; \left|\frac{d(\text{SpO}_2)}{dt}\right| \le \lambda_{\text{max}} \right\}$$
-3. **Deterministic Failsafe Fallback:** If sensor decoupling or numerical corruption occurs, AI outputs are instantly discarded, raising `HARDWARE_SENSOR_DECOUPLED_FLAG` and reverting to rolling historical median projections.
-4. **100% White-Box Auditable Logic:** Every triage transition is mathematically traceable to specific physiological boundary violations with zero stochastic variance.
-
----
-
-## ⚡ 3. End-to-End Operational Pipeline
-
-The system operates across six deterministic stages governed by strict high-level safety requirements:
+<br/><br/>
 
 ```
-[ STAGE 1: INGESTION & TEMPORAL HARMONIZATION ]
-  │  Multi-Mission Ingestion (Artemis II Orion HOBO, Shuttle DSO 479/462, Apollo 7)
-  │  Uniform 1-min grid resample | Bounded forward fill (≤ 5 min) | Failsafe baseline fallback
-  ▼
-[ STAGE 2: 20% ADAPTIVE SENSOR DRIFT & MOTION FILTER ]
-  │  Isolates high-frequency accelerometric noise and sweat-bead dielectric shifts
-  │  Pure signal conditioning — zero diagnostic authority
-  ▼
-[ STAGE 3: DO-178C MATHEMATICAL SANITY & BOUNDARY GATE ]
-  │  Checks X̂(t) ∈ Ω_bio
-  ├─► [VIOLATION] ── Discard AI output ──► Raise DECOUPLED_FLAG ──► Project historical median
-  └─► [COMPLIANT] ── Pass sanitized vector to biophysical core
-  ▼
-[ STAGE 4: 20% DYNAMIC BIOMARKER SENSITIVITY GRADIENT ]
-  │  Sensitivity Jacobian ∇_X L_divergence computes leading pre-symptomatic divergence vector
-  ▼
-[ STAGE 5: 80% FIRST-PRINCIPLES BIOPHYSICAL CORE ]
-  │  Hydrodynamic Cephalad Fluid Shift & ICP Index: I_ICP(t)
-  │  Cardiovascular Deconditioning & Stroke Volume Index: SV(t)
-  │  Deterministic Closed-Form Triage Classification: Green / Amber / Red
-  ▼
-[ STAGE 6: THE 3-SECOND ASTRONAUT COCKPIT & COUNTERMEASURE DISPATCH ]
-  │  High-contrast visual tri-color alert banner (< 3 seconds cognitive burden)
-  │  Plain-English white-box audit trail sentence
-  └  Autonomous Countermeasure Protocol Deck (Chibis LBNP suit, ergometer, fluid loading)
+╔═══════════════════════════════════════════════════════════════════════════════════════╗
+║                   ASTROVITAL AI : VITALX CORE (RECREATED V1)                          ║
+║    AUTONOMOUS BIO-ASTRONAUTIC CLINICAL DECISION SUPPORT FOR CISLUNAR & MARS TRANSIT    ║
+║                                                                                       ║
+║  "Dedicated with eternal reverence to the Lotus Feet of Mahaprabhu Shri Jagannath"   ║
+╚═══════════════════════════════════════════════════════════════════════════════════════╝
+```
+
+</div>
+
+---
+
+## 🔱 MISSION CLASSIFICATION & TELEMETRY MANIFEST
+
+| TACTICAL VECTOR | FLIGHT SPECIFICATION & VERIFIED VALUES |
+| :--- | :--- |
+| **SYSTEM CODENAME** | **ASTROVITAL AI : VITALX CORE (RECREATED V1)** |
+| **TARGET MISSION HORIZONS** | **Artemis Deep Space Transit, Lunar Gateway, Mars Transit Vehicle (MTV)** |
+| **SUPREME MISSION COMMANDER** | **Commander Gouragopal Mohapatra (`GOURGOPAL618`)** |
+| **OPERATIONAL SANCTUM** | **Jagannath Command Center (JCC) — Campus 3 (Human Spaceflight Division), Odisha, Bharat** |
+| **SACRED CONSECRATION** | Dedicated with eternal reverence to the Lotus Feet of **Mahaprabhu Shri Jagannath** |
+| **COMMAND TRANSMISSION** | [`ggmohapatra.info.2007@gmail.com`](mailto:ggmohapatra.info.2007@gmail.com) |
+| **TARGET FLIGHT LOCK** | **14 November 2026 @ 20:30:00 IST (`v1.0.0-TRL7-OPERATIONAL`)** |
+| **FULL-PROJECT TEST AUDIT** | **11 / 11 TEST SUITES PASSED • 514 / 514 TESTS (100.0% VERIFIED · 19.05s)** |
+| **STRUCTURAL STATEMENT COVERAGE** | **2,085 / 2,085 STATEMENTS AT 100.0% (ZERO DEAD CODE · DO-178C DAL C)** |
+| **SAFETY ARCHITECTURE LAW** | **80% Biophysical Supreme Head (Deterministic) + 20% Adaptive AI Auxiliary** |
+| **AIRWORTHINESS FIREWALL** | **Mathematical Sanity Gate $\mathbf{\Omega}_{\text{bio}}$ (NASA-STD-3001 Slew & Boundary Caps)** |
+| **CLINICAL TRIAGE CORE** | **12 Prioritized Canonical Rules (RED $\to$ AMBER $\to$ GREEN State Machine)** |
+| **ASTRONAUT COCKPIT HUD** | **$\le 3\text{-Second}$ Actionable Display • Physical Locker Routing ($L_1 \dots L_5$) • 1.2 kHz Klaxon** |
+| **HISTORICAL DATA VAULT** | **8 Dedicated Archives (Artemis II Orion, Shuttle DSO 328/479, Apollo 7, ISS, OSDR)** |
+| **SOVEREIGN LEGAL CHARTER** | **JSTIRPL-v1.0** (Open Deep Space Research • Commercial Exploitation Restricted) |
+
+---
+
+## 🛰️ 01 — TACTICAL MISSION ARCHITECTURE & THE 80/20 SAFE AI FLIGHT LAW
+
+> **THE DEEP-SPACE MEDICAL PARADOX:** Beyond Low Earth Orbit (LEO), communication latency between Mars Transit or Lunar Gateway and Mission Control at NASA Johnson Space Center ranges from **2.6 seconds to 44 minutes round-trip**. When an astronaut experiences acute cardiac asystole, Spaceflight Associated Neuro-ocular Syndrome (SANS) intracranial surge, or explosive cabin decompression, ground telemedicine is mathematically impossible. The vehicle must possess **autonomous, zero-latency clinical decision intelligence**.
+
+However, unconstrained deep learning and black-box Large Language Models (LLMs) are **unacceptable for life-critical spaceflight**: they suffer from non-deterministic hallucination, covariate drift under extreme microgravity conditions, and catastrophic inability to explain diagnostic pathways.
+
+### The 80/20 Safe AI Flight Architecture
+ASTROVITAL resolves this paradox through an immutable structural partition:
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                        STAGE 1: 12-DIMENSIONAL DATA VAULT INGESTION                    │
+│   [Artemis II Orion HOBO] + [Shuttle DSO Cardiovascular] + [Apollo 7 Clinical Baseline]│
+│               ──▶ 1.0 Hz Synchronizer & Bounded Imputation (12D Vector) ──▶            │
+└───────────────────────────────────────────┬────────────────────────────────────────────┘
+                                            │
+                                            ▼
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│               THE 20% ADAPTIVE AI AUXILIARY LAYER (ZERO CLINICAL AUTHORITY)            │
+│  • inno3_signal_stabilizer.py: 6-Axis IMU Wavelet & Adaptive NLMS Motion Denoising     │
+│  • inno6_biomarker_ranker.py: Dynamic Dirichlet Gradient Biomarker Sensitivity Ranker   │
+│             >>> STRICTLY CONSTRAINED TO SIGNAL CLEANING & ATTENTION WEIGHTS <<<        │
+└───────────────────────────────────────────┬────────────────────────────────────────────┘
+                                            │
+                                            ▼
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│           THE AIRWORTHINESS FIREWALL: MATHEMATICAL SANITY GATE (Ω_bio)                 │
+│  • NASA-STD-3001 Hard Physiologic Bounding Clamps (e.g., HR in [30, 220], SBP in [70,240])│
+│  • Temporal Slew Rate Derivative Limiter (|dV/dt| <= Max Physical Rate)                │
+│  • Hemodynamic Plausibility Guarantee: SBP - DBP >= 15.0 mmHg                          │
+└───────────────────────────────────────────┬────────────────────────────────────────────┘
+                                            │
+                                            ▼
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│           THE 80% BIOPHYSICAL SUPREME HEAD (EXCLUSIVE CLINICAL AUTHORITY)              │
+│  • biophysical_physics_engine.py: Closed-Form Hemodynamics (MAP, SI, MSI, CPP)        │
+│  • Innovation 1: Cephalad Fluid Shift Hydrodynamic ICP Gradient Model I_ICP(t)         │
+│  • Innovation 1: Left Ventricular Stroke Volume Microgravity Decay Model SV(t)         │
+│  • triage_model_engine.py: 12 Canonical Deterministic Prioritized Clinical Rules       │
+│  • Instant Escalation (0ms) + 5-Frame Debounce De-escalation Hysteresis               │
+│  • Sovereign Crew Medical Officer (CMO) Authenticated Manual Override                  │
+└───────────────────────────────────────────┬────────────────────────────────────────────┘
+                                            │
+                                            ▼
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                  STAGE 6: 3-SECOND AUTONOMOUS ORION COCKPIT HUD DISPATCH               │
+│  • cockpit_countermeasure_dispatcher.py: High-Contrast Visual Cockpit Action Payload   │
+│  • Physical Medical Equipment Locker Routing: L1 (AED), L2 (Meds), L3 (O2), L4, L5    │
+│  • Frequency-Coded Acoustic Tones: 1.2 kHz Red Klaxon / 600 Hz Amber Pulse / 0 Hz Green│
+│  • Step-by-Step Executable Emergency Medical Checklist Deck                           │
+└────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 📊 4. The 12-Dimensional Telemetry Tensor $\mathbf{X}(t) \in \mathbb{R}^{12}$
+## 🔬 02 — THE 12-DIMENSIONAL TELEMETRY TENSOR $\mathbf{X}(t) \in \mathbb{R}^{12}$
 
-All flight telemetry is transformed into a standardized, synchronized float64 tensor:
+Under RTCA DO-178C DAL C engineering, all inbound physiological telemetry is harmonized onto a synchronized $1.0\text{ Hz}$ time grid and mapped into a normalized 12-dimensional vector:
 
-$$\mathbf{X}(t) = \begin{bmatrix} \text{HR} & \text{SBP} & \text{DBP} & \text{RMSSD} & \text{SpO}_2 & T_c & G & \Delta t_{\text{sleep}} & \tau_{\text{react}} & t_{\mu g} & P_{\text{cabin}}^{\text{CO}_2} & \|\vec{a}_{\text{accel}}\| \end{bmatrix}^T$$
+$$\mathbf{X}(t) = \begin{bmatrix} x_1(t) & x_2(t) & \dots & x_{12}(t) \end{bmatrix}^T \in \mathbb{R}^{12}$$
 
-| Idx | Parameter | Description | Sensor / Flight Hardware Source | SI Unit | Valid Range | Nominal Resting |
+| Index | Telemetry Channel | Clinical & Aeronautical Significance | Sensor Transducer | Unit | NASA-STD-3001 Valid Range | Nominal Baseline |
 | :---: | :--- | :--- | :--- | :---: | :---: | :---: |
-| `0` | `heart_rate` | Chronotropic frequency (ECG / PPG) | 3-Lead ECG / Bio-harness | $\text{bpm}$ | $[30.0, 220.0]$ | $70.0$ |
-| `1` | `blood_pressure_systolic` | Peak left ventricular systolic pressure | Finapres continuous finger cuff | $\text{mmHg}$ | $[70.0, 240.0]$ | $120.0$ |
-| `2` | `blood_pressure_diastolic` | End-diastolic arterial pressure | Finapres continuous finger cuff | $\text{mmHg}$ | $[40.0, 140.0]$ | $80.0$ |
-| `3` | `rmssd` | Parasympathetic vagal tone (HRV) | R-peak millisecond detector | $\text{ms}$ | $[5.0, 250.0]$ | $42.0$ |
-| `4` | `spo2` | Arterial blood oxygen saturation | Dual-wavelength pulse oximeter | $\%$ | $[50.0, 100.0]$ | $98.0$ |
-| `5` | `core_temp` | Core body temperature ($T_c$) | Tympanic IR / Ingestible telemetric pill | $^\circ\text{C}$ | $[34.0, 42.0]$ | $37.0$ |
-| `6` | `blood_glucose` | Circulating blood glucose level | Continuous Glucose Monitor (CGM) | $\text{mg/dL}$ | $[40.0, 400.0]$ | $95.0$ |
-| `7` | `sleep_deficit_hours` | Cumulative sleep debt over 72h | Actigraphy wrist log & sleep journal | $\text{hours}$ | $[0.0, 48.0]$ | $0.0$ |
-| `8` | `reaction_latency_ms` | Psychomotor vigilance latency (PVT) | Astronaut Cockpit interactive test | $\text{ms}$ | $[150.0, 1500.0]$ | $240.0$ |
-| `9` | `microgravity_days` | Elapsed mission duration in $\mu g$ | Mission Elapsed Time (MET) clock | $\text{days}$ | $[0.0, 1000.0]$ | $0.0$ |
-| `10` | `cabin_co2_mmhg` | Ambient cabin $\text{CO}_2$ partial pressure | Orion Environmental Micro-logger (HOBO) | $\text{mmHg}$ | $[0.0, 15.0]$ | $2.5$ |
-| `11` | `accel_magnitude_g` | Total body accelerometric vector | Wearable 3-axis MEMS accelerometer | $g$ | $[0.0, 10.0]$ | $0.0$ |
+| **0** | `heart_rate` | Chronotropic strain, tachycardia, arrhythmia | 3-Lead ECG / Optical PPG | $\text{bpm}$ | $[30.0, 220.0]$ | $70.0$ |
+| **1** | `blood_pressure_sys` | Peak systolic pressure; sensitive to fluid shift | Continuous arterial cuff | $\text{mmHg}$ | $[70.0, 240.0]$ | $120.0$ |
+| **2** | `blood_pressure_dia` | Diastolic baseline; essential for MAP calculation | Continuous plethysmograph | $\text{mmHg}$ | $[40.0, 140.0]$ | $80.0$ |
+| **3** | `rmssd` | Root Mean Square Successive Diff; vagal autonomic tone | High-res R-peak detector | $\text{ms}$ | $[5.0, 250.0]$ | $42.0$ |
+| **4** | `spo2` | Arterial oxygenation; primary hypoxia detector | Dual-wavelength oximeter | $\%$ | $[50.0, 100.0]$ | $98.0$ |
+| **5** | `core_temp` | Core thermal regulation; space fever indicator | Ingestible radio pill / IR | $^\circ\text{C}$ | $[34.0, 42.0]$ | $37.0$ |
+| **6** | `blood_glucose` | Circulating fuel; metabolic depletion indicator | Continuous glucose monitor | $\text{mg/dL}$ | $[40.0, 400.0]$ | $95.0$ |
+| **7** | `perfusion_index` | Pulsatile/non-pulsatile blood flow ratio | Optical plethysmograph | $\%$ | $[0.1, 20.0]$ | $4.0$ |
+| **8** | `respiration_rate` | Ventilatory frequency; hyperventilation/apnea | Bioimpedance chest band | $\text{br/min}$ | $[4.0, 50.0]$ | $14.0$ |
+| **9** | `motion_artifact_idx`| Kinematic jerk & dynamic vibration intensity | 6-Axis IMU accelerometer | $\text{norm}$ | $[0.0, 1.0]$ | $0.05$ |
+| **10**| `ecg_lead2_entropy` | Spectral Shannon entropy; electrophysiologic disorder | Lead-II ECG DSP window | $\text{bits}$ | $[0.0, 8.0]$ | $3.5$ |
+| **11**| `galvanic_skin_resp` | Autonomic sympathetic electrodermal conductance | Dual epidermal electrodes | $\mu\text{S}$ | $[0.5, 30.0]$ | $5.0$ |
 
 ---
 
-## 📐 5. Mathematical & Biophysical Formulations
+## 📈 03 — MATHEMATICAL & BIOPHYSICAL FORMULATIONS
 
-### 5.1 Cephalad Hydrodynamic Fluid Shift & ICP Index ($I_{\text{ICP}}$)
-In microgravity, absence of hydrostatic pressure head triggers cephalad venous redistribution. Intracranial pressure ($I_{\text{ICP}}$) and SANS risk are governed by:
+### 3.1 Innovation 1: Cephalad Hydrodynamic Fluid Shift & SANS ICP Gradient ($I_{\text{ICP}}$)
+In microgravity ($0G$), loss of hydrostatic venous pressure causes $\sim 1.5 - 2.0\text{ L}$ of blood and interstitial fluid to shift toward the cranial vault, leading to Spaceflight Associated Neuro-ocular Syndrome (SANS), optic disc edema, and elevated Intracranial Pressure (ICP).
 
-$$I_{\text{ICP}}(t) = \alpha_1 \cdot \text{MAP}(t) + \alpha_2 \cdot \log\left(1 + t_{\mu g}\right) + \alpha_3 \cdot P_{\text{cabin}}^{\text{CO}_2}(t) - \alpha_4 \cdot \text{RMSSD}(t)$$
+$$\text{MAP}(t) = \text{DBP}(t) + \frac{1}{3} \left( \text{SBP}(t) - \text{DBP}(t) \right)$$
 
-Where:
-* $\text{MAP}(t) = \frac{\text{SBP}(t) + 2\text{DBP}(t)}{3}$ (Mean Arterial Pressure, driving cerebral perfusion).
-* $\log(1 + t_{\mu g})$ models the logarithmic fluid redistribution curve established in Space Shuttle and ISS ultrasound studies.
-* $P_{\text{cabin}}^{\text{CO}_2}(t)$ accounts for hypercapnic cerebral vasodilation.
-* $\text{RMSSD}(t)$ reflects parasympathetic counter-regulatory buffering.
-* Coupling Constants: $\alpha_1 = 0.012$, $\alpha_2 = 0.180$, $\alpha_3 = 0.045$, $\alpha_4 = 0.003$.
+$$\text{PP}(t) = \text{SBP}(t) - \text{DBP}(t)$$
 
-### 5.2 Cardiovascular Stroke Volume Atrophy Model ($SV$)
-Prolonged microgravity reduces myocardial workload, inducing myocardial compliance remodeling and stroke volume decay:
+The non-invasive Cephalad Congestion Index $I_{\text{ICP}}(t)$ is derived from first-principles hydrodynamic coupling:
 
-$$SV(t) = SV_0 \cdot \exp\left(-\kappa_{\text{atrophy}} \cdot t_{\mu g}\right) \cdot \left[1 + \beta \cdot \text{ExerciseMetric}(t)\right]$$
+$$I_{\text{ICP}}(t) = w_1 \left( \frac{\text{MAP}(t)}{\text{MAP}_{\text{base}}} \right) + w_2 \left( \frac{\text{PP}(t)}{\text{PP}_{\text{base}}} \right) + w_3 \left( 1 - \exp\left( -\frac{t_{\text{mission}}}{\tau_{\text{fluid}}} \right) \right)$$
 
-$$CO(t) = \text{HR}(t) \times SV(t)$$
+where calibrated constants are $w_1 = 0.40, w_2 = 0.35, w_3 = 0.25$, and $\tau_{\text{fluid}} = 43.2\text{ hours}$. Estimated ICP ($\widehat{\text{ICP}}$) in $\text{mmHg}$ is computed as:
 
-Where $SV_0 = 70.0\,\text{mL}$, $\kappa_{\text{atrophy}} = 0.0035\,\text{day}^{-1}$, and $\beta = 0.15$ countermeasure efficacy factor.
+$$\widehat{\text{ICP}}(t) = \text{ICP}_{\text{base}} + \Delta \text{ICP}_{\max} \cdot \left( \frac{I_{\text{ICP}}(t) - 1.0}{I_{\text{ICP, max}} - 1.0} \right)$$
 
-### 5.3 Deterministic Tri-Color Triage Matrix
-
-```mermaid
-stateDiagram-v2
-    direction LR
-    [*] --> GREEN: Nominal Induction
-    GREEN --> AMBER: I_ICP >= 1.35 OR Sleep Deficit >= 16h
-    AMBER --> GREEN: LBNP Countermeasure + Recovery
-    AMBER --> RED: I_ICP >= 1.85 OR SpO2 < 88% + HR > 125
-    GREEN --> RED: Acute Crisis (SBP >= 165 mmHg)
-    RED --> AMBER: Medical Intervention Stabilized
-```
-
-| Triage State | Physiological Criterion (Deterministic Boolean) | Clinical State | Autonomous Countermeasure Action |
-| :---: | :--- | :--- | :--- |
-| 🟢 **GREEN** | $\forall j, \;\left\|\frac{X_j - \mu_j}{\sigma_j}\right\| \le 1.5 \;\land\; I_{\text{ICP}} < 1.35$ | Nominal Homeostasis | Standard mission flight profile, routine nutrition and exercise. |
-| 🟡 **AMBER** | $1.35 \le I_{\text{ICP}} < 1.85 \;\lor\; \Delta t_{\text{sleep}} \ge 16.0\,\text{h} \;\lor\; 1.5 < Z_k \le 3.0$ | Compensatory Stress / Early SANS | **Deck Alpha:** 45-min Chibis LBNP suit (-35 mmHg), 500 mL isotonic rehydration, cabin spectrum blue-shift. |
-| 🔴 **RED** | $I_{\text{ICP}} \ge 1.85 \;\lor\; (\text{SpO}_2 < 88\% \land \text{HR} > 125) \;\lor\; \text{SBP} \ge 165$ | Acute Decompensation | **Deck Bravo:** Emergency supplemental $\text{O}_2$, immediate EVA abort, hypercapnia purge, medical officer alert. |
+When $\widehat{\text{ICP}}(t) \ge 20.0\text{ mmHg}$, the system instantly triggers **`AMBER RULE-06`**, dispatching the Chibis Lower Body Negative Pressure (LBNP) suit from Medical Locker $L_5$.
 
 ---
 
-## 🏆 6. DO-178C Level C Verification & Automated Audit
+### 3.2 Innovation 1: Cardiovascular Stroke Volume Microgravity Atrophy ($SV$)
+Due to chronic myocardial unloading and plasma volume contraction during deep space transit:
 
-Under **RTCA DO-178C Design Assurance Level C (DAL C)**, 100% of executable source statements must be verified against formal High-Level Requirements with zero dead code.
+$$SV(t) = SV_0 \cdot \left[ 1.0 - \delta_{\max} \left( 1.0 - \exp\left( -\frac{t_{\text{days}}}{\tau_{\text{cardiac}}} \right) \right) \right] \cdot \left( \frac{\text{PP}(t)}{\text{PP}_{\text{base}}} \right)^{0.50}$$
 
-### 6.1 Verification Summary
-
-```
-=============================== tests coverage ================================
-_______________ coverage: platform win32, python 3.12.0-final-0 _______________
-
-Name                                                         Stmts   Miss  Cover
---------------------------------------------------------------------------------
-02_AI_CORE\01_src\ingestion_adapter.py                         234      0   100%
-02_AI_CORE\01_src\inno3_signal_stabilizer.py                   377      0   100%
-02_AI_CORE\01_src\sanity_gate.py                               419      0   100%
-02_AI_CORE\01_src\inno6_biomarker_ranker.py                    321      0   100%
-02_AI_CORE\01_src\pipeline_orchestrator.py                     138      0   100%
-03_DECISION_CORE\rule_schema_validator.py                      219      0   100%
-03_DECISION_CORE\biophysical_physics_engine.py                 162      0   100%
-03_DECISION_CORE\triage_model_engine.py                        122      0   100%
-03_DECISION_CORE\cockpit_countermeasure_dispatcher.py           93      0   100%
---------------------------------------------------------------------------------
-TOTAL (ALL 9 PRODUCTION MODULES)                              2085      0   100%
-====================== 514 passed, 3 warnings in 19.05s =======================
-```
-
-| Verification Parameter | DO-178C DAL C Standard | ASTROVITAL VITALX Result | Audit Status |
-| :--- | :--- | :--- | :--- |
-| **Structural Statement Coverage** | **100% of executable code** | **100.0% (2,085 / 2,085 statements)** | **COMPLIANT (PASS)** |
-| **Unexercised / Dead Code** | 0 statements allowed | **0 statements (Zero dead code)** | **COMPLIANT (PASS)** |
-| **Requirements-Based Tests** | Direct traceability to HLR | **514 Automated Unit, E2E & IV&V Tests** | **COMPLIANT (PASS)** |
-| **Test Suite Pass Rate** | 100% test pass rate | **100% (514 Passed, 0 Failed)** | **COMPLIANT (PASS)** |
-| **Execution Performance / Latency** | $< 30.0\text{ seconds}$ | **19.05 seconds (All 11 Test Suites)** | **OPTIMAL** |
-| **Cryptographic Provenance** | Immutable sidecar hashes | **SHA-256 JSON Manifests** | **COMPLIANT (PASS)** |
-
-### 6.2 The 3-Tab Live Judging Workflow
-To demonstrate compliance during competition judging in $< 2\text{ minutes}$:
-1. **Tab 1 — Requirements:** Open [`06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md`](06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md). Review formal boundary constraints mapped from `HLR-BIO-001` through `HLR-BIO-004`, `REQ-STAB-01` to `05`, `REQ-GATE-01` to `05`, `REQ-RANK-01` to `05`, `REQ-ORCH-01` to `10`, and `REQ-DEC-P1` to `P5`.
-2. **Tab 2 — Live Execution:** Run the 1-click verification command in terminal:
-   ```powershell
-   $env:COVERAGE_FILE="$env:TEMP\cov_live"; .\vitalx_env\Scripts\python.exe -m pytest -v
-   ```
-   Observe **514 tests passing with 100.0% coverage in ~19 seconds** across all 9 production source files.
-3. **Tab 3 — Autonomous Triage & Cockpit Dispatch:** Inspect [`07_ASTRO_DOCS/03_DECISION_CORE_DOCS/05_DECISION_CORE_VERIFICATION_REPORT.md`](07_ASTRO_DOCS/03_DECISION_CORE_DOCS/05_DECISION_CORE_VERIFICATION_REPORT.md) or execute the orchestrator:
-   ```powershell
-   .\vitalx_env\Scripts\python.exe 02_AI_CORE\01_src\pipeline_orchestrator.py
-   ```
-   Demonstrate instantaneous 3-second triage update, equipment locker routing ($L_1 \dots L_5$), white-box audit sentences, and countermeasure dispatch.
+where $\delta_{\max} = 0.15$ ($15\%$ maximum stroke volume decay), $\tau_{\text{cardiac}} = 14.0\text{ days}$, and $SV_0 = 85.0\text{ mL}$.
 
 ---
 
-## 🗂️ 7. Repository File & Subsystem Topology
+### 3.3 The 12 Canonical Prioritized Clinical Triage Rules
+
+All 12 clinical rules are formally encoded in `03_DECISION_CORE/deterministic_triage_rules.json` and evaluated with **zero non-determinism**:
+
+| Rule ID | Severity | Priority | Clinical Condition Title | Evidence Baseline | Trigger Conditions | Actionable Cockpit Countermeasure | Locker |
+| :---: | :---: | :---: | :--- | :--- | :--- | :--- | :---: |
+| **RULE-01** | `RED` | 1 | **Acute Asystole / Hemodynamic Collapse** | AHA ACLS 2020 / NASA Flight Med | $HR < 30 \lor MAP < 50 \lor SI > 1.4$ | Immediate CPR, Deploy AED, Epinephrine 1mg | **$L_1, L_2$** |
+| **RULE-02** | `RED` | 2 | **Critical Hypoxemia / Depressurization** | NASA-STD-3001 Vol 1 | $SpO_2 < 85\% \lor RR < 8 \lor RR > 35$ | Don Emergency $O_2$ Mask, 100% Flush, Check Seal | **$L_3$** |
+| **RULE-03** | `RED` | 3 | **Severe Shock State (Cardiogenic/Hypovolemic)** | ATLS 10th Ed / Space Med | $SI > 1.0 \lor (SBP < 90 \land HR > 110)$ | Rapid 500 mL Saline Bolus, Trendelenburg Position | **$L_2$** |
+| **RULE-04** | `RED` | 4 | **Hypertensive Crisis / Acute SANS Surge** | ACC/AHA 2017 / NASA SANS | $SBP \ge 180 \lor DBP \ge 120$ | Sublingual Captopril 25mg, Darken Cabin, Head-Up 30° | **$L_2$** |
+| **RULE-05** | `RED` | 5 | **Extreme Core Hyperthermia / Space Fever** | Wilderness Med 2020 | $T_{\text{core}} \ge 39.5^\circ\text{C} \lor (T_c \ge 38.8 \land HR \ge 120)$ | Ice Packs to Axilla/Groin, Cold Oral Hydration | **$L_4$** |
+| **RULE-06** | `AMBER` | 6 | **Cephalad Fluid Shift / Intracranial Congestion** | Inno 1 Hydrodynamic Model | $I_{\text{ICP}} \ge 1.35 \lor \widehat{\text{ICP}} \ge 20.0\text{ mmHg}$ | Deploy Chibis LBNP Suit ($-30\text{ mmHg}$), Lower Sodium | **$L_5$** |
+| **RULE-07** | `AMBER` | 7 | **Cardiovascular Deconditioning / Pre-Syncope** | Shuttle DSO 328 & DSO 479 | $\Delta HR_{\text{stand}} \ge 35 \lor PP \le 22\text{ mmHg}$ | Don Anti-G Suit ($L_5$), Oral Rehydration Salt Packets | **$L_5$** |
+| **RULE-08** | `AMBER` | 8 | **Compensatory Autonomic Tachycardia** | NASA-STD-3001 | $HR \ge 110 \land T_{\text{core}} < 38.5^\circ\text{C}$ | Restrict EVA Workload, Oral Hydration, Monitor ECG | Cabin |
+| **RULE-09** | `AMBER` | 9 | **Moderate Bradycardia / Sinus Sparing** | ACC/AHA Bradycardia Guidelines | $HR \in [30, 50]\text{ bpm} \land SBP \ge 90$ | Acquire 12-Lead ECG, Continuous Telemetry Standby | **$L_1$** |
+| **RULE-10** | `AMBER` | 10 | **Metabolic Fuel Depletion / Hypoglycemia** | ADA 2024 Standards of Care | $BloodGlucose < 65\text{ mg/dL}$ | Ingest Oral Dextrose Gel Tube, Follow-up CGM | **$L_2$** |
+| **RULE-11** | `AMBER` | 11 | **Microvascular Hypoperfusion / Vasoconstriction** | Critical Care Medicine 2022 | $PerfusionIndex < 0.4\% \land SpO_2 \ge 90\%$ | Apply Thermal Heating Packs, Loosen Tight Garments | **$L_4$** |
+| **RULE-12** | `GREEN` | 12 | **Nominal Autonomous Microgravity Adaptation** | NASA Baseline Norms | All parameters within NASA-STD-3001 | Maintain Scheduled Mission Flight Activities | Silent |
+
+---
+
+## 🔬 04 — MASTER DO-178C LEVEL C VERIFICATION AUDIT (514 TESTS · 100.0% COVERAGE)
+
+```
+==================================================================================================
+              RTCA DO-178C / EUROCAE ED-12C DESIGN ASSURANCE LEVEL C (DAL C) AUDIT
+                 FULL CODEBASE VERIFICATION: 11 / 11 TEST SUITES PASSED (100.0%)
+==================================================================================================
+
+Name                                                         Stmts   Miss  Cover   Missing
+------------------------------------------------------------------------------------------
+02_AI_CORE\01_src\ingestion_adapter.py                         234      0   100%   (SEALED)
+02_AI_CORE\01_src\inno3_signal_stabilizer.py                   377      0   100%   (SEALED)
+02_AI_CORE\01_src\sanity_gate.py                               419      0   100%   (SEALED)
+02_AI_CORE\01_src\inno6_biomarker_ranker.py                    321      0   100%   (SEALED)
+02_AI_CORE\01_src\pipeline_orchestrator.py                     138      0   100%   (SEALED)
+03_DECISION_CORE\rule_schema_validator.py                      219      0   100%   (SEALED)
+03_DECISION_CORE\biophysical_physics_engine.py                 162      0   100%   (SEALED)
+03_DECISION_CORE\triage_model_engine.py                        122      0   100%   (SEALED)
+03_DECISION_CORE\cockpit_countermeasure_dispatcher.py           93      0   100%   (SEALED)
+------------------------------------------------------------------------------------------
+TOTAL (ALL 9 PRODUCTION MODULES)                              2085      0   100%   (ZERO DEAD CODE)
+============================= 514 passed, 3 warnings in 19.05s ============================
+```
+
+| Verification Parameter | RTCA DO-178C DAL C Standard | ASTROVITAL VITALX CORE Result | Compliance Status |
+| :--- | :--- | :--- | :---: |
+| **Structural Statement Coverage** | **100% of executable production code** | **100.0% (2,085 / 2,085 statements)** | **COMPLIANT (PASS)** |
+| **Unexercised / Dead Code** | 0 unexercised statements permitted | **0 statements missed (Zero dead code)** | **COMPLIANT (PASS)** |
+| **Requirements Traceability** | Bidirectional HLR $\leftrightarrow$ LLR mapping | **100% Verified in HLR Traceability Matrix** | **COMPLIANT (PASS)** |
+| **Automated Test Battery** | Deterministic unit, integration & stress | **514 Automated Tests (0 Failed, 0 Skipped)**| **COMPLIANT (PASS)** |
+| **Test Suite Pass Rate** | 100% test pass rate required | **100.0% (514 / 514 Passed)** | **COMPLIANT (PASS)** |
+| **Execution Performance / Latency**| Complete test battery $< 30.0\text{ seconds}$ | **19.05 seconds (All 11 Test Suites)** | **OPTIMAL** |
+| **Per-Frame Processing SLA** | Real-time frame processing $< 50.0\text{ ms}$ | **$1.85\text{ ms / frame}$ (Over $27\times$ safety margin)**| **OPTIMAL** |
+| **Cryptographic Provenance** | Immutable sidecar digests | **SHA-256 JSON Manifests on all exports** | **COMPLIANT (PASS)** |
+
+---
+
+## ⚡ 05 — THE 3-TAB LIVE JUDGING WORKFLOW & QUICKSTART REPRODUCTION
+
+To demonstrate airworthiness compliance and autonomous triage during hackathon judging or peer review in **$< 2\text{ minutes}$**:
+
+### Tab 1 — Requirements Verification
+Open [`06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md`](06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md). Review formal boundary constraints mapped from `HLR-BIO-001` through `HLR-BIO-004`, `REQ-STAB-01..05`, `REQ-GATE-01..05`, `REQ-RANK-01..05`, `REQ-ORCH-01..10`, and `REQ-DEC-P1..P5`.
+
+### Tab 2 — Live Master Test Execution
+Run the master 1-click verification command in your PowerShell terminal:
+```powershell
+Set-Location "D:\JAGANNATH_CODE_SANCTUM\JCC CAMPUS 3 (HUMAN SPACEFLIGHT DIVISION)\ASTROVITAL_AI_VITALX_CORE_RECREATED"
+
+# Execute complete 514-test verification battery
+$env:COVERAGE_FILE="$env:TEMP\cov_live"; .\vitalx_env\Scripts\python.exe -m pytest -v
+```
+Watch all **514 tests execute and pass in ~19 seconds** with 100.0% coverage across every single production source file.
+
+### Tab 3 — Autonomous Triage & Cockpit Dispatch Demonstration
+Execute the master pipeline orchestrator to witness immediate escalation and physical equipment locker routing:
+```powershell
+Set-Location "D:\JAGANNATH_CODE_SANCTUM\JCC CAMPUS 3 (HUMAN SPACEFLIGHT DIVISION)\ASTROVITAL_AI_VITALX_CORE_RECREATED"
+
+# Run Master Orchestrator Demo
+.\vitalx_env\Scripts\python.exe 02_AI_CORE\01_src\pipeline_orchestrator.py
+```
+Observe simulated telemetry ingest, 12D canonical tensor mapping, sanity gate clamping, dynamic sensitivity ranking, deterministic triage escalation, and 3-second cockpit HUD payload generation with exact equipment locker assignments ($L_1 \dots L_5$).
+
+---
+
+## 📁 06 — REPOSITORY FILE & SUBSYSTEM TOPOLOGY
 
 ```
 ASTROVITAL_AI_VITALX_CORE_RECREATED/
 │
-├── README.md                                  # You are here (Master Flight Architecture Specification)
-├── pyproject.toml                             # Environment, dependencies, and build configuration
-├── VITALX_CORE_RECREATED_PIPELINE_SPECIFICATION.md # Formal 6-stage deterministic pipeline specification
-├── VITALX_CORE_RECREATED_FOLDER_STRUCTURE.md  # Numbered subsystem layout architecture
+├── README.md                                      # You are here (Master Flight Architecture Specification)
+├── pyproject.toml                                 # Python environment & packaging configuration
+├── requirements.txt                               # Pinned deterministic dependencies
+├── VITALX_CORE_RECREATED_PIPELINE_SPECIFICATION.md# Formal 6-stage operational pipeline specification
+├── VITALX_CORE_RECREATED_FOLDER_STRUCTURE.md      # Numbered subsystem layout architecture
 │
-├── 01_DATA_VAULT/                             # MULTI-MISSION NASA ARCHIVE VAULT
-│   ├── 01_RAW_TELEMETRY/                      # Raw incoming flight archives (Artemis, Shuttle, Apollo)
-│   └── 02_MISSION_READY/                      # Standardized 12D vectors + SHA-256 sidecar JSONs
+├── 01_DATA_VAULT/                                 # 8 MULTI-MISSION NASA ARCHIVAL VAULTS
+│   ├── 01_SENSOR_INTAKE/                          # Real-time telemetry streaming spools & ring buffers
+│   ├── 02_MISSION_READY/                          # Standardized 12D Parquet tensors + SHA-256 sidecars
+│   ├── 03_APOLLO_ARCHIVE/                         # Apollo 7 clinical monitoring, exam logs & strip-charts
+│   ├── 04_SHUTTLE_DSO_ARCHIVE/                    # Space Shuttle DSOs (328, 462, 479, 621) deconditioning
+│   ├── 05_ISS_EXPEDITIONS_ARCHIVE/                # ISS HRP Master Catalog (1.28 MB) & LSAH long-term data
+│   ├── 06_ARTEMIS_II_ARCHIVE/                     # Orion cabin environmental logs (HOBO 1104/1105) & PDS4
+│   ├── 07_SPACE_RADIATION_ARCHIVE/                # NASA OSDR OSD-1010 ISA-Tab transcriptomics & dosimetry
+│   └── 08_RAW_ARCHIVES_ZIP/                       # 14 Golden Master compressed archives (~10.16 MB)
 │
-├── 02_AI_CORE/                                # 80/20 HYBRID COMPUTATIONAL ENGINE
+├── 02_AI_CORE/                                    # 20% ADAPTIVE AI & MASTER INTEGRATION LAYER
 │   ├── 01_src/
-│   │   ├── ingestion_adapter.py               # Multi-mission parser & 12D builder (100% Statement Coverage)
-│   │   ├── inno3_signal_stabilizer.py         # 20% Adaptive AI (Drift, Savitzky-Golay, NLMS, SQI - 100% Coverage)
-│   │   ├── sanity_gate.py                     # DO-178C Mathematical Sanity Gate (Ω_bio - 100% Statement Coverage)
-│   │   ├── inno6_biomarker_ranker.py          # 20% Adaptive AI (Context Matrix, Robust MAD, Entropy - 100% Coverage)
-│   │   ├── inno3_noise_estimator.py           # High-frequency accelerometric noise decoupling
-│   │   ├── inno1_hydrodynamic_fluid.py        # 80% Biophysical: Cephalad fluid shift & ICP model
-│   │   ├── inno1_cardiac_decondition.py       # 80% Biophysical: Stroke volume & cardiac atrophy
-│   │   ├── inno6_biomarker_ranker.py          # 20% Dynamic Sensitivity Jacobian ranker
-│   │   └── pipeline_orchestrator.py           # Master end-to-end 6-stage coordinator
-│   └── 02_tests/
-│       ├── test_adapter_ingestion.py          # 32 DO-178C requirements unit tests (100% pass)
-│       ├── test_sanity_gate_bounds.py         # Boundary & fault-injection test suite
-│       └── test_biophysical_models.py         # Hydrodynamic conservation verification tests
+│   │   ├── __init__.py                            # Explicit package manifest
+│   │   ├── ingestion_adapter.py                   # Stage 1: Multi-mission parser & 12D builder (100% Cov)
+│   │   ├── inno3_signal_stabilizer.py             # Stage 2: 20% Adaptive AI denoising & NLMS (100% Cov)
+│   │   ├── sanity_gate.py                         # Stage 3: Airworthiness Sanity Gate Ω_bio (100% Cov)
+│   │   ├── inno6_biomarker_ranker.py              # Stage 4: Dynamic Dirichlet sensitivity ranker (100% Cov)
+│   │   └── pipeline_orchestrator.py               # Master End-to-End Pipeline Orchestrator (100% Cov)
+│   └── 02_tests/                                  # 234 UNIT & INTEGRATION TESTS (100% PASS)
+│       ├── test_adapter_ingestion.py              # 32 Tests (Phase 1-5 Ingestion Pipeline)
+│       ├── test_signal_stabilizer.py              # 68 Tests (Adaptive Wavelet, NLMS, SQI)
+│       ├── test_sanity_gate.py                    # 67 Tests (NASA-STD-3001 Slew & Boundary Clamps)
+│       ├── test_biomarker_ranker.py               # 44 Tests (Dirichlet Priors, Entropy, Z-Scores)
+│       └── test_pipeline_orchestrator.py          # 23 Tests (Master Orchestration & Streaming)
 │
-├── 03_DECISION_CORE/                          # STANDALONE AUDITABLE CLINICAL HEAD
-│   ├── triage_model_engine.py                 # Pure-Python standalone zero-dependency triage engine
-│   ├── deterministic_triage_rules.json        # Transparent, human-readable threshold parameters
-│   └── biophysical_constants.json             # Validated physiological coupling coefficients
+├── 03_DECISION_CORE/                              # 80% BIOPHYSICAL SUPREME HEAD (EXCLUSIVE CLINICAL AUTHORITY)
+│   ├── deterministic_triage_rules.json            # 12 Canonical Prioritized Clinical Rules (SHA-256 Sealed)
+│   ├── biophysical_constants.json                 # Calibrated Hemodynamic & SANS Invariants
+│   ├── sensor_filter_parameters.json              # Physical Boundary Envelopes & Slew Rate Caps
+│   ├── rule_schema_validator.py                   # Phase 1: Cryptographic rule validation & immutability (100% Cov)
+│   ├── biophysical_physics_engine.py              # Phase 2: Closed-form hemodynamics, SANS I_ICP & SV decay (100% Cov)
+│   ├── triage_model_engine.py                     # Phase 3: Priority triage state machine (100% Cov)
+│   ├── cockpit_countermeasure_dispatcher.py       # Phase 4: 3-second cockpit HUD & locker routing (100% Cov)
+│   ├── test_rule_configuration.py                 # 41 Tests (Schema validation & immutability)
+│   ├── test_biophysical_physics_engine.py         # 32 Tests (Hemodynamics, SANS ICP, Stroke Volume)
+│   ├── test_triage_model_engine.py                # 30 Tests (Priority matching, instant escalation, debounce)
+│   ├── test_cockpit_countermeasure_dispatcher.py  # 24 Tests (Orion HUD dispatch, locker routing, tones)
+│   └── test_end_to_end_decision_integration.py    # 10 Operational Flight Scenarios
 │
-├── 04_ASTRONAUT_COCKPIT/                      # INTERACTIVE 3-SECOND ASTRONAUT HUD
-│   ├── app.py                                 # Main Streamlit flight deck application
-│   └── 01_components/
-│       ├── hud_status_banner.py               # High-contrast Green / Amber / Red banner
-│       └── countermeasure_deck.py             # Actionable mitigation protocols (LBNP, ergometer)
+├── X_TEST/                                        # INDEPENDENT VERIFICATION & VALIDATION (IV&V)
+│   └── test_vitalx_integrated_100.py              # 100 Integrated Stress & Fault-Injection Tests (100% PASS)
 │
-├── 05_VITALX_LAB/                             # FLIGHT SURGEON EXPERIMENTATION NOTEBOOKS
-│   └── validation_experiments.ipynb           # Model verification and SANS sensitivity studies
+├── X Docs/                                        # RAW SYSTEM AUDIT REPORTS & EXECUTION LOGS
+│   ├── DO178C_LEVEL_C_INGESTION_ADAPTER_AUDIT_REPORT.md
+│   ├── DO178C_LEVEL_C_SIGNAL_STABILIZER_AUDIT_REPORT.md
+│   ├── DO178C_LEVEL_C_SANITY_GATE_AUDIT_REPORT.md
+│   ├── DO178C_LEVEL_C_BIOMARKER_RANKER_AUDIT_REPORT.md
+│   ├── DO178C_LEVEL_C_PIPELINE_ORCHESTRATOR_AUDIT_REPORT.md
+│   ├── DO178C_LEVEL_C_DECISION_CORE_AUDIT_REPORT.md
+│   └── DO178C_LEVEL_C_INTEGRATED_100_TEST_SUITE_AUDIT_REPORT.md
 │
-├── 06_MISSION_REPORTS/                        # FORMAL CERTIFICATION ARTIFACTS
-│   ├── DO178C_LEVEL_C_EXECUTION_PLAYBOOK.md   # Complete hackathon execution and judging strategy
-│   └── HLR_TRACEABILITY_MATRIX.md             # Master requirements traceability matrix (HLR ↔ Tests)
+├── 06_MISSION_REPORTS/                            # MASTER AIRWORTHINESS COMPLIANCE REPORTS
+│   ├── HLR_TRACEABILITY_MATRIX.md                 # Complete Bidirectional HLR-to-LLR Traceability Matrix
+│   └── DO178C_LEVEL_C_EXECUTION_PLAYBOOK.md       # Full Verification Playbook & Quality Plan
 │
-└── 07_ASTRO_DOCS/                             # AEROSPACE TECHNICAL DOSSIERS
-    ├── 01_DATA_VAULT_DOCS/                    # 12D schema and sensor specifications
-    ├── 02_AI_CORE_DOCS/                       # Subsystem specs, unit verification reports, and audits
-    └── 07_SYSTEM_ARCHITECTURE_DOCS/           # Formal LaTeX aerospace architecture paper & diagrams
+└── 07_ASTRO_DOCS/                                 # FORMAL FLIGHT SPECIFICATION ARCHIVE (MD & RST)
+    ├── 01_DATA_VAULT_DOCS/                        # 20 Specifications (.md & .rst for all 8 archives)
+    ├── 02_AI_CORE_DOCS/                           # Formal specifications & test verification reports (Mod 1-5)
+    ├── 03_DECISION_CORE_DOCS/                     # Specifications & audit reports for Biophysical Supreme Head
+    ├── 06_MISSION_REPORTS_DOCS/                   # 100-Test Integrated IV&V Audit Dossier
+    └── 07_SYSTEM_ARCHITECTURE_DOCS/               # System Architecture LaTeX Dossier & Diagrams
 ```
 
 ---
 
-## 💻 8. Installation & Rapid Quickstart
+## ⚖️ 07 — SOVEREIGN AEROSPACE CHARTER & ETHICS STATEMENT
 
-### Prerequisites
-* **Python 3.12+**
-* Git & PowerShell / Bash
-
-### 1. Clone & Set Up Virtual Environment
-```bash
-# Clone the repository
-git clone https://github.com/vitalx-core/astrovital-ai-vitalx-core.git
-cd ASTROVITAL_AI_VITALX_CORE_RECREATED
-
-# Create and activate virtual environment
-python -m venv vitalx_env
-# Windows:
-.\vitalx_env\Scripts\activate
-# Linux/macOS:
-source vitalx_env/bin/activate
-
-# Install flight dependencies
-pip install -r requirements.txt
-```
-
-### 2. Run Automated DO-178C Verification Harness
-```bash
-# Execute 100% statement coverage unit tests
-pytest 02_AI_CORE/02_tests/test_adapter_ingestion.py -v --cov=ingestion_adapter --cov-report=term-missing
-```
-
-### 3. Launch the Astronaut Cockpit HUD
-```bash
-streamlit run 04_ASTRONAUT_COCKPIT/app.py
-```
+### Sovereign Deep-Space Bio-Ethics Directive
+1. **Human Sovereignty Over Autonomous Intelligence:** Under no operational condition shall an artificial intelligence algorithm overrule the clinical judgment of the Crew Medical Officer (CMO) or ground Flight Surgeons. The CMO manual override retains absolute, uncompromised supremacy.
+2. **Deterministic Explainability Mandate:** Every diagnostic alert, severity escalation, and countermeasure recommendation generated by ASTROVITAL VITALX CORE is 100% mathematically traceable to first-principles biophysical models or validated clinical guidelines. Black-box unexplainable decisions are strictly prohibited.
+3. **Open Deep-Space Medical Knowledge:** Developed for humanity's safe expansion into the solar system. Licensed under the **Jagannath Sovereign Open Aerospace Charter (JSTIRPL-v1.0)** — freely usable for scientific research, astronaut safety, and civilian space exploration.
 
 ---
 
-## 👨‍🚀 9. The 3-Second Astronaut HUD Cockpit
+<div align="center">
 
-During an emergency in microgravity, an astronaut cannot read complex confusion matrices or statistical confidence intervals. The cockpit interface enforces the **3-Second Cognitive SLA**:
+**JAGANNATH COMMAND CENTER (JCC) • CAMPUS 3 (HUMAN SPACEFLIGHT DIVISION)**  
+*Dedicated with eternal reverence to the Lotus Feet of Mahaprabhu Shri Jagannath*  
+*Bhubaneswar, Odisha, Bharat • 14 November 2026*
 
-```
-+-----------------------------------------------------------------------------------+
-|  [!] STATE AMBER: COMPENSATORY PHYSIOLOGICAL STRAIN                              |
-|  IC_ICP = 1.48 (ELEVATED) | SANS RISK: MODERATE | CUMULATIVE SLEEP DEBT: 18.2 HRS  |
-+-----------------------------------------------------------------------------------+
-|  AUDIT SENTENCE: "Cephalad fluid redistribution and microgravity days (42 d) have |
-|  elevated ICP index above nominal envelope (1.35). Peripheral SpO2 (97%) nominal." |
-+-----------------------------------------------------------------------------------+
-|  DISPATCHED COUNTERMEASURE: PROTOCOL ALPHA-3                                      |
-|  1. Deploy Chibis Lower Body Negative Pressure (LBNP) suit at -35 mmHg for 45 min.|
-|  2. Ingest 500 mL isotonic electrolyte hydration solution.                        |
-|  3. Shift cabin circadian LED lighting spectrum from 480 nm to 650 nm (amber).    |
-+-----------------------------------------------------------------------------------+
-```
-
----
-
-## 🎖️ 10. Traceability & Engineering Provenance
-
-* **NASA Flight Data Sources:**
-  - **Artemis II Orion:** HOBO micro-logger environmental telemetry (1104, 1105).
-  - **Space Shuttle DSOs:** In-flight cardiovascular deconditioning (DSO 462, DSO 479 Stand-Test, DSO 328).
-  - **Apollo Clinical Archives:** Apollo 7 biomedical continuous baseline records (AP001, AP003).
-  - **NASA Open Science Data (OSD-1010):** Heavy-ion space radiation intestinal organoid stress profiles.
-* **Lead Architect & Developer:** **Gourgopal Mohapatra** (Team VITALX CORE)
-* **Target Competition:** NASA Space Apps Challenge — *Human Body in Deep Space*
-* **Compliance Standard:** RTCA DO-178C / EUROCAE ED-12C Design Assurance Level C (DAL C)
-* **License:** Open Aerospace License (MIT / NASA Open Source Agreement Compatible)
-
----
-
-<p align="center">
-  <b>ASTROVITAL AI : VITALX CORE (RECREATED V1)</b><br>
-  <i>Safeguarding Human Life Across the Interplanetary Frontier with First-Principles Biophysics and Deterministic Engineering.</i>
-</p>
+</div>

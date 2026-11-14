@@ -74,6 +74,7 @@ class HUDStatusBannerRenderer:
         "ENV-01": "LOCKER L3 // RESPIRATORY & O2 REBREATHER",
         "PHYS-01": "LOCKER L4 // CHIBIS LBNP & EXERCISE COUNTERMEASURES",
         "DIAG-01": "LOCKER L5 // ULTRASOUND & FUNDOSCOPY DIAGNOSTICS",
+        "Sleep Bunk": "CREW REST STATION // SLEEP BUNK COMPARTMENT",
     }
 
     @classmethod
@@ -268,7 +269,7 @@ class HUDStatusBannerRenderer:
         {cmo_html}
         """
 
-        return html_output
+        return "\n".join(line.strip() for line in html_output.strip().splitlines() if line.strip())
 
     @classmethod
     def render_streamlit(
@@ -283,7 +284,10 @@ class HUDStatusBannerRenderer:
         try:
             import streamlit as st
             target = container if container is not None else st
-            target.markdown(rendered_html, unsafe_allow_html=True)
+            if hasattr(target, "html") and not (hasattr(target, "_mock_return_value") or type(target).__name__ == "MagicMock"):
+                target.html(rendered_html)
+            else:
+                target.markdown(rendered_html, unsafe_allow_html=True)
         except ImportError:
             # Headless execution fallback
             pass

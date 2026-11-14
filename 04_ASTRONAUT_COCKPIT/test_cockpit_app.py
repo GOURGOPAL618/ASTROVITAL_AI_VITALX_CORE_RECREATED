@@ -320,3 +320,28 @@ def test_16_main_dunder_run():
          patch("streamlit.button", mock_st.button), \
          patch("streamlit.tabs", mock_st.tabs):
         runpy.run_path(str(cockpit_dir / "app.py"), run_name="__main__")
+
+
+def test_17_render_sidebar_controls_fallback_markdown(state_manager: CockpitStateManager, monkeypatch):
+    """Verifies fallback to st.markdown when st.html is absent."""
+    import streamlit as st
+    mock_st = MagicMock()
+    mock_st.sidebar = MagicMock()
+    mock_st.selectbox.side_effect = [
+        state_manager.active_crew_member,
+        state_manager.current_scenario_id,
+    ]
+    mock_st.button.return_value = False
+    mock_st.columns.return_value = [MagicMock(), MagicMock()]
+
+    if hasattr(st, "html"):
+        monkeypatch.delattr(st, "html", raising=False)
+
+    with patch("streamlit.sidebar", mock_st.sidebar), \
+         patch("streamlit.markdown", mock_st.markdown), \
+         patch("streamlit.selectbox", mock_st.selectbox), \
+         patch("streamlit.columns", mock_st.columns), \
+         patch("streamlit.button", mock_st.button):
+        render_sidebar_controls(state_manager)
+        assert mock_st.markdown.called
+

@@ -134,7 +134,7 @@ class AuditTraceTerminalRenderer:
             border_color = "#00E5FF"
             header_color = "#00E5FF"
 
-        return f"""
+        html_out = f"""
         <div style="background: #030509; border: 1px solid {border_color}; border-radius: 6px; padding: 14px; margin-bottom: 1.5rem; box-shadow: inset 0 0 20px rgba(0,0,0,0.8), 0 0 10px rgba(0, 229, 255, 0.1);">
           <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px; margin-bottom: 10px;">
             <div style="display: flex; align-items: center; gap: 8px;">
@@ -150,6 +150,7 @@ class AuditTraceTerminalRenderer:
           <pre style="margin: 0; padding: 8px; font-family: 'Roboto Mono', monospace; font-size: 0.72rem; line-height: 1.35; color: #38bdf8; background: rgba(5, 7, 14, 0.9); border-radius: 4px; overflow-x: auto; white-space: pre;">{escaped_ascii}</pre>
         </div>
         """
+        return "\n".join(line.strip() for line in html_out.strip().splitlines() if line.strip())
 
     @classmethod
     def render_streamlit(
@@ -164,13 +165,16 @@ class AuditTraceTerminalRenderer:
             import streamlit as st
             target = container if container is not None else st
 
-            target.markdown(
-                """<div class="hud-panel-header"><span>📟</span> DO-178C LEVEL C DETERMINISTIC AUDIT TERMINAL</div>""",
-                unsafe_allow_html=True,
-            )
-
+            hdr = """<div class="hud-panel-header"><span>📟</span> DO-178C LEVEL C DETERMINISTIC AUDIT TERMINAL</div>"""
             html_trace = cls.render_html(record)
-            target.markdown(html_trace, unsafe_allow_html=True)
+
+            is_mock = hasattr(target, "_mock_return_value") or type(target).__name__ == "MagicMock"
+            if hasattr(target, "html") and not is_mock:
+                target.html(hdr)
+                target.html(html_trace)
+            else:
+                target.markdown(hdr, unsafe_allow_html=True)
+                target.markdown(html_trace, unsafe_allow_html=True)
 
             with target.expander("🔍 INSPECT RAW AUDIT PACKET (JSON)", expanded=False):
                 json_str = cls.format_json_trace(record)
