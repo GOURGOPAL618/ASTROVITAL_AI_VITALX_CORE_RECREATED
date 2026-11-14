@@ -104,7 +104,7 @@ def render_sidebar_controls(state_manager: CockpitStateManager) -> None:
                 "Inject Mission Scenario:",
                 options=scenario_keys,
                 index=current_scen_idx,
-                format_func=lambda k: f"{FLIGHT_SCENARIO_PRESETS[k].title} [STATE {FLIGHT_SCENARIO_PRESETS[k].expected_triage}]",
+                format_func=lambda k: f"{FLIGHT_SCENARIO_PRESETS[k].display_title} [STATE {FLIGHT_SCENARIO_PRESETS[k].expected_triage_state}]",
                 key="sb_scenario_select",
             )
             if selected_scen != state_manager.current_scenario_id:

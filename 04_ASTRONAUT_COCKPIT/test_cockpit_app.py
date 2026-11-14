@@ -117,6 +117,14 @@ def test_05_render_sidebar_controls_steady(state_manager: CockpitStateManager, m
          patch("streamlit.button", mock_st.button):
         render_sidebar_controls(state_manager)
 
+        # Verify format_func lambdas execute and format properly
+        calls = mock_st.selectbox.call_args_list
+        crew_fmt = calls[0].kwargs.get("format_func")
+        assert "Cmdr. Neil Armstrong" in crew_fmt("CDR_ORION")
+        scen_fmt = calls[1].kwargs.get("format_func")
+        assert "Nominal Deep-Space Cruise" in scen_fmt("SCENARIO_01_NOMINAL_CRUISE")
+        assert "STATE GREEN" in scen_fmt("SCENARIO_01_NOMINAL_CRUISE")
+
 
 def test_06_render_sidebar_crew_change(state_manager: CockpitStateManager, monkeypatch):
     """Verifies changing crew member triggers state change and rerun."""
