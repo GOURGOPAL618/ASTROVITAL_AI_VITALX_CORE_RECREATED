@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "system_name": "ASTROVITAL AI : VITALX CORE RECREATED V1",
+    "subsystem": "03_DECISION_CORE",
+    "file_type": "SENSOR_FILTER_PARAMETERS",
+    "standard_compliance": "DO-178C Level C (DAL C) / NASA-STD-3001 Rev B",
+    "author": "Gourgopal Mohapatra (Lead Architect, Team VITALX CORE)",
+    "version": "1.0.0",
+    "schema_version": "2026.1",
+    "governance": "Transparent Sensor Conditioning & Quality Control Specification"
+  },
+  "canonical_channels": [
+    "heart_rate_bpm",
+    "systolic_bp_mmhg",
+    "diastolic_bp_mmhg",
+    "spo2_percent",
+    "core_temp_c",
+    "resp_rate_bpm",
+    "etco2_mmhg",
+    "icp_est_mmhg",
+    "cvp_mmhg",
+    "co2_cabin_ppm",
+    "cabin_pressure_psi",
+    "ambient_temp_c"
+  ],
+  "channel_specifications": {
+    "heart_rate_bpm": {
+      "unit": "bpm",
+      "baseline_mean": 72.0,
+      "baseline_std": 8.5,
+      "viable_min": 30.0,
+      "viable_max": 220.0,
+      "max_gradient_per_sec": 5.0
+    },
+    "systolic_bp_mmhg": {
+      "unit": "mmHg",
+      "baseline_mean": 120.0,
+      "baseline_std": 10.0,
+      "viable_min": 60.0,
+      "viable_max": 250.0,
+      "max_gradient_per_sec": 8.0
+    },
+    "diastolic_bp_mmhg": {
+      "unit": "mmHg",
+      "baseline_mean": 80.0,
+      "baseline_std": 8.0,
+      "viable_min": 40.0,
+      "viable_max": 150.0,
+      "max_gradient_per_sec": 6.0
+    },
+    "spo2_percent": {
+      "unit": "%",
+      "baseline_mean": 98.0,
+      "baseline_std": 1.2,
+      "viable_min": 50.0,
+      "viable_max": 100.0,
+      "max_gradient_per_sec": 2.0
+    },
+    "core_temp_c": {
+      "unit": "degC",
+      "baseline_mean": 37.0,
+      "baseline_std": 0.35,
+      "viable_min": 34.0,
+      "viable_max": 42.0,
+      "max_gradient_per_sec": 0.05
+    },
+    "resp_rate_bpm": {
+      "unit": "bpm",
+      "baseline_mean": 14.0,
+      "baseline_std": 2.5,
+      "viable_min": 4.0,
+      "viable_max": 45.0,
+      "max_gradient_per_sec": 2.0
+    },
+    "etco2_mmhg": {
+      "unit": "mmHg",
+      "baseline_mean": 38.0,
+      "baseline_std": 3.0,
+      "viable_min": 15.0,
+      "viable_max": 65.0,
+      "max_gradient_per_sec": 2.0
+    },
+    "icp_est_mmhg": {
+      "unit": "mmHg",
+      "baseline_mean": 10.0,
+      "baseline_std": 2.0,
+      "viable_min": 0.0,
+      "viable_max": 35.0,
+      "max_gradient_per_sec": 1.0
+    },
+    "cvp_mmhg": {
+      "unit": "mmHg",
+      "baseline_mean": 5.0,
+      "baseline_std": 1.5,
+      "viable_min": -2.0,
+      "viable_max": 25.0,
+      "max_gradient_per_sec": 1.0
+    },
+    "co2_cabin_ppm": {
+      "unit": "ppm",
+      "baseline_mean": 3950.0,
+      "baseline_std": 450.0,
+      "viable_min": 300.0,
+      "viable_max": 15000.0,
+      "max_gradient_per_sec": 100.0
+    },
+    "cabin_pressure_psi": {
+      "unit": "psi",
+      "baseline_mean": 14.7,
+      "baseline_std": 0.1,
+      "viable_min": 8.0,
+      "viable_max": 16.0,
+      "max_gradient_per_sec": 0.5
+    },
+    "ambient_temp_c": {
+      "unit": "degC",
+      "baseline_mean": 22.0,
+      "baseline_std": 1.0,
+      "viable_min": 15.0,
+      "viable_max": 35.0,
+      "max_gradient_per_sec": 0.2
+    }
+  },
+  "signal_quality_parameters": {
+    "nominal_sampling_rate_hz": 1.0,
+    "min_sqi_acceptable": 0.70,
+    "decoupling_variance_threshold": 1e-4,
+    "flatline_window_seconds": 15,
+    "outlier_z_score_threshold": 3.5
+  },
+  "temporal_buffers": {
+    "rolling_baseline_window_samples": 900,
+    "short_term_smoothing_window_samples": 5,
+    "max_acceptable_packet_latency_ms": 50.0
+  }
+}

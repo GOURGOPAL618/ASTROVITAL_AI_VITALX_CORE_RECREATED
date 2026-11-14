@@ -1,0 +1,443 @@
+{
+  "metadata": {
+    "system_name": "ASTROVITAL AI : VITALX CORE RECREATED V1",
+    "subsystem": "03_DECISION_CORE",
+    "file_type": "DETERMINISTIC_TRIAGE_RULE_MATRIX",
+    "standard_compliance": "DO-178C Level C (DAL C) / NASA-STD-3001 Rev B",
+    "author": "Gourgopal Mohapatra (Lead Architect, Team VITALX CORE)",
+    "version": "1.0.0",
+    "schema_version": "2026.1",
+    "governance": "Deterministic White-Box Clinical Decision Authority (80% Biophysical Supreme Head)"
+  },
+  "triage_state_hierarchy": [
+    "RED",
+    "AMBER",
+    "GREEN"
+  ],
+  "rules": [
+    {
+      "rule_id": "RULE_RED_001_SEVERE_HYPOXIA_TACHYCARDIA",
+      "state": "RED",
+      "priority": 100,
+      "category": "CARDIORESPIRATORY_FAILURE",
+      "clinical_title": "Acute Cardiorespiratory Hypoxic Decompensation",
+      "description": "Critical arterial oxygen desaturation accompanied by compensatory severe tachycardia indicating failing oxygen delivery.",
+      "condition_type": "COMPOUND_AND",
+      "conditions": [
+        {
+          "channel": "spo2_percent",
+          "operator": "<",
+          "threshold": 88.0
+        },
+        {
+          "channel": "heart_rate_bpm",
+          "operator": ">",
+          "threshold": 125.0
+        }
+      ],
+      "cockpit_audit_template": "CRITICAL RED ALERT: Acute cardiorespiratory hypoxia detected. SpO2 {spo2_percent:.1f}% (< 88.0%) coupled with tachycardia HR {heart_rate_bpm:.1f} bpm (> 125.0 bpm).",
+      "actionable_countermeasures": [
+        {
+          "action_id": "ACT_RED_001_O2_REBREATHER",
+          "protocol": "Deploy 100% emergency O2 mask immediately via high-pressure rebreather.",
+          "priority": 1,
+          "time_to_execute_sec": 15
+        },
+        {
+          "action_id": "ACT_RED_001_SUSPEND_EVA",
+          "protocol": "Immediately abort EVA excursion / suspend high-metabolic physical exercise.",
+          "priority": 2,
+          "time_to_execute_sec": 30
+        },
+        {
+          "action_id": "ACT_RED_001_CMO_NOTIFICATION",
+          "protocol": "Trigger audible cabin alert to Crew Medical Officer (CMO) and flight surgeon link.",
+          "priority": 3,
+          "time_to_execute_sec": 45
+        }
+      ],
+      "evidence_rationale": "NASA-STD-3001 Vol 1 Rev B Sec 4.1: SpO2 < 88% produces acute cerebral hypoxia, impaired cognitive tracking, and imminent syncope in microgravity."
+    },
+    {
+      "rule_id": "RULE_RED_002_CEPHALAD_ICP_SURGE",
+      "state": "RED",
+      "priority": 95,
+      "category": "NEURO_VASCULAR_ICP",
+      "clinical_title": "Severe Cephalad Fluid Shift Intracranial Hypertension",
+      "description": "Calculated Intracranial Pressure (ICP) Index exceeds critical microgravity threshold (>= 1.85) threatening visual acuity and cerebral perfusion.",
+      "condition_type": "SINGLE_THRESHOLD",
+      "conditions": [
+        {
+          "channel": "icp_gradient_index",
+          "operator": ">=",
+          "threshold": 1.85
+        }
+      ],
+      "cockpit_audit_template": "CRITICAL RED ALERT: Hydrodynamic Cephalad Fluid Shift Index I_ICP reached {icp_gradient_index:.2f} (>= 1.85), indicating acute intracranial hypertension threat.",
+      "actionable_countermeasures": [
+        {
+          "action_id": "ACT_RED_002_LBNP_DEPLOY",
+          "protocol": "Initiate emergency Lower Body Negative Pressure (LBNP) suit protocol at -35 mmHg for 45 minutes.",
+          "priority": 1,
+          "time_to_execute_sec": 60
+        },
+        {
+          "action_id": "ACT_RED_002_CO2_SCRUBBING",
+          "protocol": "Verify Orion Environmental Control System (ECLSS) CO2 scrubber canister flow rate.",
+          "priority": 2,
+          "time_to_execute_sec": 90
+        },
+        {
+          "action_id": "ACT_RED_002_FUNDOSCOPIC_AUDIT",
+          "protocol": "Perform optical ultrasound / fundoscopic scan for optic nerve sheath diameter (ONSD) swelling.",
+          "priority": 3,
+          "time_to_execute_sec": 180
+        }
+      ],
+      "evidence_rationale": "Spaceflight-Associated Neuro-ocular Syndrome (SANS) protocols; ISS DSO 462 & Expeditions 33-38 spinal ultrasound findings."
+    },
+    {
+      "rule_id": "RULE_RED_003_HYPERTENSIVE_CRISIS",
+      "state": "RED",
+      "priority": 90,
+      "category": "CARDIOVASCULAR_EMERGENCY",
+      "clinical_title": "Acute Hypertensive Emergency",
+      "description": "Systolic blood pressure exceeds 165.0 mmHg or Mean Arterial Pressure exceeds 125.0 mmHg in microgravity.",
+      "condition_type": "COMPOUND_OR",
+      "conditions": [
+        {
+          "channel": "systolic_bp_mmhg",
+          "operator": ">=",
+          "threshold": 165.0
+        },
+        {
+          "channel": "map_mmhg",
+          "operator": ">=",
+          "threshold": 125.0
+        }
+      ],
+      "cockpit_audit_template": "CRITICAL RED ALERT: Acute Hypertensive Crisis. SBP {systolic_bp_mmhg:.1f} mmHg (>= 165.0) or MAP {map_mmhg:.1f} mmHg (>= 125.0). Risk of hemorrhagic cerebrovascular insult.",
+      "actionable_countermeasures": [
+        {
+          "action_id": "ACT_RED_003_REST_STATION",
+          "protocol": "Immediately secure astronaut to crew quarters tether; eliminate cognitive and physical stressors.",
+          "priority": 1,
+          "time_to_execute_sec": 30
+        },
+        {
+          "action_id": "ACT_RED_003_PHARMA_READY",
+          "protocol": "Prepare emergency antihypertensive kit per CMO flight medical locker inventory.",
+          "priority": 2,
+          "time_to_execute_sec": 120
+        }
+      ],
+      "evidence_rationale": "NASA Flight Surgeon Clinical Guidelines: Sustained SBP > 165 mmHg in microgravity presents acute stroke risk exacerbated by cephalad venous stasis."
+    },
+    {
+      "rule_id": "RULE_RED_004_SEVERE_SHOCK_HEMODYNAMIC_COLLAPSE",
+      "state": "RED",
+      "priority": 88,
+      "category": "HEMODYNAMIC_COLLAPSE",
+      "clinical_title": "Severe Hemodynamic Shock / Cardiovascular Collapse",
+      "description": "Shock Index (HR / SBP) exceeds 1.10 combined with hypotension (SBP < 90.0 mmHg) indicating decompensated circulating volume.",
+      "condition_type": "COMPOUND_AND",
+      "conditions": [
+        {
+          "channel": "shock_index",
+          "operator": ">=",
+          "threshold": 1.10
+        },
+        {
+          "channel": "systolic_bp_mmhg",
+          "operator": "<=",
+          "threshold": 90.0
+        }
+      ],
+      "cockpit_audit_template": "CRITICAL RED ALERT: Hemodynamic Shock Collapse. Shock Index {shock_index:.2f} (>= 1.10) with profound hypotension SBP {systolic_bp_mmhg:.1f} mmHg (<= 90.0).",
+      "actionable_countermeasures": [
+        {
+          "action_id": "ACT_RED_004_INFUSION_PROTOCOL",
+          "protocol": "Initiate immediate 1000 mL intravenous saline/electrolyte infusion to restore central venous volume.",
+          "priority": 1,
+          "time_to_execute_sec": 60
+        },
+        {
+          "action_id": "ACT_RED_004_G_SUIT_INFLATE",
+          "protocol": "Inflate anti-gravity lower extremity compression garments to force venous return to heart.",
+          "priority": 2,
+          "time_to_execute_sec": 90
+        }
+      ],
+      "evidence_rationale": "Shuttle DSO 479 Stand-Test & Post-flight Orthostatic Decompensation Studies: SI >= 1.10 predicts imminent circulatory collapse."
+    },
+    {
+      "rule_id": "RULE_RED_005_RAPID_CABIN_DECOMPRESSION",
+      "state": "RED",
+      "priority": 99,
+      "category": "ENVIRONMENTAL_CATASTROPHE",
+      "clinical_title": "Cabin Atmosphere Rapid Decompression",
+      "description": "Cabin atmospheric pressure drops below 10.5 psi indicating hull breach or ECLSS depressurization.",
+      "condition_type": "SINGLE_THRESHOLD",
+      "conditions": [
+        {
+          "channel": "cabin_pressure_psi",
+          "operator": "<=",
+          "threshold": 10.5
+        }
+      ],
+      "cockpit_audit_template": "CRITICAL RED ALERT: Cabin Decompression Breach. Pressure {cabin_pressure_psi:.2f} psi (<= 10.5 psi). Imminent hypoxia and ebullism hazard.",
+      "actionable_countermeasures": [
+        {
+          "action_id": "ACT_RED_005_DON_ORION_SUIT",
+          "protocol": "Don Orion Crew Survival System (OCSS) pressure suit and close helmet visors immediately.",
+          "priority": 1,
+          "time_to_execute_sec": 30
+        },
+        {
+          "action_id": "ACT_RED_005_SEAL_HATCHES",
+          "protocol": "Seal compartment hatches and initiate emergency repressurization sequence.",
+          "priority": 2,
+          "time_to_execute_sec": 60
+        }
+      ],
+      "evidence_rationale": "Artemis Orion Environmental Standards: Baseline cabin pressure is 14.7 psi (or 10.2 psi contingency); pressure below 10.5 psi requires immediate pressurization PPE."
+    },
+    {
+      "rule_id": "RULE_RED_006_CRITICAL_HYPOTHERMIA_HYPERTHERMIA",
+      "state": "RED",
+      "priority": 85,
+      "category": "THERMAL_DYSREGULATION",
+      "clinical_title": "Core Thermal Regulation Failure",
+      "description": "Astronaut core body temperature drops below 35.0 C (severe hypothermia) or exceeds 39.5 C (heat stroke / malignant hyperthermia).",
+      "condition_type": "COMPOUND_OR",
+      "conditions": [
+        {
+          "channel": "core_temp_c",
+          "operator": "<=",
+          "threshold": 35.0
+        },
+        {
+          "channel": "core_temp_c",
+          "operator": ">=",
+          "threshold": 39.5
+        }
+      ],
+      "cockpit_audit_template": "CRITICAL RED ALERT: Severe Core Thermal Failure. Core temperature {core_temp_c:.2f} C out of viable bounds (<= 35.0 C or >= 39.5 C).",
+      "actionable_countermeasures": [
+        {
+          "action_id": "ACT_RED_006_THERMAL_GARMENT",
+          "protocol": "Adjust Liquid Cooling and Ventilation Garment (LCVG) coolant loop immediately to counteract thermal excursion.",
+          "priority": 1,
+          "time_to_execute_sec": 30
+        }
+      ],
+      "evidence_rationale": "NASA-STD-3001 Vol 1 Rev B: Thermal extremes impair neurological regulation and cardiac conduction."
+    },
+    {
+      "rule_id": "RULE_AMBER_001_ELEVATED_CEPHALAD_FLUID_SHIFT",
+      "state": "AMBER",
+      "priority": 70,
+      "category": "NEURO_VASCULAR_ICP",
+      "clinical_title": "Elevated Cephalad Fluid Shift / SANS Precursor",
+      "description": "Intracranial Pressure (ICP) Index is elevated in the range [1.35, 1.85) indicating progressive venous engorgement and ocular stress.",
+      "condition_type": "SINGLE_THRESHOLD",
+      "conditions": [
+        {
+          "channel": "icp_gradient_index",
+          "operator": ">=",
+          "threshold": 1.35
+        }
+      ],
+      "cockpit_audit_template": "WARNING AMBER: Elevated Cephalad Fluid Shift Index I_ICP = {icp_gradient_index:.2f} (in compensatory stress envelope [1.35, 1.85)).",
+      "actionable_countermeasures": [
+        {
+          "action_id": "ACT_AMB_001_LBNP_SESSION",
+          "protocol": "Schedule 30-minute Lower Body Negative Pressure (LBNP) session at -25 mmHg within 4 hours.",
+          "priority": 1,
+          "time_to_execute_sec": 600
+        },
+        {
+          "action_id": "ACT_AMB_001_POSTURE_REST",
+          "protocol": "Restrict forward-bending tasks; increase neck and venous drainage mobility stretches.",
+          "priority": 2,
+          "time_to_execute_sec": 900
+        }
+      ],
+      "evidence_rationale": "ISS Expedition 33-38 ultrasound tracking: Early LBNP intervention prevents permanent retrobulbar tissue remodeling."
+    },
+    {
+      "rule_id": "RULE_AMBER_002_HYPERCAPNIC_CABIN_AIR",
+      "state": "AMBER",
+      "priority": 68,
+      "category": "ENVIRONMENTAL_CO2",
+      "clinical_title": "Elevated Cabin CO2 Hypercapnia Hazard",
+      "description": "Cabin CO2 concentration exceeds 5000.0 ppm (approx 3.8 mmHg), causing headaches and worsening intracranial fluid pressure.",
+      "condition_type": "SINGLE_THRESHOLD",
+      "conditions": [
+        {
+          "channel": "co2_cabin_ppm",
+          "operator": ">=",
+          "threshold": 5000.0
+        }
+      ],
+      "cockpit_audit_template": "WARNING AMBER: Cabin CO2 concentration elevated at {co2_cabin_ppm:.0f} ppm (>= 5000 ppm). Risk of crew cognitive impairment and headache.",
+      "actionable_countermeasures": [
+        {
+          "action_id": "ACT_AMB_002_SWAP_CANISTER",
+          "protocol": "Switch Orion Amine Bed / LiOH scrubber canister to secondary backup loop.",
+          "priority": 1,
+          "time_to_execute_sec": 180
+        },
+        {
+          "action_id": "ACT_AMB_002_VENTILATION_BOOST",
+          "protocol": "Increase local cabin diffuser fan velocity to prevent stagnant CO2 micro-pockets.",
+          "priority": 2,
+          "time_to_execute_sec": 120
+        }
+      ],
+      "evidence_rationale": "NASA Spaceflight CO2 Guidelines (Law et al. 2014): Chronic ambient CO2 > 5000 ppm correlates with increased cephalad ICP symptoms and astronaut headache."
+    },
+    {
+      "rule_id": "RULE_AMBER_003_CARDIOVASCULAR_DECONDITIONING_STRAIN",
+      "state": "AMBER",
+      "priority": 65,
+      "category": "CARDIOVASCULAR_DECONDITIONING",
+      "clinical_title": "Autonomic & Stroke Volume Strain",
+      "description": "Calculated Stroke Volume index drops below 65.0 mL or resting Heart Rate exceeds 100.0 bpm with reduced pulse pressure.",
+      "condition_type": "COMPOUND_OR",
+      "conditions": [
+        {
+          "channel": "stroke_volume_ml",
+          "operator": "<=",
+          "threshold": 65.0
+        },
+        {
+          "channel": "heart_rate_bpm",
+          "operator": ">=",
+          "threshold": 105.0
+        }
+      ],
+      "cockpit_audit_template": "WARNING AMBER: Cardiovascular Deconditioning. Stroke Volume = {stroke_volume_ml:.1f} mL (<= 65.0) or resting HR = {heart_rate_bpm:.1f} bpm (>= 105.0).",
+      "actionable_countermeasures": [
+        {
+          "action_id": "ACT_AMB_003_ARED_RESISTANCE",
+          "protocol": "Complete prescribed 45-minute ARED cycle ergometer resistance regimen with resistive preload.",
+          "priority": 1,
+          "time_to_execute_sec": 600
+        },
+        {
+          "action_id": "ACT_AMB_003_ORAL_HYDRATION",
+          "protocol": "Administer 500 mL oral electrolyte rehydration solution (Astro-Hydrate formulation).",
+          "priority": 2,
+          "time_to_execute_sec": 300
+        }
+      ],
+      "evidence_rationale": "Perhonen et al. (2001) & Levine et al. (2002): Microgravity induces left ventricular mass atrophy and progressive reduction in stroke volume."
+    },
+    {
+      "rule_id": "RULE_AMBER_004_MILD_HYPOXIA_DESATURATION",
+      "state": "AMBER",
+      "priority": 63,
+      "category": "RESPIRATORY_WARNING",
+      "clinical_title": "Mild Arterial Desaturation",
+      "description": "Arterial oxygen saturation SpO2 in the borderline warning range [88.0%, 92.0%).",
+      "condition_type": "SINGLE_THRESHOLD",
+      "conditions": [
+        {
+          "channel": "spo2_percent",
+          "operator": "<=",
+          "threshold": 92.0
+        }
+      ],
+      "cockpit_audit_template": "WARNING AMBER: Mild arterial oxygen desaturation SpO2 = {spo2_percent:.1f}% (<= 92.0%). Sub-optimal alveolar ventilation.",
+      "actionable_countermeasures": [
+        {
+          "action_id": "ACT_AMB_004_DEEP_BREATHE",
+          "protocol": "Direct astronaut to conduct incentive spirometry deep-breathing maneuvers for 5 minutes.",
+          "priority": 1,
+          "time_to_execute_sec": 60
+        },
+        {
+          "action_id": "ACT_AMB_004_CABIN_O2_CHECK",
+          "protocol": "Verify Orion cabin oxygen partial pressure (ppO2) levels in ECLSS telemetry.",
+          "priority": 2,
+          "time_to_execute_sec": 120
+        }
+      ],
+      "evidence_rationale": "NASA-STD-3001 Vol 2: SpO2 in the 88-92% range impairs twilight vision and night tracking performance."
+    },
+    {
+      "rule_id": "RULE_AMBER_005_EXTREME_SLEEP_DEBT_FATIGUE",
+      "state": "AMBER",
+      "priority": 55,
+      "category": "FATIGUE_NEUROCOGNITIVE",
+      "clinical_title": "Cumulative Sleep Debt & Fatigue Impairment",
+      "description": "Continuous awake duration or cumulative sleep debt exceeds 16.0 hours during active operations.",
+      "condition_type": "SINGLE_THRESHOLD",
+      "conditions": [
+        {
+          "channel": "sleep_debt_hours",
+          "operator": ">=",
+          "threshold": 16.0
+        }
+      ],
+      "cockpit_audit_template": "WARNING AMBER: Cumulative sleep debt reached {sleep_debt_hours:.1f} hours (>= 16.0 hrs). Elevated cognitive lapse probability.",
+      "actionable_countermeasures": [
+        {
+          "action_id": "ACT_AMB_005_MANDATORY_REST",
+          "protocol": "Schedule mandatory 2-hour sleep buffer prior to critical flight maneuvers or docking.",
+          "priority": 1,
+          "time_to_execute_sec": 300
+        },
+        {
+          "action_id": "ACT_AMB_005_CIRCADIAN_LIGHTING",
+          "protocol": "Switch cabin solid-state lighting modules to melatonin-promoting circadian spectrum (blue-depleted).",
+          "priority": 2,
+          "time_to_execute_sec": 60
+        }
+      ],
+      "evidence_rationale": "NASA Human Research Program (HRP) Fatigue Management Protocol: Sleep debt > 16 hrs degrades psychomotor vigilance reaction time by > 40%."
+    },
+    {
+      "rule_id": "RULE_GREEN_001_PHYSIOLOGICAL_EQUILIBRIUM",
+      "state": "GREEN",
+      "priority": 10,
+      "category": "NOMINAL_EQUILIBRIUM",
+      "clinical_title": "Full Physiological & Environmental Equilibrium",
+      "description": "All 12 vital channels, fluid shift gradients, and cabin environmental factors reside within nominal 1.5-sigma bounds.",
+      "condition_type": "COMPOUND_AND",
+      "conditions": [
+        {
+          "channel": "icp_gradient_index",
+          "operator": "<",
+          "threshold": 1.35
+        },
+        {
+          "channel": "spo2_percent",
+          "operator": ">=",
+          "threshold": 95.0
+        },
+        {
+          "channel": "heart_rate_bpm",
+          "operator": ">=",
+          "threshold": 50.0
+        },
+        {
+          "channel": "heart_rate_bpm",
+          "operator": "<=",
+          "threshold": 100.0
+        }
+      ],
+      "cockpit_audit_template": "NOMINAL GREEN: Astronaut in physiological equilibrium. I_ICP = {icp_gradient_index:.2f} (< 1.35), SpO2 = {spo2_percent:.1f}%, HR = {heart_rate_bpm:.1f} bpm.",
+      "actionable_countermeasures": [
+        {
+          "action_id": "ACT_GRN_001_MAINTAIN_TIMELINE",
+          "protocol": "Maintain nominal flight timeline and standard daily workout protocol.",
+          "priority": 1,
+          "time_to_execute_sec": 0
+        }
+      ],
+      "evidence_rationale": "NASA-STD-3001 Vol 1 Rev B: Baseline nominal homeostatic parameters for active spaceflight crew members."
+    }
+  ]
+}

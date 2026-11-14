@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "system_name": "ASTROVITAL AI : VITALX CORE RECREATED V1",
+    "subsystem": "03_DECISION_CORE",
+    "file_type": "BIOPHYSICAL_COUPLING_CONSTANTS",
+    "standard_compliance": "DO-178C Level C (DAL C) / NASA-STD-3001 Rev B",
+    "author": "Gourgopal Mohapatra (Lead Architect, Team VITALX CORE)",
+    "version": "1.0.0",
+    "schema_version": "2026.1",
+    "governance": "First-Principles Spaceflight Biophysics Engine (80% Biophysical Supreme Head)"
+  },
+  "cephalad_fluid_shift_model": {
+    "description": "Hydrodynamic Intracranial Pressure (ICP) Index Formulation: I_ICP = alpha1*(MAP/MAP_base) + alpha2*log(1+t_ug) + alpha3*(P_CO2/P_CO2_base) - alpha4*(RMSSD/RMSSD_base)",
+    "coefficients": {
+      "alpha_1_map": 0.40,
+      "alpha_2_microgravity_duration": 0.35,
+      "alpha_3_cabin_co2": 0.15,
+      "alpha_4_autonomic_rmssd": 0.10
+    },
+    "normalization_check": {
+      "expected_sum": 1.00,
+      "tolerance": 1e-6
+    },
+    "thresholds": {
+      "green_upper_bound": 1.35,
+      "amber_upper_bound": 1.85,
+      "red_critical_threshold": 1.85
+    }
+  },
+  "stroke_volume_atrophy_model": {
+    "description": "Left Ventricular Stroke Volume Degradation: SV(t) = SV_0 * exp(-kappa * t_ug) * [1 + beta * ExerciseMetric]",
+    "sv_0_ml": 90.0,
+    "kappa_atrophy_per_day": 0.0035,
+    "beta_exercise_factor": 0.25,
+    "min_viable_sv_ml": 40.0,
+    "warning_threshold_sv_ml": 65.0,
+    "nominal_sv_range_ml": [70.0, 110.0]
+  },
+  "hemodynamic_baselines": {
+    "map_baseline_mmhg": 93.33,
+    "rmssd_baseline_ms": 42.0,
+    "cabin_co2_baseline_ppm": 3950.0,
+    "cabin_co2_baseline_mmhg": 3.0,
+    "icp_baseline_mmhg": 10.0,
+    "cvp_baseline_mmhg": 5.0,
+    "heart_rate_baseline_bpm": 72.0,
+    "systolic_bp_baseline_mmhg": 120.0,
+    "diastolic_bp_baseline_mmhg": 80.0,
+    "spo2_baseline_percent": 98.0,
+    "core_temp_baseline_c": 37.0,
+    "resp_rate_baseline_bpm": 14.0
+  },
+  "cerebral_perfusion_bounds": {
+    "description": "Cerebral Perfusion Pressure: CPP = MAP - ICP",
+    "nominal_min_cpp_mmhg": 60.0,
+    "warning_min_cpp_mmhg": 50.0,
+    "critical_floor_cpp_mmhg": 40.0
+  },
+  "shock_index_thresholds": {
+    "description": "Shock Index: SI = Heart Rate (bpm) / Systolic Blood Pressure (mmHg)",
+    "nominal_max": 0.70,
+    "mild_stress_max": 0.90,
+    "decompensated_shock_critical": 1.10,
+    "severe_fatal_shock": 1.30
+  },
+  "safety_envelope_bounds": {
+    "microgravity_duration_days_max": 1000.0,
+    "cabin_pressure_nominal_psi": 14.7,
+    "cabin_pressure_contingency_psi": 10.2,
+    "cabin_pressure_critical_psi": 10.5
+  }
+}
