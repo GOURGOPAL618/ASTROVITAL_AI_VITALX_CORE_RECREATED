@@ -43,6 +43,13 @@ from triage_model_engine import (
     TriageDecisionPacket,
     CMOOverrideRecord,
 )
+from cockpit_countermeasure_dispatcher import (
+    SequencedActionStep,
+    HUDAlertBanner,
+    CockpitActionPayload,
+    CockpitCountermeasureDispatcher,
+    EQUIPMENT_LOCKER_REGISTRY,
+)
 
 __all__ = [
     "RuleCondition",
@@ -66,4 +73,9 @@ __all__ = [
     "TriageModelEngine",
     "TriageDecisionPacket",
     "CMOOverrideRecord",
+    "SequencedActionStep",
+    "HUDAlertBanner",
+    "CockpitActionPayload",
+    "CockpitCountermeasureDispatcher",
+    "EQUIPMENT_LOCKER_REGISTRY",
 ]
