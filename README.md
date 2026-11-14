@@ -2,8 +2,8 @@
 ### *Autonomous Bio-Astronautic Clinical Decision Support Architecture for Deep Space Missions*
 
 [![DO-178C Standard](https://img.shields.io/badge/Certification-DO--178C%20Level%20C%20(DAL%20C)-0052CC.svg?style=for-the-badge&logo=nasa)](06_MISSION_REPORTS/DO178C_LEVEL_C_EXECUTION_PLAYBOOK.md)
-[![Statement Coverage](https://img.shields.io/badge/Coverage-100%25%20(1030%2F1030%20Lines)-2ea44f.svg?style=for-the-badge&logo=pytest)](07_ASTRO_DOCS/02_AI_CORE_DOCS/01_src_DOCS/03_SANITY_GATE_SPECIFICATION_AND_AUDIT.md)
-[![Test Suite Status](https://img.shields.io/badge/Tests-167%20%2F%20167%20Passed%20(1.79s)-brightgreen.svg?style=for-the-badge&logo=githubactions)](07_ASTRO_DOCS/02_AI_CORE_DOCS/02_tests_DOCS/03_TEST_SANITY_GATE_VERIFICATION_REPORT.md)
+[![Statement Coverage](https://img.shields.io/badge/Coverage-100%25%20(1351%2F1351%20Lines)-2ea44f.svg?style=for-the-badge&logo=pytest)](07_ASTRO_DOCS/02_AI_CORE_DOCS/01_src_DOCS/04_BIOMARKER_RANKER_SPECIFICATION_AND_AUDIT.md)
+[![Test Suite Status](https://img.shields.io/badge/Tests-211%20%2F%20211%20Passed%20(2.54s)-brightgreen.svg?style=for-the-badge&logo=githubactions)](07_ASTRO_DOCS/02_AI_CORE_DOCS/02_tests_DOCS/04_TEST_BIOMARKER_RANKER_VERIFICATION_REPORT.md)
 [![Python Version](https://img.shields.io/badge/Python-3.12%20%7C%203.14-3776AB.svg?style=for-the-badge&logo=python)](pyproject.toml)
 [![Architecture Paradigm](https://img.shields.io/badge/Architecture-80%2F20%20Hybrid%20Deterministic-FF6F00.svg?style=for-the-badge)](VITALX_CORE_RECREATED_PIPELINE_SPECIFICATION.md)
 [![NASA Challenge Track](https://img.shields.io/badge/Challenge-Human%20Body%20in%20Deep%20Space-E03C31.svg?style=for-the-badge&logo=nasa)](07_ASTRO_DOCS/07_SYSTEM_ARCHITECTURE_DOCS/ASTROVITAL_VITALX_CORE_RECREATED_ARCHITECTURE.tex)
@@ -228,29 +228,30 @@ Name                                           Stmts   Miss  Cover   Missing
 ----------------------------------------------------------------------------
 02_AI_CORE\01_src\ingestion_adapter.py           234      0   100%
 02_AI_CORE\01_src\inno3_signal_stabilizer.py     377      0   100%
+02_AI_CORE\01_src\inno6_biomarker_ranker.py      321      0   100%
 02_AI_CORE\01_src\sanity_gate.py                 419      0   100%
 ----------------------------------------------------------------------------
-TOTAL                                           1030      0   100%
-======================= 167 passed, 2 warnings in 1.79s =======================
+TOTAL                                           1351      0   100%
+======================= 211 passed, 2 warnings in 2.54s =======================
 ```
 
 | Verification Parameter | DO-178C DAL C Standard | ASTROVITAL VITALX Result | Audit Status |
 | :--- | :--- | :--- | :--- |
-| **Structural Statement Coverage** | **100% of executable code** | **100.0% (1,030 / 1,030 statements)** | **COMPLIANT (PASS)** |
+| **Structural Statement Coverage** | **100% of executable code** | **100.0% (1,351 / 1,351 statements)** | **COMPLIANT (PASS)** |
 | **Unexercised / Dead Code** | 0 statements allowed | **0 statements (Zero dead code)** | **COMPLIANT (PASS)** |
-| **Requirements-Based Tests** | Direct traceability to HLR | **167 Unit & Integration Tests** | **COMPLIANT (PASS)** |
-| **Test Suite Pass Rate** | 100% test pass rate | **100% (167 Passed, 0 Failed)** | **COMPLIANT (PASS)** |
-| **Execution Performance / Latency** | $< 5.0\text{ seconds}$ | **1.79 seconds** | **OPTIMAL** |
+| **Requirements-Based Tests** | Direct traceability to HLR | **211 Unit & Integration Tests** | **COMPLIANT (PASS)** |
+| **Test Suite Pass Rate** | 100% test pass rate | **100% (211 Passed, 0 Failed)** | **COMPLIANT (PASS)** |
+| **Execution Performance / Latency** | $< 5.0\text{ seconds}$ | **2.54 seconds** | **OPTIMAL** |
 | **Cryptographic Provenance** | Immutable sidecar hashes | **SHA-256 JSON Manifests** | **COMPLIANT (PASS)** |
 
 ### 6.2 The 3-Tab Live Judging Workflow
 To demonstrate compliance during competition judging in $< 2\text{ minutes}$:
-1. **Tab 1 — Requirements:** Open [`06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md`](06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md). Review formal boundary constraints mapped from `HLR-BIO-001` through `HLR-BIO-004`, `REQ-STAB-01` to `05`, and `REQ-GATE-01` to `05`.
+1. **Tab 1 — Requirements:** Open [`06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md`](06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md). Review formal boundary constraints mapped from `HLR-BIO-001` through `HLR-BIO-004`, `REQ-STAB-01` to `05`, `REQ-GATE-01` to `05`, and `REQ-RANK-01` to `05`.
 2. **Tab 2 — Live Execution:** Run the 1-click verification command in terminal:
    ```bash
-   pytest 02_AI_CORE/02_tests/ -v --cov=ingestion_adapter --cov=inno3_signal_stabilizer --cov=sanity_gate --cov-report=term-missing
+   pytest 02_AI_CORE/02_tests/ -v --cov=ingestion_adapter --cov=inno3_signal_stabilizer --cov=sanity_gate --cov=inno6_biomarker_ranker --cov-report=term-missing
    ```
-   Observe 167 tests passing with 100% coverage in **1.79 seconds**.
+   Observe 211 tests passing with 100% coverage in **2.54 seconds**.
 3. **Tab 3 — Interactive HUD:** Launch the Astronaut Cockpit UI:
    ```bash
    streamlit run 04_ASTRONAUT_COCKPIT/app.py
@@ -278,6 +279,7 @@ ASTROVITAL_AI_VITALX_CORE_RECREATED/
 │   │   ├── ingestion_adapter.py               # Multi-mission parser & 12D builder (100% Statement Coverage)
 │   │   ├── inno3_signal_stabilizer.py         # 20% Adaptive AI (Drift, Savitzky-Golay, NLMS, SQI - 100% Coverage)
 │   │   ├── sanity_gate.py                     # DO-178C Mathematical Sanity Gate (Ω_bio - 100% Statement Coverage)
+│   │   ├── inno6_biomarker_ranker.py          # 20% Adaptive AI (Context Matrix, Robust MAD, Entropy - 100% Coverage)
 │   │   ├── inno3_noise_estimator.py           # High-frequency accelerometric noise decoupling
 │   │   ├── inno1_hydrodynamic_fluid.py        # 80% Biophysical: Cephalad fluid shift & ICP model
 │   │   ├── inno1_cardiac_decondition.py       # 80% Biophysical: Stroke volume & cardiac atrophy

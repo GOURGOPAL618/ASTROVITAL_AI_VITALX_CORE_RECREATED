@@ -69,6 +69,16 @@ Under RTCA DO-178C / EUROCAE ED-12C Section 5.1, High-Level Requirements define 
 | **REQ-GATE-04** (HLR-BIO-003) | `LLR-GATE-004`: Manage sensor lead-off and dropouts via bounded hold (`HOLD_LAST_VALID`) and transition to Apollo/ISS calibrated baselines (`MISSION_BASELINE`); log substitution audit records. | `SensorDecouplingFallbackEngine.apply_fallback_channel()`<br>`SensorDecouplingFallbackEngine.apply_fallback_frame()` | `test_46` to `test_59`<br>(14 unit tests) | 100% | **PASS** |
 | **REQ-GATE-05** (HLR-BIO-003, HLR-BIO-004) | `LLR-GATE-005`: Orchestrate sequential 4-stage firewall; produce immutable `SanityGatedPacket` with clean pass status and DO-178C audit manifest; execute emergency non-finite scrub. | `SanityGateExporter.process_and_export_packet()` | `test_60` to `test_67`<br>(8 unit tests) | 100% | **PASS** |
 
+### 2.4 Subsystem 02: AI Core — Module `inno6_biomarker_ranker.py`
+
+| HLR / Requirement Ref | Low-Level Requirement (LLR) | Source Class & Method | Automated Test Suite ID | Statement Coverage | Test Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **REQ-RANK-01** (HLR-BIO-003) | `LLR-RANK-001`: Map 8 spaceflight operational phases to dynamic Dirichlet prior weights ($\sum w_i = 1.0$); cephalad fluid shift boosts ICP/CVP, EVA boosts metabolic parameters; handle phase string aliases and empty input exceptions. | `MissionContextMatrix.resolve_phase()`<br>`MissionContextMatrix.get_phase_weights()` | `test_01` to `test_12`<br>(12 unit tests) | 100% | **PASS** |
+| **REQ-RANK-02** (HLR-BIO-003) | `LLR-RANK-002`: Compute robust MAD scaled Z-scores ($Z_i = \frac{\|x_i - \text{median}\|}{1.4826 \times \text{MAD}}$); scale urgency weights via sigmoidal saturation function; handle zero-MAD edge cases and non-finite values. | `PhysiologicalDeviationScorer.calculate_channel_z_score()`<br>`PhysiologicalDeviationScorer.score_telemetry_vector()` | `test_13` to `test_24`<br>(12 unit tests) | 100% | **PASS** |
+| **REQ-RANK-03** (HLR-BIO-003) | `LLR-RANK-003`: Calculate objective Shannon entropy $E_j = -\frac{1}{\ln(m)} \sum p_{ij} \ln(p_{ij})$ and information divergence $d_j = 1 - E_j$; handle flatlines (max entropy), short temporal horizons ($M < 3$), and NaN/Inf. | `EntropyWeightEngine.calculate_entropy_weights()` | `test_25` to `test_32`<br>(8 unit tests) | 100% | **PASS** |
+| **REQ-RANK-04** (HLR-BIO-003) | `LLR-RANK-004`: Fuse 3 sensitivity sources via convex combination $\mathbf{W} = \alpha \mathbf{W}_{\text{context}} + \beta \mathbf{W}_{\text{dev}} + \gamma \mathbf{W}_{\text{entropy}}$; enforce Dirichlet floor and simplex bounds ($\sum w_i = 1.0$); sort priority rankings. | `CompositeSensitivityRanker.fuse_sensitivity_vectors()` | `test_33` to `test_39`<br>(7 unit tests) | 100% | **PASS** |
+| **REQ-RANK-05** (HLR-BIO-003, HLR-BIO-004) | `LLR-RANK-005`: Orchestrate end-to-end 4-stage ranking pipeline; export immutable `BiomarkerSensitivityContract` with numerical certification; identify top critical biomarker channel. | `SensitivityContractExporter.process_and_export_contract()` | `test_40` to `test_44`<br>(5 unit tests) | 100% | **PASS** |
+
 ---
 
 ## 3. Structural Statement Coverage Audit (DO-178C Level C)
@@ -83,18 +93,19 @@ Name                                           Stmts   Miss  Cover   Missing
 ----------------------------------------------------------------------------
 02_AI_CORE\01_src\ingestion_adapter.py           234      0   100%
 02_AI_CORE\01_src\inno3_signal_stabilizer.py     377      0   100%
+02_AI_CORE\01_src\inno6_biomarker_ranker.py      321      0   100%
 02_AI_CORE\01_src\sanity_gate.py                 419      0   100%
 ----------------------------------------------------------------------------
-TOTAL                                           1030      0   100%
-======================= 167 passed, 2 warnings in 1.79s =======================
+TOTAL                                           1351      0   100%
+======================= 211 passed, 2 warnings in 2.54s =======================
 ```
 
-- **Total Executable Statements:** 1,030  
-- **Exercised Statements:** 1,030  
+- **Total Executable Statements:** 1,351  
+- **Exercised Statements:** 1,351  
 - **Unexercised Statements (Dead Code):** 0  
 - **Coverage Percentage:** **100.0%**  
-- **Execution Pass Rate:** 167 / 167 Passed (**100%**)  
-- **Execution Elapsed Time:** 1.79 seconds (Combined 3 suites, well within $< 5.0\text{s}$ SLA)
+- **Execution Pass Rate:** 211 / 211 Passed (**100%**)  
+- **Execution Elapsed Time:** 2.54 seconds (Combined 4 suites, well within $< 5.0\text{s}$ SLA)
 
 ---
 
