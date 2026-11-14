@@ -49,6 +49,26 @@ Under RTCA DO-178C / EUROCAE ED-12C Section 5.1, High-Level Requirements define 
 | **HLR-BIO-003** | `LLR-ING-011`: Strict schema validation, null-rejection, and physical limits verification for 12D vectors. | `TelemetryVector12DBuilder.validate_and_build()` | `test_phase4_builder_initialization`<br>`test_phase4_validate_and_build_tensor_nominal`<br>`test_phase4_builder_without_timestamp_column`<br>`test_phase4_empty_dataframe_defense`<br>`test_phase4_missing_columns_and_unresolved_nulls_defense`<br>`test_phase4_biological_limits_violation_defense` | 100% | **PASS** |
 | **HLR-BIO-004** | `LLR-ING-012`: Mission-Ready CSV and sidecar JSON export with SHA-256 digest and defensive DataFrame check. | `MissionReadyVaultExporter.export()` | `test_phase5_default_init_exporter`<br>`test_phase5_export_dataset_nominal`<br>`test_phase5_export_empty_dataframe_defense`<br>`test_phase5_complete_end_to_end_phases_1_to_5_chain` | 100% | **PASS** |
 
+### 2.2 Subsystem 02: AI Core — Module `inno3_signal_stabilizer.py`
+
+| HLR / Requirement Ref | Low-Level Requirement (LLR) | Source Class & Method | Automated Test Suite ID | Statement Coverage | Test Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **REQ-STAB-01** (HLR-BIO-003) | `LLR-STAB-001`: Strip non-physiological baseline wander (<0.05 Hz) using moving median with boundary reflection & polynomial fallback; audit drift velocity. | `BaselineDriftCompensator.estimate_baseline_drift()`<br>`BaselineDriftCompensator.compensate_drift()` | `test_01` to `test_20`<br>(20 unit tests) | 100% | **PASS** |
+| **REQ-STAB-02** (HLR-BIO-003) | `LLR-STAB-002`: Closed-form Savitzky-Golay convolution filtering thruster acoustics and pump harmonics while preserving pulse morphology and computing SNR improvement. | `MorphologyPreservingFilter.filter_signal()`<br>`MorphologyPreservingFilter.filter_telemetry_frame()` | `test_21` to `test_34`<br>(14 unit tests) | 100% | **PASS** |
+| **REQ-STAB-03** (HLR-BIO-003) | `LLR-STAB-003`: Normalized Least Mean Squares (NLMS) adaptive FIR filter with leaky update canceling astronaut exercise/maneuver motion artifacts using IMU reference. | `AdaptiveMotionCanceller.cancel_motion_artifact()`<br>`AdaptiveMotionCanceller.cancel_motion_telemetry_frame()` | `test_35` to `test_47`<br>(13 unit tests) | 100% | **PASS** |
+| **REQ-STAB-04** (HLR-BIO-003) | `LLR-STAB-004`: Compute composite Signal Quality Index ($0.0 \le \text{SQI} \le 1.0$) blending variance, skewness, and kurtosis; detect lead-off flatlines (`DECOUPLED`). | `SignalQualityEvaluator.evaluate_sqi()`<br>`SignalQualityEvaluator.evaluate_telemetry_frame()` | `test_48` to `test_60`<br>(13 unit tests) | 100% | **PASS** |
+| **REQ-STAB-05** (HLR-BIO-003) | `LLR-STAB-005`: End-to-end 4-stage pipeline orchestrator producing immutable `StabilizedFrameContract` with non-finite numerical scrub and flight-ready audit. | `StabilizedFrameExporter.process_and_export_frame()` | `test_61` to `test_68`<br>(8 unit tests) | 100% | **PASS** |
+
+### 2.3 Subsystem 02: AI Core — Module `sanity_gate.py`
+
+| HLR / Requirement Ref | Low-Level Requirement (LLR) | Source Class & Method | Automated Test Suite ID | Statement Coverage | Test Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **REQ-GATE-01** (HLR-BIO-002, HLR-BIO-003) | `LLR-GATE-001`: Enforce NASA-STD-3001 biological envelope ($\mathbf{\Omega}_{\text{bio}}$); detect non-viable values ($HR < 20 \lor > 240$, $SpO_2 > 100\%$, etc.) and clamp to viable limits. | `PhysiologicalBoundaryEnforcer.audit_channel_array()`<br>`PhysiologicalBoundaryEnforcer.audit_telemetry_frame()` | `test_01` to `test_19`<br>(19 unit tests) | 100% | **PASS** |
+| **REQ-GATE-02** (HLR-BIO-003) | `LLR-GATE-002`: Enforce maximum biological slew rates $|d\mathbf{V}/dt|$; clamp non-physiological step jumps (e.g. HR jumping $+80\text{ bpm/sec}$) preserving continuity. | `PhysiologicalGradientLimiter.audit_channel_gradient()`<br>`PhysiologicalGradientLimiter.audit_telemetry_frame()` | `test_20` to `test_32`<br>(13 unit tests) | 100% | **PASS** |
+| **REQ-GATE-03** (HLR-BIO-002, HLR-BIO-003) | `LLR-GATE-003`: Verify cross-parameter hydraulic and thermodynamic coupling ($SBP - DBP \ge 15\text{ mmHg}$, cardiac-respiratory arrest consistency); resolve unphysical discordances safely around mean pressure. | `PhysiologicalCouplingGuard.audit_hemodynamic_coupling()`<br>`PhysiologicalCouplingGuard.audit_cardiorespiratory_coupling()` | `test_33` to `test_45`<br>(13 unit tests) | 100% | **PASS** |
+| **REQ-GATE-04** (HLR-BIO-003) | `LLR-GATE-004`: Manage sensor lead-off and dropouts via bounded hold (`HOLD_LAST_VALID`) and transition to Apollo/ISS calibrated baselines (`MISSION_BASELINE`); log substitution audit records. | `SensorDecouplingFallbackEngine.apply_fallback_channel()`<br>`SensorDecouplingFallbackEngine.apply_fallback_frame()` | `test_46` to `test_59`<br>(14 unit tests) | 100% | **PASS** |
+| **REQ-GATE-05** (HLR-BIO-003, HLR-BIO-004) | `LLR-GATE-005`: Orchestrate sequential 4-stage firewall; produce immutable `SanityGatedPacket` with clean pass status and DO-178C audit manifest; execute emergency non-finite scrub. | `SanityGateExporter.process_and_export_packet()` | `test_60` to `test_67`<br>(8 unit tests) | 100% | **PASS** |
+
 ---
 
 ## 3. Structural Statement Coverage Audit (DO-178C Level C)
@@ -59,20 +79,22 @@ Under DO-178C Level C, 100% statement coverage is mandatory. Measured via `pytes
 =============================== tests coverage ================================
 _______________ coverage: platform win32, python 3.12.0-final-0 _______________
 
-Name                                     Stmts   Miss  Cover   Missing
-----------------------------------------------------------------------
-02_AI_CORE\01_src\ingestion_adapter.py     234      0   100%
-----------------------------------------------------------------------
-TOTAL                                      234      0   100%
-======================= 32 passed, 2 warnings in 1.60s ========================
+Name                                           Stmts   Miss  Cover   Missing
+----------------------------------------------------------------------------
+02_AI_CORE\01_src\ingestion_adapter.py           234      0   100%
+02_AI_CORE\01_src\inno3_signal_stabilizer.py     377      0   100%
+02_AI_CORE\01_src\sanity_gate.py                 419      0   100%
+----------------------------------------------------------------------------
+TOTAL                                           1030      0   100%
+======================= 167 passed, 2 warnings in 1.79s =======================
 ```
 
-- **Total Executable Statements:** 234  
-- **Exercised Statements:** 234  
+- **Total Executable Statements:** 1,030  
+- **Exercised Statements:** 1,030  
 - **Unexercised Statements (Dead Code):** 0  
 - **Coverage Percentage:** **100.0%**  
-- **Execution Pass Rate:** 32 / 32 Passed (**100%**)  
-- **Execution Elapsed Time:** 1.60 seconds (Well within $< 5.0\text{s}$ SLA)
+- **Execution Pass Rate:** 167 / 167 Passed (**100%**)  
+- **Execution Elapsed Time:** 1.79 seconds (Combined 3 suites, well within $< 5.0\text{s}$ SLA)
 
 ---
 
