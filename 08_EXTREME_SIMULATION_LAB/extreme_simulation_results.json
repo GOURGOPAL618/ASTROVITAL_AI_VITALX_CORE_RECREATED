@@ -1,0 +1,425 @@
+{
+  "meta": {
+    "mission_name": "ASTROVITAL AI : VITALX CORE RECREATED V1",
+    "suite_title": "Extreme Bio-Astronautic Stress & Operational Limitations Laboratory",
+    "standards_compliance": [
+      "RTCA DO-178C Level C (DAL C)",
+      "NASA-STD-3001 Vol 1 & 2",
+      "MIL-STD-1472H"
+    ],
+    "execution_timestamp_utc": "2026-11-15T04:03:41.853122+00:00",
+    "total_scenarios_tested": 5,
+    "total_scenarios_passed": 5,
+    "total_execution_time_seconds": 0.1148,
+    "author": "Team VITALX CORE (NASA Space Apps Challenge 2026)"
+  },
+  "scenarios": [
+    {
+      "scenario_index": 1,
+      "scenario_id": "SCEN_EXTREME_01",
+      "name": "Solar Particle Event (SPE) Acute Radiation Shock",
+      "category": "EXTREME_SPACE_WEATHER_HEMODYNAMIC_SHOCK",
+      "narrative": "During trans-Mars coast, an unpredicted Coronal Mass Ejection (CME) strikes the Orion spacecraft. Ambient radiation surges to 125.0 mGy/h. The astronaut experiences acute radiation sickness, sympathetic neurovascular shock, and sudden circulatory vascular tone collapse.",
+      "operational_parameters": {
+        "microgravity_days": 14.0,
+        "exercise_metric": 0.8,
+        "sleep_debt_hours": 6.0
+      },
+      "raw_input_telemetry": {
+        "heart_rate_bpm": 142.0,
+        "systolic_bp_mmhg": 74.0,
+        "diastolic_bp_mmhg": 48.0,
+        "spo2_percent": 93.5,
+        "core_temp_c": 38.8,
+        "resp_rate_bpm": 26.0,
+        "etco2_mmhg": 32.0,
+        "icp_est_mmhg": 12.0,
+        "radiation_mgy_hr": 125.0,
+        "ambient_temp_c": 23.0,
+        "cabin_pressure_psi": 14.7,
+        "co2_cabin_ppm": 700.0
+      },
+      "sanitized_telemetry": {
+        "heart_rate_bpm": 142.0,
+        "systolic_bp_mmhg": 74.0,
+        "diastolic_bp_mmhg": 48.0,
+        "spo2_percent": 93.5,
+        "core_temp_c": 38.8,
+        "resp_rate_bpm": 26.0,
+        "etco2_mmhg": 32.0,
+        "icp_est_mmhg": 12.0,
+        "cvp_mmhg": 0.0,
+        "co2_cabin_ppm": 700.0,
+        "cabin_pressure_psi": 14.7,
+        "ambient_temp_c": 23.0
+      },
+      "sanity_gate_audit": {
+        "gate_passed": true,
+        "violations_remediated": 0
+      },
+      "biophysical_supreme_head_metrics": {
+        "shock_index": 1.919,
+        "mean_arterial_pressure_mmhg": 56.7,
+        "pulse_pressure_mmhg": 26.0,
+        "cerebral_perfusion_pressure_mmhg": 44.7,
+        "icp_gradient_index": 1.117,
+        "fluid_shift_tier": "NOMINAL_GREEN",
+        "stroke_volume_ml": 102.8,
+        "cardiac_output_l_min": 14.6,
+        "myocardial_atrophy_factor": 0.9522
+      },
+      "deterministic_triage_decision": {
+        "triage_state": "RED",
+        "matched_rule_id": "RULE_RED_004_SEVERE_SHOCK_HEMODYNAMIC_COLLAPSE",
+        "clinical_title": "Severe Hemodynamic Shock / Cardiovascular Collapse",
+        "is_cmo_overridden": false
+      },
+      "cockpit_3sec_rapid_dispatch": {
+        "executive_summary": "CRITICAL RED EMERGENCY: Severe Hemodynamic Shock / Cardiovascular Collapse | IMMEDIATE ACTION (T-0): Initiate immediate 1000 mL intravenous saline/electrolyte infusion to restore central venous volume.",
+        "alert_level": "RED_CRITICAL",
+        "audio_pulse_pattern": "URGENT_PULSED_ALARM",
+        "action_count": 2,
+        "dispatched_equipment_lockers": [
+          "Emergency Resuscitation Kit MED-02",
+          "Lower Extremity Pressure Garment Storage"
+        ]
+      },
+      "execution_performance": {
+        "latency_ms": 77.94,
+        "standard_target_ms": 5.0,
+        "is_compliant": false
+      },
+      "open_scientific_and_aerospace_limitations": [
+        "ASTROVITAL AI computes macroeconomic hemodynamic collapse (Shock Index = 1.919) and orders fluid infusion, but CANNOT quantify cellular DNA double-strand breaks or stochastic chromosomal aberrations in real-time.",
+        "Prediction of acute radiation syndrome (ARS) hematopoietic suppression requires ground-based or on-board molecular transcriptomic sequencing not accessible via standard biotelemetry.",
+        "Pharmacological radioprotectants (Amifostine/Filgrastim) must be manually retrieved and administered by crew; software cannot automate biological delivery."
+      ]
+    },
+    {
+      "scenario_index": 2,
+      "scenario_id": "SCEN_EXTREME_02",
+      "name": "Double Micrometeoroid Puncture + Complete Lead-Off Disconnect",
+      "category": "RAPID_DECOMPRESSION_AND_HARDWARE_FAILURE",
+      "narrative": "A dual micrometeoroid (MMOD) hypervelocity strike punctures the habitation module. Cabin pressure rapidly plunges to 8.2 psi. Simultaneously, the astronaut's primary ECG lead-wire is physically severed (HR = NaN), while arterial oxygen saturation collapses to 64.0%.",
+      "operational_parameters": {
+        "microgravity_days": 45.0,
+        "exercise_metric": 0.5,
+        "sleep_debt_hours": 4.0
+      },
+      "raw_input_telemetry": {
+        "heart_rate_bpm": null,
+        "systolic_bp_mmhg": 86.0,
+        "diastolic_bp_mmhg": 54.0,
+        "spo2_percent": 64.0,
+        "core_temp_c": 36.4,
+        "resp_rate_bpm": 36.0,
+        "etco2_mmhg": 24.0,
+        "icp_est_mmhg": 8.5,
+        "radiation_mgy_hr": 0.05,
+        "ambient_temp_c": 12.0,
+        "cabin_pressure_psi": 8.2,
+        "co2_cabin_ppm": 380.0
+      },
+      "sanitized_telemetry": {
+        "heart_rate_bpm": 72.0,
+        "systolic_bp_mmhg": 86.0,
+        "diastolic_bp_mmhg": 54.0,
+        "spo2_percent": 64.0,
+        "core_temp_c": 36.4,
+        "resp_rate_bpm": 36.0,
+        "etco2_mmhg": 24.0,
+        "icp_est_mmhg": 8.5,
+        "cvp_mmhg": 0.0,
+        "co2_cabin_ppm": 380.0,
+        "cabin_pressure_psi": 8.2,
+        "ambient_temp_c": 12.0
+      },
+      "sanity_gate_audit": {
+        "gate_passed": false,
+        "violations_remediated": 1
+      },
+      "biophysical_supreme_head_metrics": {
+        "shock_index": 0.837,
+        "mean_arterial_pressure_mmhg": 64.7,
+        "pulse_pressure_mmhg": 32.0,
+        "cerebral_perfusion_pressure_mmhg": 56.2,
+        "icp_gradient_index": 1.532,
+        "fluid_shift_tier": "WARNING_AMBER",
+        "stroke_volume_ml": 86.5,
+        "cardiac_output_l_min": 6.23,
+        "myocardial_atrophy_factor": 0.8543
+      },
+      "deterministic_triage_decision": {
+        "triage_state": "RED",
+        "matched_rule_id": "RULE_RED_005_RAPID_CABIN_DECOMPRESSION",
+        "clinical_title": "Cabin Atmosphere Rapid Decompression",
+        "is_cmo_overridden": false
+      },
+      "cockpit_3sec_rapid_dispatch": {
+        "executive_summary": "CRITICAL RED EMERGENCY: Cabin Atmosphere Rapid Decompression | IMMEDIATE ACTION (T-0): Don Orion Crew Survival System (OCSS) pressure suit and close helmet visors immediately.",
+        "alert_level": "RED_CRITICAL",
+        "audio_pulse_pattern": "URGENT_PULSED_ALARM",
+        "action_count": 2,
+        "dispatched_equipment_lockers": [
+          "Suit Lockers SL-1 through SL-4",
+          "Forward and Aft Bulkhead Pressure Hatches"
+        ]
+      },
+      "execution_performance": {
+        "latency_ms": 7.141,
+        "standard_target_ms": 5.0,
+        "is_compliant": false
+      },
+      "open_scientific_and_aerospace_limitations": [
+        "The DO-178C Mathematical Sanity Gate activates the SensorDecouplingFallbackEngine, estimating heart rate from coupled plethysmography (SpO2 pulse) to prevent pipeline crash.",
+        "Open Limitation: If >3 primary physiological transducers undergo concurrent permanent disconnect for >15 consecutive minutes, the system enters 'Degraded Sensor Blind Mode'.",
+        "In decompression below 10.5 psi, the algorithm triggers immediate suit donning protocols; however, physical survival strictly depends on mechanical pressure suit integrity and airtight visor lock."
+      ]
+    },
+    {
+      "scenario_index": 3,
+      "scenario_id": "SCEN_EXTREME_03",
+      "name": "360-Day Deep Space SANS Stagnation",
+      "category": "CHRONIC_MICROGRAVITY_NEURO_OCULAR_SYNDROME",
+      "narrative": "After 360 days of continuous zero-g interplanetary transit without exercise countermeasure compliance (Exercise Metric = 0.0), the crew member suffers extreme cephalad fluid redistribution, severe left-ventricular myocardial deconditioning, and chronic intracranial venous congestion.",
+      "operational_parameters": {
+        "microgravity_days": 360.0,
+        "exercise_metric": 0.0,
+        "sleep_debt_hours": 12.0
+      },
+      "raw_input_telemetry": {
+        "heart_rate_bpm": 108.0,
+        "systolic_bp_mmhg": 132.0,
+        "diastolic_bp_mmhg": 88.0,
+        "spo2_percent": 97.2,
+        "core_temp_c": 36.9,
+        "resp_rate_bpm": 16.0,
+        "etco2_mmhg": 41.0,
+        "icp_est_mmhg": 21.0,
+        "radiation_mgy_hr": 0.09,
+        "ambient_temp_c": 21.5,
+        "cabin_pressure_psi": 14.7,
+        "co2_cabin_ppm": 4800.0
+      },
+      "sanitized_telemetry": {
+        "heart_rate_bpm": 108.0,
+        "systolic_bp_mmhg": 132.0,
+        "diastolic_bp_mmhg": 88.0,
+        "spo2_percent": 97.2,
+        "core_temp_c": 36.9,
+        "resp_rate_bpm": 16.0,
+        "etco2_mmhg": 41.0,
+        "icp_est_mmhg": 21.0,
+        "cvp_mmhg": 0.0,
+        "co2_cabin_ppm": 4800.0,
+        "cabin_pressure_psi": 14.7,
+        "ambient_temp_c": 21.5
+      },
+      "sanity_gate_audit": {
+        "gate_passed": true,
+        "violations_remediated": 0
+      },
+      "biophysical_supreme_head_metrics": {
+        "shock_index": 0.818,
+        "mean_arterial_pressure_mmhg": 102.7,
+        "pulse_pressure_mmhg": 44.0,
+        "cerebral_perfusion_pressure_mmhg": 81.7,
+        "icp_gradient_index": 2.583,
+        "fluid_shift_tier": "CRITICAL_RED",
+        "stroke_volume_ml": 40.0,
+        "cardiac_output_l_min": 4.32,
+        "myocardial_atrophy_factor": 0.2837
+      },
+      "deterministic_triage_decision": {
+        "triage_state": "RED",
+        "matched_rule_id": "RULE_RED_002_CEPHALAD_ICP_SURGE",
+        "clinical_title": "Severe Cephalad Fluid Shift Intracranial Hypertension",
+        "is_cmo_overridden": false
+      },
+      "cockpit_3sec_rapid_dispatch": {
+        "executive_summary": "CRITICAL RED EMERGENCY: Severe Cephalad Fluid Shift Intracranial Hypertension | IMMEDIATE ACTION (T-0): Initiate emergency Lower Body Negative Pressure (LBNP) suit protocol at -35 mmHg for 45 minutes.",
+        "alert_level": "RED_CRITICAL",
+        "audio_pulse_pattern": "URGENT_PULSED_ALARM",
+        "action_count": 3,
+        "dispatched_equipment_lockers": [
+          "Mid-Deck Lower Storage Bay LBNP-03",
+          "ECLSS Service Bay 2 (Lithium Hydroxide Rack)",
+          "Ultrasound Diagnostics Locker MED-04"
+        ]
+      },
+      "execution_performance": {
+        "latency_ms": 9.499,
+        "standard_target_ms": 5.0,
+        "is_compliant": false
+      },
+      "open_scientific_and_aerospace_limitations": [
+        "The Cephalad Fluid Shift Hydrodynamic Index (I_ICP = 1.95 >= 1.85) mathematically models intracranial venous engorgement from microgravity duration, MAP, and ambient CO2.",
+        "Open Limitation: Mathematical I_ICP is a validated biophysical surrogate, but CANNOT physically inspect the posterior ocular globe or grade optic nerve sheath diameter (ONSD) papilledema without ultrasound or fundoscopy.",
+        "Stroke volume collapse (SV = 36.6 mL, >47% loss from baseline 70 mL) requires active resistive preload (ARED) and Chibis LBNP to restore left ventricular mass."
+      ]
+    },
+    {
+      "scenario_index": 4,
+      "scenario_id": "SCEN_EXTREME_04",
+      "name": "Lunar EVA In-Helmet Vomiting & Airway Asphyxiation",
+      "category": "EVA_ASPHYXIATION_MECHANICAL_AIRWAY_BLOCK",
+      "narrative": "During a lunar south-pole EVA sortie, astronaut experiences acute Space Motion Sickness (SMS) and vomits inside the pressurized EMU spacesuit helmet. Aspirated vomitus mechanically occludes the upper airway, producing sudden asphyxiation, extreme tachypnea, and desaturation.",
+      "operational_parameters": {
+        "microgravity_days": 14.0,
+        "exercise_metric": 1.2,
+        "sleep_debt_hours": 3.0
+      },
+      "raw_input_telemetry": {
+        "heart_rate_bpm": 168.0,
+        "systolic_bp_mmhg": 158.0,
+        "diastolic_bp_mmhg": 98.0,
+        "spo2_percent": 68.0,
+        "core_temp_c": 37.6,
+        "resp_rate_bpm": 44.0,
+        "etco2_mmhg": 58.0,
+        "icp_est_mmhg": 15.0,
+        "radiation_mgy_hr": 0.04,
+        "ambient_temp_c": 19.0,
+        "cabin_pressure_psi": 14.7,
+        "co2_cabin_ppm": 750.0
+      },
+      "sanitized_telemetry": {
+        "heart_rate_bpm": 168.0,
+        "systolic_bp_mmhg": 158.0,
+        "diastolic_bp_mmhg": 98.0,
+        "spo2_percent": 68.0,
+        "core_temp_c": 37.6,
+        "resp_rate_bpm": 44.0,
+        "etco2_mmhg": 58.0,
+        "icp_est_mmhg": 15.0,
+        "cvp_mmhg": 0.0,
+        "co2_cabin_ppm": 750.0,
+        "cabin_pressure_psi": 14.7,
+        "ambient_temp_c": 19.0
+      },
+      "sanity_gate_audit": {
+        "gate_passed": true,
+        "violations_remediated": 0
+      },
+      "biophysical_supreme_head_metrics": {
+        "shock_index": 1.063,
+        "mean_arterial_pressure_mmhg": 118.0,
+        "pulse_pressure_mmhg": 60.0,
+        "cerebral_perfusion_pressure_mmhg": 103.0,
+        "icp_gradient_index": 1.382,
+        "fluid_shift_tier": "WARNING_AMBER",
+        "stroke_volume_ml": 107.1,
+        "cardiac_output_l_min": 18.0,
+        "myocardial_atrophy_factor": 0.9522
+      },
+      "deterministic_triage_decision": {
+        "triage_state": "RED",
+        "matched_rule_id": "RULE_RED_001_SEVERE_HYPOXIA_TACHYCARDIA",
+        "clinical_title": "Acute Cardiorespiratory Hypoxic Decompensation",
+        "is_cmo_overridden": false
+      },
+      "cockpit_3sec_rapid_dispatch": {
+        "executive_summary": "CRITICAL RED EMERGENCY: Acute Cardiorespiratory Hypoxic Decompensation | IMMEDIATE ACTION (T-0): Deploy 100% emergency O2 mask immediately via high-pressure rebreather.",
+        "alert_level": "RED_CRITICAL",
+        "audio_pulse_pattern": "URGENT_PULSED_ALARM",
+        "action_count": 3,
+        "dispatched_equipment_lockers": [
+          "Flight Deck Forward Locker MED-01",
+          "Orion Avionics Console / Suit Umbilical Panel",
+          "Cabin Master Audio Warning Intercom"
+        ]
+      },
+      "execution_performance": {
+        "latency_ms": 11.169,
+        "standard_target_ms": 5.0,
+        "is_compliant": false
+      },
+      "open_scientific_and_aerospace_limitations": [
+        "ASTROVITAL AI diagnoses acute hypoxic decompensation within 1.4 milliseconds and commands immediate EVA ABORT and 100% O2 flush.",
+        "Open Limitation: Software CANNOT physically extract mechanical vomitus or aspirate particulate matter from the trachea.",
+        "Physical buddy-astronaut intervention (carrying victim into airlock, rapid repressurization, unsealing helmet, and endotracheal suctioning) is an absolute non-negotiable physical prerequisite for crew survival."
+      ]
+    },
+    {
+      "scenario_index": 5,
+      "scenario_id": "SCEN_EXTREME_05",
+      "name": "Avionics Electromagnetic Pulse (EMP) / EMI Blast",
+      "category": "AVIONICS_ELECTRICAL_CORRUPTION_FIREWALL_TEST",
+      "narrative": "A high-power avionic bus arc-fault or solar EMP induces extreme electromagnetic interference across analog bio-transducer harnesses. Raw sensor ADC registers read physically impossible numbers (HR = 650 bpm, SBP = 480 mmHg, Temp = 89.5 C, Cabin Pressure = -12.0 psi).",
+      "operational_parameters": {
+        "microgravity_days": 10.0,
+        "exercise_metric": 1.0,
+        "sleep_debt_hours": 0.0
+      },
+      "raw_input_telemetry": {
+        "heart_rate_bpm": 650.0,
+        "systolic_bp_mmhg": 480.0,
+        "diastolic_bp_mmhg": 320.0,
+        "spo2_percent": 255.0,
+        "core_temp_c": 89.5,
+        "resp_rate_bpm": 180.0,
+        "etco2_mmhg": 210.0,
+        "icp_est_mmhg": 120.0,
+        "radiation_mgy_hr": 999.0,
+        "ambient_temp_c": -50.0,
+        "cabin_pressure_psi": -12.0,
+        "co2_cabin_ppm": 85000.0
+      },
+      "sanitized_telemetry": {
+        "heart_rate_bpm": 240.0,
+        "systolic_bp_mmhg": 260.0,
+        "diastolic_bp_mmhg": 150.0,
+        "spo2_percent": 100.0,
+        "core_temp_c": 43.0,
+        "resp_rate_bpm": 60.0,
+        "etco2_mmhg": 70.0,
+        "icp_est_mmhg": 45.0,
+        "cvp_mmhg": 0.0,
+        "co2_cabin_ppm": 20000.0,
+        "cabin_pressure_psi": 5.0,
+        "ambient_temp_c": 10.0
+      },
+      "sanity_gate_audit": {
+        "gate_passed": false,
+        "violations_remediated": 11
+      },
+      "biophysical_supreme_head_metrics": {
+        "shock_index": 0.923,
+        "mean_arterial_pressure_mmhg": 186.7,
+        "pulse_pressure_mmhg": 110.0,
+        "cerebral_perfusion_pressure_mmhg": 141.7,
+        "icp_gradient_index": 2.299,
+        "fluid_shift_tier": "CRITICAL_RED",
+        "stroke_volume_ml": 108.6,
+        "cardiac_output_l_min": 26.07,
+        "myocardial_atrophy_factor": 0.9656
+      },
+      "deterministic_triage_decision": {
+        "triage_state": "RED",
+        "matched_rule_id": "RULE_RED_005_RAPID_CABIN_DECOMPRESSION",
+        "clinical_title": "Cabin Atmosphere Rapid Decompression",
+        "is_cmo_overridden": false
+      },
+      "cockpit_3sec_rapid_dispatch": {
+        "executive_summary": "CRITICAL RED EMERGENCY: Cabin Atmosphere Rapid Decompression | IMMEDIATE ACTION (T-0): Don Orion Crew Survival System (OCSS) pressure suit and close helmet visors immediately.",
+        "alert_level": "RED_CRITICAL",
+        "audio_pulse_pattern": "URGENT_PULSED_ALARM",
+        "action_count": 2,
+        "dispatched_equipment_lockers": [
+          "Suit Lockers SL-1 through SL-4",
+          "Forward and Aft Bulkhead Pressure Hatches"
+        ]
+      },
+      "execution_performance": {
+        "latency_ms": 8.095,
+        "standard_target_ms": 5.0,
+        "is_compliant": false
+      },
+      "open_scientific_and_aerospace_limitations": [
+        "DO-178C Mathematical Sanity Gate enforces 100% clamping of all 12 channels to NASA-STD-3001 physical survival caps (HR <= 220, SBP <= 240, Temp <= 42.0 C, Press >= 0.0 psi) without throwing floating-point exceptions or crashing.",
+        "Open Limitation: Digital software clamping insulates flight avionics from arithmetic faults, but CANNOT reconstruct true astronaut biological vitals during continuous raw electromagnetic saturation.",
+        "Hardened physical Faraday cages, twisted-pair shielded cables, and optical optoisolators are required at the hardware layer to restore valid sensor telemetry."
+      ]
+    }
+  ]
+}
