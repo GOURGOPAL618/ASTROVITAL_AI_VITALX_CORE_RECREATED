@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,10:030712,25:0b192c,45:1e1b4b,65:0f172a,85:022c43,100:000000&height=320&section=header&text=ASTROVITAL%20AI%20%E2%80%A2%20VITALX%20CORE&fontSize=70&fontColor=00f2fe&animation=fadeIn&fontAlignY=33&desc=DO-178C%20DAL%20C%20%E2%80%A2%20AUTONOMOUS%20BIO-ASTRONAUTIC%20FLIGHT%20DECISION%20ENGINE&descAlignY=54&descSize=16&descColor=38bdf8" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,10:030712,25:0b192c,45:1e1b4b,65:0f172a,85:022c43,100:000000&height=320&section=header&text=ASTROVITAL%20AI%20%E2%80%A2%20VITALX%20CORE&fontSize=70&fontColor=00f2fe&animation=fadeIn&fontAlignY=33&desc=DO-178C%20LEVEL%20C%20(DAL%20C)%20%E2%80%A2%20AUTONOMOUS%20BIO-ASTRONAUTIC%20FLIGHT%20DECISION%20ENGINE&descAlignY=54&descSize=16&descColor=38bdf8" width="100%"/>
 
 <img src="https://readme-typing-svg.demolab.com/?lines=%3E+FLIGHT+STATUS+%3A+TRL-7+OPERATIONAL+LOCK+(15+NOV+2026+%40+10%3A00%3A00+IST);%3E+DO-178C+DAL+C+AUDIT+%3A+25%2F25+SUITES+%E2%80%A2+666%2F666+TESTS+PASSED+(100.0%25);%3E+STRUCTURAL+COVERAGE+%3A+2%2C970%2F2%2C970+STATEMENTS+AT+100.0%25+(ZERO+DEAD+CODE);%3E+SAFETY+ARCHITECTURE+%3A+80%25+BIOPHYSICAL+HEAD+%2B+20%25+ADAPTIVE+AI+AUXILIARY;%3E+3-SECOND+COCKPIT+HUD+%3A+12+CANONICAL+RULES+%E2%80%A2+LOCKER+ROUTING+(L1-L5);%3E+MISSION+%3A+NASA+SPACE+APPS+CHALLENGE+2026+%E2%80%A2+HUMAN+BODY+IN+DEEP+SPACE;%3E+PROJECT+LEAD+%3A+GOURGOPAL+MOHAPATRA+%E2%80%A2+TEAM+VITALX+CORE&font=Fira+Code&size=16&duration=2200&pause=600&color=00F2FE&center=true&vCenter=true&width=1000&height=55" />
 
@@ -37,14 +37,24 @@
 <br/><br/>
 
 <!-- ========================================================================================= -->
-<!-- CLUSTER 4: DATA VAULT & FLIGHT STANDARDS                                                  -->
+<!-- CLUSTER 4: DATA VAULT, COMMUNITY STANDARDS & REPOSITORY HEALTH                            -->
 <!-- ========================================================================================= -->
 <a href="07_ASTRO_DOCS/01_DATA_VAULT_DOCS/00_DATA_VAULT_CATALOG_INDEX.md"><img height="28" src="https://img.shields.io/badge/DATA%20VAULT-8%20DEDICATED%20ARCHIVES%20%E2%80%A2%20MD%20%26%20RST-00f2fe?style=for-the-badge&logo=database&logoColor=00f2fe&labelColor=050814"/></a>
-<a href="07_ASTRO_DOCS/01_DATA_VAULT_DOCS/01_INGESTION_TELEMETRY_SCHEMA_SPECIFICATION.md"><img height="28" src="https://img.shields.io/badge/TELEMETRY%20CONTRACT-12D%20VECTOR%20TENSOR%20X(t)-7f00ff?style=for-the-badge&logo=matrix&logoColor=7f00ff&labelColor=050814"/></a>
-<a href="07_ASTRO_DOCS/01_DATA_VAULT_DOCS/06_ARTEMIS_II_DOCS/06_ARTEMIS_II_SPECIFICATION.md"><img height="28" src="https://img.shields.io/badge/FLIGHT%20HERITAGE-ARTEMIS%20II%20%E2%80%A2%20SHUTTLE%20DSO%20%E2%80%A2%20APOLLO-ff007f?style=for-the-badge&logo=rocket&logoColor=ff007f&labelColor=050814"/></a>
-<a href="06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md"><img height="28" src="https://img.shields.io/badge/SPACE%20MEDICINE-NASA--STD--3001%20VOL%201%20%26%202-00ffab?style=for-the-badge&logo=shield&logoColor=00ffab&labelColor=050814"/></a>
+<a href="CODE_OF_CONDUCT.md"><img height="28" src="https://img.shields.io/badge/CONDUCT-CONTRIBUTOR%20COVENANT%20v2.1-7f00ff?style=for-the-badge&logo=github&logoColor=7f00ff&labelColor=050814"/></a>
+<a href="SECURITY.md"><img height="28" src="https://img.shields.io/badge/SECURITY-DO--178C%20CYBERSECURITY%20POLICY-ff007f?style=for-the-badge&logo=dependabot&logoColor=ff007f&labelColor=050814"/></a>
+<a href="LICENSE"><img height="28" src="https://img.shields.io/badge/LICENSE-MIT%20%2F%20NASA%20OPEN%20SOURCE-00ffab?style=for-the-badge&logo=open-source-initiative&logoColor=00ffab&labelColor=050814"/></a>
 
 <br/><br/>
+
+<p align="center">
+  <b><a href="04_ASTRONAUT_COCKPIT/">🚀 Cockpit HUD</a></b> &nbsp;•&nbsp; 
+  <b><a href="08_EXTREME_SIMULATION_LAB/">🧪 Extreme Simulations</a></b> &nbsp;•&nbsp; 
+  <b><a href="06_MISSION_REPORTS/NASA_SPACE_APPS_PITCH_DECK.md">📊 7-Slide Pitch Deck</a></b> &nbsp;•&nbsp; 
+  <b><a href="06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md">🛡️ DO-178C Traceability</a></b> &nbsp;•&nbsp; 
+  <b><a href="CODE_OF_CONDUCT.md">📜 Code of Conduct</a></b> &nbsp;•&nbsp; 
+  <b><a href="SECURITY.md">🔒 Security Policy</a></b> &nbsp;•&nbsp; 
+  <b><a href="LICENSE">⚖️ MIT License</a></b>
+</p>
 
 ```
 ╔═══════════════════════════════════════════════════════════════════════════════════════╗
