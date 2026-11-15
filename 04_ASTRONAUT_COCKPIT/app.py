@@ -3,7 +3,7 @@
 ASTROVITAL AI : VITALX CORE RECREATED V1
 Subsystem: 04_ASTRONAUT_COCKPIT
 Master Flight Application Entrypoint: app.py
-Author: Gourgopal Mohapatra (Lead Architect & Sole Developer, Team VITALX CORE)
+Author: Team VITALX CORE (NASA Space Apps Challenge 2026)
 Safety Standard: DO-178C Level C (DAL C) / NASA-STD-3001 Vol 2 / MIL-STD-1472H
 Deployment: NASA Orion Flight Deck / SpaceX Crew Dragon Glassmorphic Cockpit HUD
 =============================================================================

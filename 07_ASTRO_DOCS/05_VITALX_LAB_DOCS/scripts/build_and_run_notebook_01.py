@@ -28,7 +28,7 @@ cells = []
 top_md_1 = """# ASTROVITAL AI : VITALX CORE RECREATED (V1)
 ## Notebook 01: Multi-Mission Spaceflight Telemetry Synthesis & 12D Tensor Verification
 **Standard:** RTCA DO-178C Level C (DAL C) / NASA-STD-3001 Vol 2 / MIL-STD-1472H  
-**Author:** Gourgopal Mohapatra (Lead Architect & Sole Developer, Team VITALX CORE)  
+**Author:** Team VITALX CORE (NASA Space Apps Challenge 2026)  
 **Mission Architecture:** Orion Spacecraft / Artemis MTV Deep-Space Lunar Cruise  
 
 ---

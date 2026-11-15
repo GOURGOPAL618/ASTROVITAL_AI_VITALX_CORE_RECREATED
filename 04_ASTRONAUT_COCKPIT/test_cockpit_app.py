@@ -3,7 +3,7 @@
 ASTROVITAL AI : VITALX CORE RECREATED V1
 Subsystem: 04_ASTRONAUT_COCKPIT
 Test Suite: test_cockpit_app.py
-Author: Gourgopal Mohapatra (Lead Architect & Sole Developer, Team VITALX CORE)
+Author: Team VITALX CORE (NASA Space Apps Challenge 2026)
 Safety Standard: DO-178C Level C (DAL C) / ARP4754A Master Flight App Verification
 Verification: 100% Statement Coverage on app.py
 =============================================================================

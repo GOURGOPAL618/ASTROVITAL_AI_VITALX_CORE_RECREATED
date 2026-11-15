@@ -13,7 +13,7 @@ MODULE: hud_status_banner.py (NASA 3-Second Alert Banner & Acoustic Signatures)
    **CERTIFICATION STANDARD:** DO-178C LEVEL C / NASA-STD-3001 VOL 2 / MIL-STD-1472H
    **TRACEABLE REQUIREMENTS:** LLR-COCKPIT-002 (HLR-BIO-002)
    **VERIFICATION STATUS:** 100% STATEMENT COVERAGE (123/123 STATEMENTS) | 14/14 TESTS PASS
-   **AUDITOR & LEAD ARCHITECT:** Commander Gouragopal Mohapatra (GOURGOPAL618)
+   **AUDITOR & LEAD ARCHITECT:** Team VITALX CORE
    **DATE OF CERTIFICATION:** November 15, 2026
 
 --------------------------------------------------------------------------------

@@ -15,7 +15,7 @@
  PRIMARY FORMATS: Microsoft Excel (.xlsx), Tagged Image File (.tif), PDF
  INTEGRITY CHECKSUM: MD5 Manifest Verification
  CERTIFICATION STANDARD: DO-178C LEVEL C (DAL C) / NASA-STD-3001
- AUTHOR & LEAD: GOURGOPAL MOHAPATRA (TEAM VITALX CORE)
+ AUTHOR & LEAD: TEAM VITALX CORE
  DATE OF RATIFICATION: NOVEMBER 14, 2026
 ================================================================================
 ```

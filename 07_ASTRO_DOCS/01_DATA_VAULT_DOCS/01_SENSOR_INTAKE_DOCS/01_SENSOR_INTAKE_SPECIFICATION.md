@@ -12,7 +12,7 @@
  CERTIFICATION STANDARD: DO-178C LEVEL C (DAL C) / NASA-STD-3001 VOL 1 & 2
  TRANSMISSION PROTOCOL: CCSDS 133.0-B-2 / ZeroMQ PUB-SUB / Ring Buffer Spool
  INTAKE BUFFER CAPACITY: 10,000 packets/channel (FIFO circular memory)
- AUTHOR & LEAD: GOURGOPAL MOHAPATRA (TEAM VITALX CORE)
+ AUTHOR & LEAD: TEAM VITALX CORE
  DATE OF RATIFICATION: NOVEMBER 14, 2026
 ================================================================================
 ```

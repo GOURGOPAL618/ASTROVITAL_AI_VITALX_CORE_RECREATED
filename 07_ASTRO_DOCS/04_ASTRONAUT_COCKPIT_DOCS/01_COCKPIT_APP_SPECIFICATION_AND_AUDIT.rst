@@ -13,7 +13,7 @@ MODULE: app.py (Master Flight Deck Streamlit Application)
    **CERTIFICATION STANDARD:** DO-178C DESIGN ASSURANCE LEVEL C (DAL C)
    **TRACEABLE REQUIREMENTS:** LLR-COCKPIT-001 (HLR-BIO-002)
    **VERIFICATION STATUS:** 100% STATEMENT COVERAGE (109/109 STATEMENTS) | 17/17 TESTS PASS
-   **AUDITOR & LEAD ARCHITECT:** Commander Gouragopal Mohapatra (GOURGOPAL618)
+   **AUDITOR & LEAD ARCHITECT:** Team VITALX CORE
    **DATE OF CERTIFICATION:** November 15, 2026
 
 --------------------------------------------------------------------------------

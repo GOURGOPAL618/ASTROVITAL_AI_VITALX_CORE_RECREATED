@@ -15,7 +15,7 @@ REPORT: 04_inno1_biophysical_triage_proof.ipynb Synthesis & Analysis
    **VERIFICATION METRIC:** 4,320 Frames Triaged (72.0 Mission Hours) | 100% Deterministic State Matches
    **LATENCY PERFORMANCE:** Mean = 0.025 ms | Max = 0.449 ms | p99 = 0.113 ms (< 10.0 ms Ceiling)
    **FIGURES GENERATED:** 4 High-Resolution Aerospace Figures (figures/04_figures/)
-   **LEAD RESEARCHER & ARCHITECT:** Commander Gouragopal Mohapatra (GOURGOPAL618)
+   **LEAD RESEARCHER & ARCHITECT:** Team VITALX CORE
    **DATE OF RATIFICATION:** November 15, 2026
 
 --------------------------------------------------------------------------------

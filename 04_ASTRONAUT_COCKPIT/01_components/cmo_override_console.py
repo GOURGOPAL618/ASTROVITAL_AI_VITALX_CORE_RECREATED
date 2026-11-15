@@ -4,7 +4,7 @@ ASTROVITAL AI : VITALX CORE RECREATED V1
 Subsystem: 04_ASTRONAUT_COCKPIT / UI Components
 Component: Sovereign Crew Medical Officer (CMO) Override Console
 File: 04_ASTRONAUT_COCKPIT/01_components/cmo_override_console.py
-Author: Gourgopal Mohapatra (Lead Architect & Sole Developer, Team VITALX CORE)
+Author: Team VITALX CORE (NASA Space Apps Challenge 2026)
 Safety Standard: DO-178C Level C (DAL C) / NASA Flight Surgeon Operational Command
 =============================================================================
 """

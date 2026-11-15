@@ -1,7 +1,7 @@
 # DO-178C Level C Software Verification & Audit Report
 ## Subsystem 04: ASTRONAUT COCKPIT (Flight Deck HUD & Autonomous CDSS HMI)
 ### Project: ASTROVITAL AI : VITALX CORE RECREATED V1
-**Author & Lead Architect:** Gourgopal Mohapatra (Lead Architect & Sole Developer, Team VITALX CORE)  
+**Author & Lead Architect:** Team VITALX CORE (NASA Space Apps Challenge 2026)  
 **Competition:** NASA Space Apps Challenge 2026  
 **Safety & Design Standard:** DO-178C Level C (DAL C) / NASA-STD-3001 Vol 2 / MIL-STD-1472H / ARP4754A  
 **Date of Verification:** November 14, 2026  
@@ -128,5 +128,5 @@ All software verification activities for File 6 (`04_ASTRONAUT_COCKPIT`) have be
 
 **Architect Verification Sign-off:**  
 `GOURGOPAL MOHAPATRA`  
-Lead Architect & Sole Developer, Team VITALX CORE  
+Team VITALX CORE (NASA Space Apps Challenge 2026)  
 NASA Space Apps Challenge 2026

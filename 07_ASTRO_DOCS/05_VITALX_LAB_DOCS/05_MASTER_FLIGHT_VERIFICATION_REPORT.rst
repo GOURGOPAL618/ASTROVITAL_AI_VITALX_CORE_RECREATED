@@ -17,7 +17,7 @@ REPORT: 05_master_flight_verification.ipynb Master Flight Verification
    **LATENCY PERFORMANCE:** Mean = 0.061 ms | Max = 1.652 ms | p99 = 0.268 ms (Ceiling <= 3000 ms)
    **SAFETY MARGIN FACTOR:** 1,815.98x against NASA 3-Second Non-Physician Rule
    **FIGURES GENERATED:** 4 High-Resolution Master Figures (figures/05_figures/)
-   **LEAD RESEARCHER & ARCHITECT:** Commander Gouragopal Mohapatra (GOURGOPAL618)
+   **LEAD RESEARCHER & ARCHITECT:** Team VITALX CORE
    **DATE OF RATIFICATION:** November 15, 2026
 
 --------------------------------------------------------------------------------

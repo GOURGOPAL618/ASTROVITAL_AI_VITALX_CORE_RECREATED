@@ -13,7 +13,7 @@ MODULE: biophysical_physics_engine.py
    **CERTIFICATION STANDARD:** DO-178C DESIGN ASSURANCE LEVEL C (DAL C)
    **TRACEABLE REQUIREMENTS:** LLR-DEC-002 (HLR-BIO-002)
    **VERIFICATION STATUS:** 100% STATEMENT COVERAGE (162/162 STATEMENTS) | 32/32 TESTS PASS
-   **AUDITOR & LEAD ARCHITECT:** Commander Gouragopal Mohapatra (GOURGOPAL618)
+   **AUDITOR & LEAD ARCHITECT:** Team VITALX CORE
    **DATE OF CERTIFICATION:** November 14, 2026
 
 --------------------------------------------------------------------------------

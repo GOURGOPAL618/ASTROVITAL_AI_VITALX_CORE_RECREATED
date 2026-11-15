@@ -14,7 +14,7 @@ SUBSYSTEM 04: ASTRONAUT COCKPIT — MASTER SUBSYSTEM VERIFICATION INDEX
    **PRODUCTION SOURCE METRICS:** 885 Executable Statements | 0 Uncovered | 100.0% Statement Coverage
    **TEST METRICS:** 85 Unit & Component Tests | 85 PASSED (100% Pass Rate in 9.08s)
    **COMPONENT MODULES:** 7 Flight UI Components + Master Flight Entrypoint (app.py)
-   **AUTHOR & LEAD ARCHITECT:** Commander Gouragopal Mohapatra (GOURGOPAL618)
+   **AUTHOR & LEAD ARCHITECT:** Team VITALX CORE
    **DATE OF RATIFICATION:** November 15, 2026
 
 --------------------------------------------------------------------------------

@@ -4,7 +4,7 @@ ASTROVITAL AI : VITALX CORE RECREATED V1
 Subsystem: 04_ASTRONAUT_COCKPIT / UI Components
 Component: Real-Time Telemetry Stream & Biophysical Physics Monitor
 File: 04_ASTRONAUT_COCKPIT/01_components/telemetry_stream_view.py
-Author: Gourgopal Mohapatra (Lead Architect & Sole Developer, Team VITALX CORE)
+Author: Team VITALX CORE (NASA Space Apps Challenge 2026)
 Safety Standard: DO-178C Level C (DAL C) / NASA-STD-3001 Vol 2 / MIL-STD-1472H
 =============================================================================
 """

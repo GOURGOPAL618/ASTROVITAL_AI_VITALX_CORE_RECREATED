@@ -14,7 +14,7 @@
  ASSAY PLATFORM: Illumina NextSeq (RNA-Seq Transcriptomic Profiling)
  SPECTROMETRY / QA: NanoDrop A260/A280 & A260/A230 Spectrophotometric Purity
  CERTIFICATION STANDARD: DO-178C LEVEL C (DAL C) / NASA-STD-3001
- AUTHOR & LEAD: GOURGOPAL MOHAPATRA (TEAM VITALX CORE)
+ AUTHOR & LEAD: TEAM VITALX CORE
  DATE OF RATIFICATION: NOVEMBER 14, 2026
 ================================================================================
 ```

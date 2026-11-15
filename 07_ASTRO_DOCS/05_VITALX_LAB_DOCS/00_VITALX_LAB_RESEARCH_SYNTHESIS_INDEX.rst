@@ -12,7 +12,7 @@ SUBSYSTEM 05: VITALX LAB — RESEARCH SYNTHESIS & EXPERIMENTAL LAB INDEX
    **CERTIFICATION STANDARD:** RTCA DO-178C LEVEL C (DAL C) / NASA-STD-3001 VOL 2 / MIL-STD-1472H
    **RESEARCH MODULES:** 5 Production Jupyter Notebooks | 20 Publication-Grade Figures
    **ARTIFACT TYPES:** High-Res PNG Visualizers, Parquet Datasets, JSON Metrics
-   **LEAD RESEARCHER & ARCHITECT:** Commander Gouragopal Mohapatra (GOURGOPAL618)
+   **LEAD RESEARCHER & ARCHITECT:** Team VITALX CORE
    **DATE OF RATIFICATION:** November 15, 2026
 
 --------------------------------------------------------------------------------

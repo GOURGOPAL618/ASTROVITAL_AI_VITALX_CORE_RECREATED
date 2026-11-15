@@ -15,7 +15,7 @@
  PRIMARY FORMATS: CSV Time-Series, PDS4 Collection Inventory, User Guide PDF (7.3 MB)
  PRIMARY CHANNELS: Temperature (deg C), Relative Humidity (RH %), Dew Point (deg C)
  CERTIFICATION STANDARD: DO-178C LEVEL C (DAL C) / NASA-STD-3001
- AUTHOR & LEAD: GOURGOPAL MOHAPATRA (TEAM VITALX CORE)
+ AUTHOR & LEAD: TEAM VITALX CORE
  DATE OF RATIFICATION: NOVEMBER 14, 2026
 ================================================================================
 ```

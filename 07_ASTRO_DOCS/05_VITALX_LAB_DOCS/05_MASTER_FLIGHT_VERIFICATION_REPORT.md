@@ -15,7 +15,7 @@
  LATENCY PERFORMANCE: Mean = 0.061 ms | Max = 1.652 ms | p99 = 0.268 ms (Ceiling <= 3000 ms)
  SAFETY MARGIN FACTOR: 1,815.98x against NASA 3-Second Non-Physician Rule
  FIGURES GENERATED: 4 High-Resolution Master Figures (figures/05_figures/)
- LEAD RESEARCHER & ARCHITECT: COMMANDER GOURGOPAL MOHAPATRA (TEAM VITALX CORE)
+ LEAD RESEARCHER & ARCHITECT: TEAM VITALX CORE (NASA SPACE APPS CHALLENGE 2026)
  DATE OF RATIFICATION: 15 NOVEMBER 2026
 ================================================================================
 ```

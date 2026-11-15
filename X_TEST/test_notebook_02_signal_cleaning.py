@@ -4,7 +4,7 @@ ASTROVITAL AI : VITALX CORE RECREATED (V1)
 Module: test_notebook_02_signal_cleaning.py
 Subsystem: X_TEST
 Design Standard: RTCA DO-178C Level C (DAL C) / NASA-STD-3001
-Author: Gourgopal Mohapatra (Lead Architect & Sole Developer, Team VITALX CORE)
+Author: Team VITALX CORE (NASA Space Apps Challenge 2026)
 
 Independent Verification & Validation (IV&V) test suite for:
 Notebook 02: 02_inno3_signal_cleaning_validation.ipynb

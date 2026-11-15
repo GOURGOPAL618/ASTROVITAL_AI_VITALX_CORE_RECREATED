@@ -4,12 +4,13 @@ ASTROVITAL AI : VITALX CORE RECREATED V1
 Subsystem: 02_AI_CORE / Master Operational Orchestration
 Component: AstroVital Master End-to-End Pipeline Orchestrator
 File: 02_AI_CORE/01_src/pipeline_orchestrator.py
-Author: Gourgopal Mohapatra (Lead Architect & Sole Developer, Team VITALX CORE)
+Author: Team VITALX CORE (NASA Space Apps Challenge 2026)
 Safety Standard: DO-178C Level C (DAL C) / ARP4754A Operational Pipeline
 Governance: 20% Adaptive AI Telemetry Conditioning -> 80% Biophysical Supreme Head
 =============================================================================
 """
 
+import math
 import sys
 import time
 from dataclasses import dataclass, field
@@ -227,7 +228,10 @@ class AstroVitalPipelineOrchestrator:
         # -------------------------------------------------------------------
         # 2. Stage 2: Adaptive AI Signal Stabilization (20% AI)
         # -------------------------------------------------------------------
-        if not skip_stabilizer:
+        # DO-178C Defense: If raw telemetry contains decoupled non-finite values (NaN/Inf),
+        # automatically route directly to Stage 3 Sanity Gate fallback engine.
+        has_non_finite = any(not math.isfinite(v) for v in canonical_raw.values())
+        if not skip_stabilizer and not has_non_finite:
             df_for_stabilizer = pd.DataFrame([canonical_raw])
             stabilized_frame = self.stabilizer.process_and_export_frame(df_for_stabilizer)
             stabilized_vitals = stabilized_frame.stabilized_data.iloc[0].to_dict()

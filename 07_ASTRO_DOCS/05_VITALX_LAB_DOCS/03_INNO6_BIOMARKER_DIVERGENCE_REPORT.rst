@@ -12,7 +12,7 @@ REPORT: 03_inno6_biomarker_divergence.ipynb Synthesis & Analysis
    **SUBSYSTEM LOCATION:** 05_VITALX_LAB/ & 07_ASTRO_DOCS/05_VITALX_LAB_DOCS/
    **RESEARCH ARTIFACT:** 03_inno6_biomarker_divergence.ipynb
    **FOCUS:** Dynamic Dirichlet Priors, Robust MAD Z-Scores, Information Entropy
-   **LEAD RESEARCHER & ARCHITECT:** Commander Gouragopal Mohapatra (GOURGOPAL618)
+   **LEAD RESEARCHER & ARCHITECT:** Team VITALX CORE
    **DATE OF CERTIFICATION:** November 15, 2026
 
 --------------------------------------------------------------------------------

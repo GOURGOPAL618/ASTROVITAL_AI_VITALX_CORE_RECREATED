@@ -13,7 +13,7 @@ MODULE: Comprehensive Decision Core Verification (137 Tests Passed)
    **CERTIFICATION STANDARD:** DO-178C DESIGN ASSURANCE LEVEL C (DAL C)
    **TRACEABLE REQUIREMENTS:** LLR-DEC-001 through LLR-DEC-005
    **VERIFICATION STATUS:** 100% STATEMENT COVERAGE (596/596 STATEMENTS) | 137/137 TESTS PASS
-   **AUDITOR & LEAD ARCHITECT:** Commander Gouragopal Mohapatra (GOURGOPAL618)
+   **AUDITOR & LEAD ARCHITECT:** Team VITALX CORE
    **DATE OF CERTIFICATION:** November 14, 2026
 
 --------------------------------------------------------------------------------

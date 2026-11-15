@@ -4,7 +4,7 @@ ASTROVITAL AI : VITALX CORE (RECREATED V1)
 Module: batch_vault_ingestor.py
 Subsystem: 02_AI_CORE/01_src
 Design Standard: RTCA DO-178C Level C (DAL C) High-Level Requirement HLR-BIO-001 & HLR-BIO-004
-Author: Gourgopal Mohapatra (Lead Architect & Sole Developer, Team VITALX CORE)
+Author: Team VITALX CORE (NASA Space Apps Challenge 2026)
 
 Batch Ingestion & Processing Pipeline for 01_DATA_VAULT:
 1. Ingests raw multi-mission archives (Artemis II Orion, Shuttle DSO, Apollo 7).

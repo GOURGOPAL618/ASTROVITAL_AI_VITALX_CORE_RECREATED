@@ -13,7 +13,7 @@ TEST SUITE: test_signal_stabilizer.py (68 Tests Passed · 100% Coverage)
    **CERTIFICATION STANDARD:** DO-178C DESIGN ASSURANCE LEVEL C (DAL C)
    **TARGET MODULE:** 02_AI_CORE/01_src/inno3_signal_stabilizer.py (377 Statements)
    **TEST RESULTS:** 68 / 68 PASSED (100.0% Pass Rate) | 100% Statement Coverage
-   **AUDITOR & LEAD ARCHITECT:** Commander Gouragopal Mohapatra (GOURGOPAL618)
+   **AUDITOR & LEAD ARCHITECT:** Team VITALX CORE
    **DATE OF CERTIFICATION:** November 14, 2026
 
 --------------------------------------------------------------------------------

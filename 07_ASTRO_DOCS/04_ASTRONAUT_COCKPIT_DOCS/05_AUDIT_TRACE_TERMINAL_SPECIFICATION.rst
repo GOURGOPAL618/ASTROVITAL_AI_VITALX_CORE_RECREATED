@@ -13,7 +13,7 @@ MODULE: audit_trace_terminal.py (Mathematical Trace & CRT Display)
    **CERTIFICATION STANDARD:** DO-178C LEVEL C / DO-178C OBJECTIVE A-7 (OUTPUT TRACEABILITY)
    **TRACEABLE REQUIREMENTS:** LLR-COCKPIT-005 (HLR-BIO-004)
    **VERIFICATION STATUS:** 100% STATEMENT COVERAGE (73/73 STATEMENTS) | 5/5 TESTS PASS
-   **AUDITOR & LEAD ARCHITECT:** Commander Gouragopal Mohapatra (GOURGOPAL618)
+   **AUDITOR & LEAD ARCHITECT:** Team VITALX CORE
    **DATE OF CERTIFICATION:** November 15, 2026
 
 --------------------------------------------------------------------------------

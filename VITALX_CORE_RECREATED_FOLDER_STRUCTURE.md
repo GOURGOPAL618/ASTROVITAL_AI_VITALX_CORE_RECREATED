@@ -1,7 +1,7 @@
 # ASTROVITAL AI : VITALX CORE (RECREATED V1)
 ## Master Numbered Repository Structure Specification
 **Author:** Gourgopal Mohapatra  
-**Role:** Lead Architect & Sole Developer, Team VITALX CORE  
+**Role:** Team VITALX CORE (NASA Space Apps Challenge 2026)  
 **Date:** November 13, 2026  
 **Standard:** Inspired by Safety-Critical Deterministic Principles of DO-178C & ARP4754A  
 

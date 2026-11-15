@@ -66,7 +66,7 @@
 | **SYSTEM CODENAME** | **ASTROVITAL AI : VITALX CORE (RECREATED V1)** |
 | **HACKATHON CHALLENGE** | **NASA Space Apps Challenge 2026 — Human Body in Deep Space** |
 | **TARGET MISSION HORIZONS** | **Artemis Deep Space Transit, Lunar Gateway, Mars Transit Vehicle (MTV)** |
-| **DEVELOPED BY** | **Team VITALX CORE • Lead Architect: Gourgopal Mohapatra (`GOURGOPAL618`)** |
+| **DEVELOPED BY** | **Team VITALX CORE • Lead Architect: Team VITALX CORE** |
 | **CONTACT TRANSMISSION** | [`ggmohapatra.info.2007@gmail.com`](mailto:ggmohapatra.info.2007@gmail.com) |
 | **TARGET FLIGHT LOCK** | **14 November 2026 @ 20:30:00 IST (`v1.0.0-TRL7-OPERATIONAL`)** |
 | **FULL-PROJECT TEST AUDIT** | **18 / 18 TEST SUITES PASSED • 556 / 556 TESTS (100.0% VERIFIED · 28.13s)** |

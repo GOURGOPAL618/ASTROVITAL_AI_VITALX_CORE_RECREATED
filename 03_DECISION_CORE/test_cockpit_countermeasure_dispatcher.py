@@ -3,7 +3,7 @@
 ASTROVITAL AI : VITALX CORE RECREATED V1
 Subsystem: 03_DECISION_CORE
 Verification Suite: test_cockpit_countermeasure_dispatcher.py (Phase 4 IV&V)
-Author: Gourgopal Mohapatra (Lead Architect & Sole Developer, Team VITALX CORE)
+Author: Team VITALX CORE (NASA Space Apps Challenge 2026)
 Safety Standard: DO-178C Level C (DAL C) / ARP4754A
 Governance: 3-Second Astronaut Cockpit Protocol & Dispatcher Verification
 =============================================================================

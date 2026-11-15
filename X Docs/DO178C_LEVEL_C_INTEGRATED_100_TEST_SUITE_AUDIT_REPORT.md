@@ -8,7 +8,7 @@
 - **Project:** ASTROVITAL AI : VITALX CORE RECREATED V1
 - **Mission Division:** Human Spaceflight Division / Deep Space Autonomous Medical Operations
 - **Verification Authority:** DO-178C Level C (Design Assurance Level C - Major Safety Impact)
-- **Author & Lead Architect:** Gourgopal Mohapatra (Team VITALX CORE)
+- **Author & Lead Architect:** Team VITALX CORE
 - **Target Verification Suite:** `X_TEST/test_vitalx_integrated_100.py`
 - **Subsystems Evaluated:**
   1. `02_AI_CORE/01_src/ingestion_adapter.py` (Stage 1: Multi-Mission Intake & 12D Normalizer)

@@ -12,7 +12,7 @@
  SYSTEM CERTIFICATION: RTCA DO-178C LEVEL C (DAL C) / NASA-STD-3001
  TOTAL ARCHIVAL MODULES: 8 Dedicated Subsystems
  DOCUMENTATION FORMATS: Dual GitHub-Flavored Markdown (.md) & Sphinx (.rst)
- LEAD ARCHITECT: GOURGOPAL MOHAPATRA (TEAM VITALX CORE)
+ LEAD ARCHITECT: TEAM VITALX CORE
  DATE OF RATIFICATION: NOVEMBER 14, 2026
 ================================================================================
 ```

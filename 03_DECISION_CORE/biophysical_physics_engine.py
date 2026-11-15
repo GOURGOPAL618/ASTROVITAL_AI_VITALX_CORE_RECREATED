@@ -3,7 +3,7 @@
 ASTROVITAL AI : VITALX CORE RECREATED V1
 Subsystem: 03_DECISION_CORE
 Module: biophysical_physics_engine.py
-Author: Gourgopal Mohapatra (Lead Architect & Sole Developer, Team VITALX CORE)
+Author: Team VITALX CORE (NASA Space Apps Challenge 2026)
 Safety Standard: DO-178C Level C (DAL C) / ARP4754A Deterministic Engine
 Governance: First-Principles Spaceflight Biophysics (80% Biophysical Supreme Head)
 =============================================================================

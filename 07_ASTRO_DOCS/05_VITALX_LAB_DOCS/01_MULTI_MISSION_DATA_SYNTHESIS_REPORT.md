@@ -14,7 +14,7 @@
  SAMPLING INTERVAL: Uniform 1.0 Minute Grid (0.0167 Hz Resampled Telemetry)
  TENSOR DIMENSIONALITY: 12 Physiological & Environmental Dimensions (0 Nulls)
  SHA-256 PARQUET SEAL: 97eef8458604b9ec21023b6fd5f82d5af9ae0fce993c0759125a7dae5062b3db
- AUTHOR & LEAD ARCHITECT: GOURGOPAL MOHAPATRA (TEAM VITALX CORE)
+ AUTHOR & LEAD ARCHITECT: TEAM VITALX CORE
  DATE OF RATIFICATION: NOVEMBER 15, 2026
 ================================================================================
 ```

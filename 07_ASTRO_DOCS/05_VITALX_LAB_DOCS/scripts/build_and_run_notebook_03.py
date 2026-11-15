@@ -34,7 +34,7 @@ cells = []
 top_md_1 = r"""# ASTROVITAL AI : VITALX CORE RECREATED (V1)
 ## Notebook 03: Inno-6 Dynamic Biomarker Sensitivity Gradient Matrix & Phase Divergence
 **Standard:** RTCA DO-178C Level C (DAL C) / NASA-STD-3001 Vol 2 / MIL-STD-1472H  
-**Author:** Gourgopal Mohapatra (Lead Architect & Sole Developer, Team VITALX CORE)  
+**Author:** Team VITALX CORE (NASA Space Apps Challenge 2026)  
 **Subsystem Anchored:** `02_AI_CORE/01_src/inno6_biomarker_ranker.py`  
 
 ---

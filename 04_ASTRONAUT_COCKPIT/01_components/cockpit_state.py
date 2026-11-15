@@ -4,7 +4,7 @@ ASTROVITAL AI : VITALX CORE RECREATED V1
 Subsystem: 04_ASTRONAUT_COCKPIT / State Architecture & Buffer Engine
 Component: Cockpit State Engine & Rolling Telemetry Ring Buffer
 File: 04_ASTRONAUT_COCKPIT/01_components/cockpit_state.py
-Author: Gourgopal Mohapatra (Lead Architect & Sole Developer, Team VITALX CORE)
+Author: Team VITALX CORE (NASA Space Apps Challenge 2026)
 Safety Standard: DO-178C Level C (DAL C) / ARP4754A HMI Systems
 =============================================================================
 """

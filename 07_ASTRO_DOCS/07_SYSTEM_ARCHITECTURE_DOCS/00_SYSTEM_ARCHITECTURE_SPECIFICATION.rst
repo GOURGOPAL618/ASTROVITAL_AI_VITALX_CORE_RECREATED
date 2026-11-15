@@ -11,7 +11,7 @@ SUBSYSTEM 07: AEROSPACE SYSTEM ARCHITECTURE & 80/20 SAFE FLIGHT LAW
    **CERTIFICATION TARGET:** RTCA DO-178C / EUROCAE ED-12C DAL C
    **OPERATIONAL PRINCIPLE:** 80% Biophysical Supreme Head + 20% Adaptive AI Auxiliary
    **CHALLENGE:** NASA Space Apps Challenge 2026 — Human Body in Deep Space
-   **ARCHITECT & LEAD:** Gourgopal Mohapatra (Team VITALX CORE)
+   **ARCHITECT & LEAD:** Team VITALX CORE
    **STATUS:** TRL-7 Operational Flight Lock (14 November 2026)
 
 --------------------------------------------------------------------------------

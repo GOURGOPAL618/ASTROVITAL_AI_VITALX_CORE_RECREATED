@@ -14,7 +14,7 @@
  MISSION PHASE MODELS: 8 Flight Operational Context Profiles
  FORMULATION: W_raw = alpha * W_context + beta * W_deviation + gamma * W_entropy
  SIMPLEX NORMALIZATION: Sum(w_i) = 1.0 with w_min >= 0.01 Floor Guarantee
- AUTHOR & LEAD ARCHITECT: GOURGOPAL MOHAPATRA (TEAM VITALX CORE)
+ AUTHOR & LEAD ARCHITECT: TEAM VITALX CORE
  DATE OF RATIFICATION: NOVEMBER 15, 2026
 ================================================================================
 ```

@@ -4,7 +4,7 @@ ASTROVITAL AI : VITALX CORE RECREATED V1
 Subsystem: 04_ASTRONAUT_COCKPIT / UI Components
 Component: White-Box Deterministic Audit Terminal & DO-178C Inspector
 File: 04_ASTRONAUT_COCKPIT/01_components/audit_trace_terminal.py
-Author: Gourgopal Mohapatra (Lead Architect & Sole Developer, Team VITALX CORE)
+Author: Team VITALX CORE (NASA Space Apps Challenge 2026)
 Safety Standard: DO-178C Level C (DAL C) / ARP4754A Safety Audit Trail
 =============================================================================
 """

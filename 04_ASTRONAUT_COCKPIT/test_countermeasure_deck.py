@@ -3,7 +3,7 @@
 ASTROVITAL AI : VITALX CORE RECREATED V1
 Subsystem: 04_ASTRONAUT_COCKPIT
 Test Suite: test_countermeasure_deck.py
-Author: Gourgopal Mohapatra (Lead Architect & Sole Developer, Team VITALX CORE)
+Author: Team VITALX CORE (NASA Space Apps Challenge 2026)
 Safety Standard: DO-178C Level C (DAL C) / ARP4754A HMI Systems
 Verification: 100% Statement Coverage on countermeasure_deck.py
 =============================================================================

@@ -13,7 +13,7 @@ MODULE: cockpit_state.py (Circular FIFO Ring Buffer & Crew Profiles)
    **CERTIFICATION STANDARD:** DO-178C LEVEL C / NASA-STD-3001
    **TRACEABLE REQUIREMENTS:** LLR-COCKPIT-007 (HLR-BIO-003)
    **VERIFICATION STATUS:** 100% STATEMENT COVERAGE (135/135 STATEMENTS) | 14/14 TESTS PASS
-   **AUDITOR & LEAD ARCHITECT:** Commander Gouragopal Mohapatra (GOURGOPAL618)
+   **AUDITOR & LEAD ARCHITECT:** Team VITALX CORE
    **DATE OF CERTIFICATION:** November 15, 2026
 
 --------------------------------------------------------------------------------

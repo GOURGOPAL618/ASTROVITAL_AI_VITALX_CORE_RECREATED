@@ -10,7 +10,7 @@
  SUBSYSTEM LOCATION: 01_DATA_VAULT/ & 02_AI_CORE/01_src/ingestion_adapter.py
  CERTIFICATION STANDARD: DO-178C LEVEL C (DAL C)
  DATA SCHEMA VECTOR: X(t) in R^12 (N x 12 float64 Tensor)
- ARCHITECT & LEAD: GOURGOPAL MOHAPATRA (TEAM VITALX CORE)
+ ARCHITECT & LEAD: TEAM VITALX CORE
  DATE OF RATIFICATION: NOVEMBER 14, 2026
 ================================================================================
 ```

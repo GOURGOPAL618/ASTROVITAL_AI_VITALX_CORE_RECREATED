@@ -13,7 +13,7 @@ MODULE: Comprehensive Cockpit Test Battery (85 Tests Passed)
    **CERTIFICATION STANDARD:** DO-178C DESIGN ASSURANCE LEVEL C (DAL C)
    **TRACEABLE REQUIREMENTS:** LLR-COCKPIT-001 through LLR-COCKPIT-007
    **VERIFICATION STATUS:** 100% STATEMENT COVERAGE (885/885 STATEMENTS) | 85/85 TESTS PASS
-   **AUDITOR & LEAD ARCHITECT:** Commander Gouragopal Mohapatra (GOURGOPAL618)
+   **AUDITOR & LEAD ARCHITECT:** Team VITALX CORE
    **DATE OF CERTIFICATION:** November 15, 2026
 
 --------------------------------------------------------------------------------

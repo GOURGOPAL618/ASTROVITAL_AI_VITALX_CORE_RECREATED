@@ -3,7 +3,7 @@
 ASTROVITAL AI : VITALX CORE RECREATED V1
 Subsystem: 03_DECISION_CORE
 Integration Suite: test_end_to_end_decision_integration.py (Phase 5 IV&V)
-Author: Gourgopal Mohapatra (Lead Architect & Sole Developer, Team VITALX CORE)
+Author: Team VITALX CORE (NASA Space Apps Challenge 2026)
 Safety Standard: DO-178C Level C (DAL C) / ARP4754A Master Integration
 Governance: End-to-End Full Pipeline IV&V (AI Core -> Decision Core -> Cockpit)
 =============================================================================

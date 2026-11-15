@@ -13,7 +13,7 @@
  TEST PASS RESULT: 32 / 32 TESTS PASSED (100.0%) | 0 FAILURES
  MEASURED EXECUTION DURATION: 1.63 SECONDS
  STATEMENT COVERAGE: 100% (234 / 234 EXECUTABLE LINES)
- AUTHOR & LEAD ARCHITECT: GOURGOPAL MOHAPATRA (TEAM VITALX CORE)
+ AUTHOR & LEAD ARCHITECT: TEAM VITALX CORE
  DATE OF AUDIT: NOVEMBER 14, 2026
 ================================================================================
 ```
@@ -138,5 +138,5 @@ TOTAL                                       234      0   100%
 ---
 
 **Engineering Authorization:** Lead Systems Architect (`GOURGOPAL618`)  
-**Lead Systems Architect & Sole Developer — Team VITALX CORE**  
+**Team VITALX CORE — NASA Space Apps Challenge 2026**  
 

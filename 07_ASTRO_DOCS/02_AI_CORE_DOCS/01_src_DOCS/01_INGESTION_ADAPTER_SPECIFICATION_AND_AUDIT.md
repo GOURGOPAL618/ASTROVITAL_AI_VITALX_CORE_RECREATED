@@ -11,7 +11,7 @@
  CERTIFICATION STANDARD: DO-178C DESIGN ASSURANCE LEVEL C (DAL C)
  TRACEABLE REQUIREMENTS: HLR-BIO-001, HLR-BIO-003, HLR-BIO-004
  VERIFICATION STATUS: 100% STATEMENT COVERAGE (234/234 STATEMENTS) | 32/32 TESTS PASS
- AUDITOR & LEAD ARCHITECT: GOURGOPAL MOHAPATRA (TEAM VITALX CORE)
+ AUDITOR & LEAD ARCHITECT: TEAM VITALX CORE
  DATE OF CERTIFICATION: NOVEMBER 14, 2026
 ================================================================================
 ```
@@ -166,4 +166,4 @@ pytest 02_AI_CORE/02_tests/test_adapter_ingestion.py -v --cov=02_AI_CORE/01_src/
 ---
 
 **Engineering Authorization:** Lead Systems Architect (`GOURGOPAL618`)  
-**Lead Systems Architect & Sole Developer — Team VITALX CORE**  
+**Team VITALX CORE — NASA Space Apps Challenge 2026**  

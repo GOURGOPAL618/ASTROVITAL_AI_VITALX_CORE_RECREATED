@@ -13,7 +13,7 @@ TEST SUITE: test_pipeline_orchestrator.py (23 Tests Passed · 100% Coverage)
    **CERTIFICATION STANDARD:** DO-178C DESIGN ASSURANCE LEVEL C (DAL C)
    **TARGET MODULE:** 02_AI_CORE/01_src/pipeline_orchestrator.py (138 Statements)
    **TEST RESULTS:** 23 / 23 PASSED (100.0% Pass Rate) | 100% Statement Coverage
-   **AUDITOR & LEAD ARCHITECT:** Commander Gouragopal Mohapatra (GOURGOPAL618)
+   **AUDITOR & LEAD ARCHITECT:** Team VITALX CORE
    **DATE OF CERTIFICATION:** November 14, 2026
 
 --------------------------------------------------------------------------------

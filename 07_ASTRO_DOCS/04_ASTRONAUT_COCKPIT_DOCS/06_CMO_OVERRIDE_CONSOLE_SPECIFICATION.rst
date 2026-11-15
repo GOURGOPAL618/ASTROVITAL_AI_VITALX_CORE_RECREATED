@@ -13,7 +13,7 @@ MODULE: cmo_override_console.py (Sovereign Crew Medical Officer Console)
    **CERTIFICATION STANDARD:** DO-178C LEVEL C / NASA FLIGHT CREW AUTHORITY DIRECTIVE
    **TRACEABLE REQUIREMENTS:** LLR-COCKPIT-006 (HLR-BIO-002)
    **VERIFICATION STATUS:** 100% STATEMENT COVERAGE (83/83 STATEMENTS) | 8/8 TESTS PASS
-   **AUDITOR & LEAD ARCHITECT:** Commander Gouragopal Mohapatra (GOURGOPAL618)
+   **AUDITOR & LEAD ARCHITECT:** Team VITALX CORE
    **DATE OF CERTIFICATION:** November 15, 2026
 
 --------------------------------------------------------------------------------

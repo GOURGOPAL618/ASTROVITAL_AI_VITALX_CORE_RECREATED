@@ -13,7 +13,7 @@ MODULE: rule_schema_validator.py
    **CERTIFICATION STANDARD:** DO-178C DESIGN ASSURANCE LEVEL C (DAL C)
    **TRACEABLE REQUIREMENTS:** LLR-DEC-001 (HLR-BIO-004)
    **VERIFICATION STATUS:** 100% STATEMENT COVERAGE (219/219 STATEMENTS) | 41/41 TESTS PASS
-   **AUDITOR & LEAD ARCHITECT:** Commander Gouragopal Mohapatra (GOURGOPAL618)
+   **AUDITOR & LEAD ARCHITECT:** Team VITALX CORE
    **DATE OF CERTIFICATION:** November 14, 2026
 
 --------------------------------------------------------------------------------

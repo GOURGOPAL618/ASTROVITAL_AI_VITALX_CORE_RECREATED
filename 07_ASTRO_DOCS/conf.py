@@ -11,7 +11,7 @@ import sys
 
 project = 'ASTROVITAL AI : VITALX CORE (RECREATED V1)'
 copyright = '2026, Team VITALX CORE (NASA Space Apps Challenge 2026)'
-author = 'Gourgopal Mohapatra (Team VITALX CORE)'
+author = 'Team VITALX CORE'
 release = '1.0.0-TRL7-OPERATIONAL'
 version = '1.0.0'
 

@@ -13,7 +13,7 @@ MODULE: countermeasure_deck.py (Orion Equipment Locker Routing & Checklists)
    **CERTIFICATION STANDARD:** DO-178C LEVEL C / NASA-STD-3001 VOL 2
    **TRACEABLE REQUIREMENTS:** LLR-COCKPIT-004 (HLR-BIO-002)
    **VERIFICATION STATUS:** 100% STATEMENT COVERAGE (133/133 STATEMENTS) | 9/9 TESTS PASS
-   **AUDITOR & LEAD ARCHITECT:** Commander Gouragopal Mohapatra (GOURGOPAL618)
+   **AUDITOR & LEAD ARCHITECT:** Team VITALX CORE
    **DATE OF CERTIFICATION:** November 15, 2026
 
 --------------------------------------------------------------------------------

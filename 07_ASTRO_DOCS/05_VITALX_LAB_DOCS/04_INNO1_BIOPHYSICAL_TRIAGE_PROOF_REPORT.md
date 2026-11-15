@@ -13,7 +13,7 @@
  VERIFICATION METRIC: 4,320 Frames Triaged (72.0 Mission Hours) | 100% Deterministic State Matches
  LATENCY PERFORMANCE: Mean = 0.025 ms | Max = 0.449 ms | p99 = 0.113 ms (< 10.0 ms Ceiling)
  FIGURES GENERATED: 4 High-Resolution Aerospace Figures (figures/04_figures/)
- LEAD RESEARCHER & ARCHITECT: COMMANDER GOURGOPAL MOHAPATRA (TEAM VITALX CORE)
+ LEAD RESEARCHER & ARCHITECT: TEAM VITALX CORE (NASA SPACE APPS CHALLENGE 2026)
  DATE OF RATIFICATION: 15 NOVEMBER 2026
 ================================================================================
 ```

@@ -12,7 +12,7 @@ ASTROVITAL AI : VITALX CORE (RECREATED V1)
    **CERTIFICATION LEVEL:** RTCA DO-178C / EUROCAE ED-12C DAL C (MAJOR SAFETY IMPACT)
    **AIRWORTHINESS SCOPE:** 18 Test Suites | 556 Tests Passed | 2,970 Statements (100.0% Cov)
    **CHALLENGE:** NASA Space Apps Challenge 2026 — Human Body in Deep Space
-   **ARCHITECT & LEAD:** Gourgopal Mohapatra (Team VITALX CORE)
+   **ARCHITECT & LEAD:** Team VITALX CORE
    **STATUS:** TRL-7 Operational Flight Lock (15 November 2026)
 
 --------------------------------------------------------------------------------

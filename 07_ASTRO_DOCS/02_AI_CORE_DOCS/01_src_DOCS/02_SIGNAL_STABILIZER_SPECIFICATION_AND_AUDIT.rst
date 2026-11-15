@@ -13,7 +13,7 @@ MODULE: inno3_signal_stabilizer.py (02_AI_CORE/01_src)
    **CERTIFICATION STANDARD:** DO-178C DESIGN ASSURANCE LEVEL C (DAL C)
    **TRACEABLE REQUIREMENTS:** REQ-STAB-01 through REQ-STAB-05 (HLR-BIO-003)
    **VERIFICATION STATUS:** 100% STATEMENT COVERAGE (377/377 STATEMENTS) | 68/68 TESTS PASS
-   **AUDITOR & LEAD ARCHITECT:** Commander Gouragopal Mohapatra (GOURGOPAL618)
+   **AUDITOR & LEAD ARCHITECT:** Team VITALX CORE
    **DATE OF CERTIFICATION:** November 14, 2026
 
 --------------------------------------------------------------------------------

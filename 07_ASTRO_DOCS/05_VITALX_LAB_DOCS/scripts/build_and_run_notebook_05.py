@@ -37,7 +37,7 @@ cells = []
 top_md_1 = r"""# ASTROVITAL AI : VITALX CORE RECREATED (V1)
 ## Notebook 05: Master Multi-Mission Flight Verification & Head-to-Head Comparative Benchmark
 **Standard:** RTCA DO-178C Level C (DAL C) / NASA-STD-3001 Vol 2 / MIL-STD-1472H  
-**Author:** Gourgopal Mohapatra (Lead Architect & Sole Developer, Team VITALX CORE)  
+**Author:** Team VITALX CORE (NASA Space Apps Challenge 2026)  
 **Subsystems Anchored:** `01_DATA_VAULT`, `02_AI_CORE`, `03_DECISION_CORE`, `04_ASTRONAUT_COCKPIT`  
 
 ---

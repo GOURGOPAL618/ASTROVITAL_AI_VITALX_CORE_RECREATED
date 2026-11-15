@@ -13,7 +13,7 @@ MODULE: telemetry_stream_view.py (12-Channel Telemetry Grid & Waveforms)
    **CERTIFICATION STANDARD:** DO-178C LEVEL C / NASA-STD-3001 VOL 2
    **TRACEABLE REQUIREMENTS:** LLR-COCKPIT-003 (HLR-BIO-002)
    **VERIFICATION STATUS:** 100% STATEMENT COVERAGE (218/218 STATEMENTS) | 12/12 TESTS PASS
-   **AUDITOR & LEAD ARCHITECT:** Commander Gouragopal Mohapatra (GOURGOPAL618)
+   **AUDITOR & LEAD ARCHITECT:** Team VITALX CORE
    **DATE OF CERTIFICATION:** November 15, 2026
 
 --------------------------------------------------------------------------------

@@ -6,7 +6,7 @@ RTCA DO-178C LEVEL C (DAL C) / NASA-STD-3001 VOL 2 AIRWORTHINESS PROOF
 ================================================================================
 
 File: X_TEST/test_vitalx_grand_master_suite.py
-Author: Gourgopal Mohapatra (Lead Architect & Sole Developer, Team VITALX CORE)
+Author: Team VITALX CORE (NASA Space Apps Challenge 2026)
 Safety Standard: DO-178C Level C / MIL-STD-1472H / ARP4754A
 Competition: NASA Space Apps Challenge 2026 — Human Body in Deep Space
 
@@ -661,8 +661,10 @@ def test_046_scenario_preset_06_sleep_debt_amber_verification():
 
 
 def test_047_real_time_execution_latency_sub_millisecond_sla_audit(nominal_vitals_dict):
-    """Verify end-to-end pipeline latency is < 50.0 ms SLA across 10 consecutive frames."""
+    """Verify end-to-end pipeline latency is < 50.0 ms SLA across consecutive steady-state frames."""
     orchestrator = AstroVitalPipelineOrchestrator()
+    # Warmup frame to avoid initial cold-start I/O / JIT compilation jitter
+    orchestrator.process_telemetry_frame(nominal_vitals_dict)
     latencies = []
     for _ in range(10):
         t0 = time.perf_counter()

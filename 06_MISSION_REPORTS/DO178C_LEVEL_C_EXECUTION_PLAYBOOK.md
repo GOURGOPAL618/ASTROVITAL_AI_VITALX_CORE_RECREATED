@@ -2,7 +2,7 @@
 ## Implementation, Automated Verification, & Live Judging Architecture for ASTROVITAL AI : VITALX CORE
 
 **Author:** Gourgopal Mohapatra  
-**Role:** Lead Architect & Sole Developer, Team VITALX CORE  
+**Role:** Team VITALX CORE (NASA Space Apps Challenge 2026)  
 **Date:** November 14, 2026  
 **Standard:** DO-178C Design Assurance Level C (DAL C) Compliance Specification  
 

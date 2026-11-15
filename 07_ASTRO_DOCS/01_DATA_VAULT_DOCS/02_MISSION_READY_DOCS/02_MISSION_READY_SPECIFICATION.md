@@ -13,7 +13,7 @@
  SERIALIZATION FORMAT: Apache Parquet (Snappy Compressed) & HDF5 / NumPy .npz
  CRYPTOGRAPHIC SIDE-CAR: SHA-256 JSON Digest Manifest
  TENSOR DIMENSIONALITY: N x 12 IEEE 754 Float64 Matrix
- AUTHOR & LEAD: GOURGOPAL MOHAPATRA (TEAM VITALX CORE)
+ AUTHOR & LEAD: TEAM VITALX CORE
  DATE OF RATIFICATION: NOVEMBER 14, 2026
 ================================================================================
 ```

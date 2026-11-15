@@ -14,7 +14,7 @@ SUBSYSTEM 03: DECISION CORE — MASTER SUBSYSTEM VERIFICATION INDEX
    **PRODUCTION MODULES:** 4 Source Modules | 3 JSON Data Assets | 5 Test Suites
    **CODE METRICS:** 596 Executable Statements | 0 Uncovered | 100.0% Statement Coverage
    **TEST METRICS:** 137 Unit & E2E Integration Tests (100% Pass Rate in 3.34s)
-   **AUTHOR & AIRWORTHINESS LEAD:** Commander Gouragopal Mohapatra (GOURGOPAL618)
+   **AUTHOR & AIRWORTHINESS LEAD:** Team VITALX CORE
    **DATE OF RATIFICATION:** November 14, 2026
 
 --------------------------------------------------------------------------------

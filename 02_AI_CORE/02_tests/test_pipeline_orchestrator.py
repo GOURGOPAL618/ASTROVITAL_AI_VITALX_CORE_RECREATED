@@ -3,7 +3,7 @@
 ASTROVITAL AI : VITALX CORE RECREATED V1
 Subsystem: 02_AI_CORE / Master Operational Orchestration
 Test Suite: test_pipeline_orchestrator.py
-Author: Gourgopal Mohapatra (Lead Architect & Sole Developer, Team VITALX CORE)
+Author: Team VITALX CORE (NASA Space Apps Challenge 2026)
 Safety Standard: DO-178C Level C (DAL C) / ARP4754A Master Integration
 Verification: 100% Statement Coverage on pipeline_orchestrator.py
 =============================================================================

@@ -13,7 +13,7 @@ MODULE: inno6_biomarker_ranker.py (02_AI_CORE/01_src)
    **CERTIFICATION STANDARD:** DO-178C DESIGN ASSURANCE LEVEL C (DAL C)
    **TRACEABLE REQUIREMENTS:** REQ-RANK-01 through REQ-RANK-05 (HLR-BIO-003, HLR-BIO-004)
    **VERIFICATION STATUS:** 100% STATEMENT COVERAGE (321/321 STATEMENTS) | 44/44 TESTS PASS
-   **AUDITOR & LEAD ARCHITECT:** Commander Gouragopal Mohapatra (GOURGOPAL618)
+   **AUDITOR & LEAD ARCHITECT:** Team VITALX CORE
    **DATE OF CERTIFICATION:** November 14, 2026
 
 --------------------------------------------------------------------------------

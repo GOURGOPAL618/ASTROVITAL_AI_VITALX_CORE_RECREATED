@@ -14,7 +14,7 @@
  VERIFICATION STANDARD: SHA-256 / MD5 Cryptographic Integrity Checks
  CERTIFICATION STANDARD: DO-178C LEVEL C (DAL C) / NASA-STD-3001
  DECOMPRESSION PROTOCOL: Deflate / PKZIP 2.04g Bounded Stream Unpacker
- AUTHOR & LEAD: GOURGOPAL MOHAPATRA (TEAM VITALX CORE)
+ AUTHOR & LEAD: TEAM VITALX CORE
  DATE OF RATIFICATION: NOVEMBER 14, 2026
 ================================================================================
 ```
