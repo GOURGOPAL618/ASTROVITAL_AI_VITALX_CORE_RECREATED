@@ -165,5 +165,5 @@ pytest 02_AI_CORE/02_tests/test_adapter_ingestion.py -v --cov=02_AI_CORE/01_src/
 
 ---
 
-**Sanctum Authorization:** Commander Gouragopal Mohapatra (`GOURGOPAL618`)  
+**Engineering Authorization:** Lead Systems Architect (`GOURGOPAL618`)  
 **Lead Systems Architect & Sole Developer — Team VITALX CORE**  

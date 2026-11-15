@@ -137,6 +137,6 @@ TOTAL                                       234      0   100%
 
 ---
 
-**Sanctum Authorization:** Commander Gouragopal Mohapatra (`GOURGOPAL618`)  
+**Engineering Authorization:** Lead Systems Architect (`GOURGOPAL618`)  
 **Lead Systems Architect & Sole Developer — Team VITALX CORE**  
 
