@@ -119,7 +119,7 @@ pie title 32 Unit Tests Partitioned Across 5 Ingestion Phases
 ```
 ================================ test session starts ================================
 platform win32 -- Python 3.14.7, pytest-9.1.1, pluggy-1.6.0
-rootdir: D:\JAGANNATH_CODE_SANCTUM\JCC CAMPUS 3 (HUMAN SPACEFLIGHT DIVISION)\ASTROVITAL_AI_VITALX_CORE_RECREATED
+rootdir: ASTROVITAL_AI_VITALX_CORE_RECREATED
 plugins: cov-4.1.0
 collected 32 items
 

@@ -50,11 +50,11 @@ $$\mathbf{X}_{\text{raw}} \xrightarrow{\text{Resample (1.0 min)}} \mathbf{X}_{\t
 
 ## 3. Generated Publication Figures
 
-- **Figure 1:** [figure_01_artemis_cabin_environment.png](file:///D:/JAGANNATH_CODE_SANCTUM/JCC%20CAMPUS%203%20(HUMAN%20SPACEFLIGHT%20DIVISION)/ASTROVITAL_AI_VITALX_CORE_RECREATED/07_ASTRO_DOCS/05_VITALX_LAB_DOCS/figures/figure_01_artemis_cabin_environment.png)
+- **Figure 1:** [figure_01_artemis_cabin_environment.png](figures/01_figures/figure_01_artemis_cabin_environment.png)
   - Time-series plot of Artemis II Orion cabin temperature, relative humidity, and dew point demonstrating thermal coupling.
-- **Figure 2:** [figure_02_shuttle_dso_cardiovascular.png](file:///D:/JAGANNATH_CODE_SANCTUM/JCC%20CAMPUS%203%20(HUMAN%20SPACEFLIGHT%20DIVISION)/ASTROVITAL_AI_VITALX_CORE_RECREATED/07_ASTRO_DOCS/05_VITALX_LAB_DOCS/figures/figure_02_shuttle_dso_cardiovascular.png)
+- **Figure 2:** [figure_02_shuttle_dso_cardiovascular.png](figures/01_figures/figure_02_shuttle_dso_cardiovascular.png)
   - Cardiovascular response curves from Space Shuttle DSO 479 stand tests.
-- **Figure 3:** [figure_03_master_12channel_telemetry.png](file:///D:/JAGANNATH_CODE_SANCTUM/JCC%20CAMPUS%203%20(HUMAN%20SPACEFLIGHT%20DIVISION)/ASTROVITAL_AI_VITALX_CORE_RECREATED/07_ASTRO_DOCS/05_VITALX_LAB_DOCS/figures/figure_03_master_12channel_telemetry.png)
+- **Figure 3:** [figure_03_master_12channel_telemetry.png](figures/01_figures/figure_03_master_12channel_telemetry.png)
   - Full 12-channel multi-panel display over 72 hours of lunar transit.
-- **Figure 4:** [figure_04_correlation_matrix.png](file:///D:/JAGANNATH_CODE_SANCTUM/JCC%20CAMPUS%203%20(HUMAN%20SPACEFLIGHT%20DIVISION)/ASTROVITAL_AI_VITALX_CORE_RECREATED/07_ASTRO_DOCS/05_VITALX_LAB_DOCS/figures/figure_04_correlation_matrix.png)
+- **Figure 4:** [figure_04_correlation_matrix.png](figures/01_figures/figure_04_correlation_matrix.png)
   - Correlation heatmap demonstrating physiological coupling between environmental cabin CO2, heart rate, and cerebral perfusion pressure.

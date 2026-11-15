@@ -10,8 +10,8 @@ SUBSYSTEM 07: AEROSPACE SYSTEM ARCHITECTURE & 80/20 SAFE FLIGHT LAW
    **ARTIFACT DESIGNATOR:** ASTROVITAL-SYS-ARCH-SPEC-001
    **CERTIFICATION TARGET:** RTCA DO-178C / EUROCAE ED-12C DAL C
    **OPERATIONAL PRINCIPLE:** 80% Biophysical Supreme Head + 20% Adaptive AI Auxiliary
-   **ARCHITECT & LEAD:** Commander Gouragopal Mohapatra (GOURGOPAL618)
-   **JURISDICTION:** JCC Campus 3 (Human Spaceflight Division), Odisha, Bharat
+   **CHALLENGE:** NASA Space Apps Challenge 2026 — Human Body in Deep Space
+   **ARCHITECT & LEAD:** Gourgopal Mohapatra (Team VITALX CORE)
    **STATUS:** TRL-7 Operational Flight Lock (14 November 2026)
 
 --------------------------------------------------------------------------------

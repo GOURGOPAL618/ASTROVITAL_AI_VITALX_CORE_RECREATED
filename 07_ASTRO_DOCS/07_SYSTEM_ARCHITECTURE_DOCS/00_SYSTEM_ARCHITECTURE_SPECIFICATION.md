@@ -8,11 +8,10 @@
 ================================================================================
  ARTIFACT DESIGNATOR: ASTROVITAL-SYS-ARCH-SPEC-001
  SUBSYSTEM DESIGNATION: 07_SYSTEM_ARCHITECTURE_DOCS
+ CHALLENGE: NASA SPACE APPS CHALLENGE 2026 — HUMAN BODY IN DEEP SPACE
  CERTIFICATION TARGET: RTCA DO-178C / EUROCAE ED-12C DAL C
  OPERATIONAL PRINCIPLE: 80% BIOPHYSICAL SUPREME HEAD + 20% ADAPTIVE AI AUXILIARY
- ARCHITECT & LEAD: GOURGOPAL MOHAPATRA (COMMANDER GOURGOPAL618)
- JURISDICTION: JAGANNATH COMMAND CENTER (JCC) — CAMPUS 3 (HUMAN SPACEFLIGHT)
- SACRED DEDICATION: DEDICATED TO THE LOTUS FEET OF MAHAPRABHU SHRI JAGANNATH
+ ARCHITECT & LEAD: GOURGOPAL MOHAPATRA (TEAM VITALX CORE)
  STATUS: TRL-7 OPERATIONAL FLIGHT LOCK (14 NOVEMBER 2026)
 ================================================================================
 ```
@@ -123,6 +122,6 @@ All layers of the architecture have been formally verified under automated test 
 ```
 ================================================================================
                     END OF ARCHITECTURAL SPECIFICATION DOSSIER
-                   CONSECRATED TO MAHAPRABHU SHRI JAGANNATH
+            NASA SPACE APPS CHALLENGE 2026 • HUMAN BODY IN DEEP SPACE
 ================================================================================
 ```

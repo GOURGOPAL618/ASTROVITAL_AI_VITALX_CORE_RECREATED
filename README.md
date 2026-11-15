@@ -2,15 +2,15 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,10:030712,25:0b192c,45:1e1b4b,65:0f172a,85:022c43,100:000000&height=320&section=header&text=ASTROVITAL%20AI%20%E2%80%A2%20VITALX%20CORE&fontSize=70&fontColor=00f2fe&animation=fadeIn&fontAlignY=33&desc=DO-178C%20DAL%20C%20%E2%80%A2%20AUTONOMOUS%20BIO-ASTRONAUTIC%20FLIGHT%20DECISION%20ENGINE&descAlignY=54&descSize=16&descColor=38bdf8" width="100%"/>
 
-<img src="https://readme-typing-svg.demolab.com/?lines=%3E+FLIGHT+STATUS+%3A+TRL-7+OPERATIONAL+LOCK+(14+NOV+2026+%40+20%3A30%3A00+IST);%3E+DO-178C+DAL+C+AUDIT+%3A+18%2F18+SUITES+%E2%80%A2+556%2F556+TESTS+PASSED+(100.0%25);%3E+STRUCTURAL+COVERAGE+%3A+2%2C970%2F2%2C970+STATEMENTS+AT+100.0%25+(ZERO+DEAD+CODE);%3E+SAFETY+ARCHITECTURE+%3A+80%25+BIOPHYSICAL+HEAD+%2B+20%25+ADAPTIVE+AI+AUXILIARY;%3E+3-SECOND+COCKPIT+HUD+%3A+12+CANONICAL+RULES+%E2%80%A2+LOCKER+ROUTING+(L1-L5);%3E+COMMAND+AUTHORITY+%3A+COMMANDER+GOURAGOPAL+MOHAPATRA+%E2%80%A2+JCC+CAMPUS+3;%3E+CONSECRATED+TO+THE+LOTUS+FEET+OF+MAHAPRABHU+SHRI+JAGANNATH&font=Fira+Code&size=16&duration=2200&pause=600&color=00F2FE&center=true&vCenter=true&width=1000&height=55" />
+<img src="https://readme-typing-svg.demolab.com/?lines=%3E+FLIGHT+STATUS+%3A+TRL-7+OPERATIONAL+LOCK+(14+NOV+2026+%40+20%3A30%3A00+IST);%3E+DO-178C+DAL+C+AUDIT+%3A+18%2F18+SUITES+%E2%80%A2+556%2F556+TESTS+PASSED+(100.0%25);%3E+STRUCTURAL+COVERAGE+%3A+2%2C970%2F2%2C970+STATEMENTS+AT+100.0%25+(ZERO+DEAD+CODE);%3E+SAFETY+ARCHITECTURE+%3A+80%25+BIOPHYSICAL+HEAD+%2B+20%25+ADAPTIVE+AI+AUXILIARY;%3E+3-SECOND+COCKPIT+HUD+%3A+12+CANONICAL+RULES+%E2%80%A2+LOCKER+ROUTING+(L1-L5);%3E+MISSION+%3A+NASA+SPACE+APPS+CHALLENGE+2026+%E2%80%A2+HUMAN+BODY+IN+DEEP+SPACE;%3E+PROJECT+LEAD+%3A+GOURGOPAL+MOHAPATRA+%E2%80%A2+TEAM+VITALX+CORE&font=Fira+Code&size=16&duration=2200&pause=600&color=00F2FE&center=true&vCenter=true&width=1000&height=55" />
 
 <br/>
 
 <!-- ========================================================================================= -->
 <!-- CLUSTER 1: MISSION COMMAND & SOVEREIGN SUPREMACY (DENSE AEROSPACE HUD)                   -->
 <!-- ========================================================================================= -->
-<a href="06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md"><img height="28" src="https://img.shields.io/badge/MISSION%20AUTHORITY-COMMANDER%20GOURAGOPAL%20MOHAPATRA%20(GOURGOPAL618)-00f2fe?style=for-the-badge&logo=spacex&logoColor=00f2fe&labelColor=050814"/></a>
-<a href="06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md"><img height="28" src="https://img.shields.io/badge/WAR%20ROOM-JCC%20CAMPUS%203%20(HUMAN%20SPACEFLIGHT%20DIVISION)-7f00ff?style=for-the-badge&logo=nasa&logoColor=7f00ff&labelColor=050814"/></a>
+<a href="06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md"><img height="28" src="https://img.shields.io/badge/PROJECT%20LEAD-GOURGOPAL%20MOHAPATRA%20(TEAM%20VITALX%20CORE)-00f2fe?style=for-the-badge&logo=spacex&logoColor=00f2fe&labelColor=050814"/></a>
+<a href="06_MISSION_REPORTS/HLR_TRACEABILITY_MATRIX.md"><img height="28" src="https://img.shields.io/badge/CHALLENGE-NASA%20SPACE%20APPS%202026%20(HUMAN%20BODY%20IN%20DEEP%20SPACE)-7f00ff?style=for-the-badge&logo=nasa&logoColor=7f00ff&labelColor=050814"/></a>
 <a href="#-01--tactical-mission-architecture--the-8020-safe-ai-flight-law"><img height="28" src="https://img.shields.io/badge/DECISION%20ENGINE-VITALX--CORE--RECREATED--V1-ff007f?style=for-the-badge&logo=atom&logoColor=ff007f&labelColor=050814"/></a>
 <a href="07_ASTRO_DOCS/07_SYSTEM_ARCHITECTURE_DOCS/"><img height="28" src="https://img.shields.io/badge/FLIGHT%20RELEASE-v1.0.0--TRL7--OPERATIONAL-00ffab?style=for-the-badge&logo=clockify&logoColor=00ffab&labelColor=050814"/></a>
 
@@ -51,7 +51,7 @@
 ║                   ASTROVITAL AI : VITALX CORE (RECREATED V1)                          ║
 ║    AUTONOMOUS BIO-ASTRONAUTIC CLINICAL DECISION SUPPORT FOR CISLUNAR & MARS TRANSIT    ║
 ║                                                                                       ║
-║  "Dedicated with eternal reverence to the Lotus Feet of Mahaprabhu Shri Jagannath"   ║
+║               NASA SPACE APPS CHALLENGE 2026 — HUMAN BODY IN DEEP SPACE               ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════╝
 ```
 
@@ -64,11 +64,10 @@
 | TACTICAL VECTOR | FLIGHT SPECIFICATION & VERIFIED VALUES |
 | :--- | :--- |
 | **SYSTEM CODENAME** | **ASTROVITAL AI : VITALX CORE (RECREATED V1)** |
+| **HACKATHON CHALLENGE** | **NASA Space Apps Challenge 2026 — Human Body in Deep Space** |
 | **TARGET MISSION HORIZONS** | **Artemis Deep Space Transit, Lunar Gateway, Mars Transit Vehicle (MTV)** |
-| **SUPREME MISSION COMMANDER** | **Commander Gouragopal Mohapatra (`GOURGOPAL618`)** |
-| **OPERATIONAL SANCTUM** | **Jagannath Command Center (JCC) — Campus 3 (Human Spaceflight Division), Odisha, Bharat** |
-| **SACRED CONSECRATION** | Dedicated with eternal reverence to the Lotus Feet of **Mahaprabhu Shri Jagannath** |
-| **COMMAND TRANSMISSION** | [`ggmohapatra.info.2007@gmail.com`](mailto:ggmohapatra.info.2007@gmail.com) |
+| **DEVELOPED BY** | **Team VITALX CORE • Lead Architect: Gourgopal Mohapatra (`GOURGOPAL618`)** |
+| **CONTACT TRANSMISSION** | [`ggmohapatra.info.2007@gmail.com`](mailto:ggmohapatra.info.2007@gmail.com) |
 | **TARGET FLIGHT LOCK** | **14 November 2026 @ 20:30:00 IST (`v1.0.0-TRL7-OPERATIONAL`)** |
 | **FULL-PROJECT TEST AUDIT** | **18 / 18 TEST SUITES PASSED • 556 / 556 TESTS (100.0% VERIFIED · 28.13s)** |
 | **STRUCTURAL STATEMENT COVERAGE** | **2,970 / 2,970 STATEMENTS AT 100.0% (ZERO DEAD CODE · DO-178C DAL C)** |
@@ -77,7 +76,7 @@
 | **CLINICAL TRIAGE CORE** | **12 Prioritized Canonical Rules (RED $\to$ AMBER $\to$ GREEN State Machine)** |
 | **ASTRONAUT COCKPIT HUD** | **$\le 3\text{-Second}$ Actionable Display • Physical Locker Routing ($L_1 \dots L_5$) • 1.2 kHz Klaxon** |
 | **HISTORICAL DATA VAULT** | **8 Dedicated Archives (Artemis II Orion, Shuttle DSO 328/479, Apollo 7, ISS, OSDR)** |
-| **SOVEREIGN LEGAL CHARTER** | **JSTIRPL-v1.0** (Open Deep Space Research • Commercial Exploitation Restricted) |
+| **OPEN RESEARCH CHARTER** | **NASA Open Source Agreement / MIT License (Open Deep Space Research)** |
 
 ---
 
@@ -353,23 +352,18 @@ ASTROVITAL_AI_VITALX_CORE_RECREATED/
 │   └── test_cockpit_state.py                      # 14 Unit Tests (FIFO ring buffer, baseline profiles, scenarios)
 │
 ├── 05_VITALX_LAB/                                 # SCIENTIFIC RESEARCH & BIOPHYSICAL ANALYSIS LAB
-│   ├── 01_notebooks/                              # Executable Research & Model Synthesis Notebooks
-│   │   ├── 01_multi_mission_data_synthesis.ipynb  # Multi-mission cross-calibration & 12D synchronization
-│   │   ├── 02_inno3_signal_cleaning_validation.ipynb # Wavelet denoising & NLMS motion artifact removal
-│   │   └── 03_inno6_biomarker_divergence.ipynb    # Dirichlet prior sensitivity & information entropy ranking
-│   ├── 02_figures/                                # High-Resolution Publication & Verification Figures
-│   │   ├── fig1_sensor_timeseries.png             # Raw vs calibrated telemetry streams
-│   │   ├── fig2_imputation_comparison.png         # Bounded forward-fill vs baseline projection
-│   │   ├── fig3_cross_correlation.png             # Inter-sensor physiologic cross-correlation matrix
-│   │   ├── fig4_nlms_convergence.png              # Adaptive filter learning rate & SNR optimization
-│   │   ├── fig5_filter_frequency_response.png     # Savitzky-Golay frequency attenuation characteristics
-│   │   ├── fig6_sqi_distribution.png              # Signal quality index distributions across missions
-│   │   ├── fig7_phase_prior_distribution.png      # Dynamic Dirichlet phase weight heatmaps
-│   │   └── fig8_entropy_divergence_roc.png        # Biomarker sensitivity ranking ROC curves
-│   └── 03_scripts/                                # Research Automation & Dataset Extraction Scripts
-│       ├── run_lab_pipeline.py                    # Batch execution harness for Lab notebooks
-│       ├── export_publication_figures.py          # Figure rendering and vector export utility
-│       └── generate_synthetic_stress_telemetry.py # High-entropy physiological stress generator
+│   ├── 01_multi_mission_data_synthesis.ipynb      # Multi-mission cross-calibration & 12D synchronization
+│   ├── 02_inno3_signal_cleaning_validation.ipynb # Wavelet denoising & NLMS motion artifact removal
+│   ├── 03_inno6_biomarker_divergence.ipynb        # Dirichlet prior sensitivity & information entropy ranking
+│   ├── 04_inno1_biophysical_triage_proof.ipynb   # Inno 1 closed-form hemodynamics & deterministic triage proof
+│   └── 05_master_flight_verification.ipynb       # Master 72-hour flight verification (100.0% vs 85.25%)
+│
+├── 06_MISSION_REPORTS/                            # MASTER AIRWORTHINESS COMPLIANCE & SAFETY REPORTS
+│   ├── HLR_TRACEABILITY_MATRIX.md                 # Complete Bidirectional HLR-to-LLR Traceability Matrix
+│   ├── DO178C_LEVEL_C_EXECUTION_PLAYBOOK.md       # Full Verification Playbook & Quality Plan
+│   ├── DO178C_SAFETY_PHILOSOPHY_REPORT.md         # FMEA, Hazard Mitigations & 80/20 Safe AI Philosophy
+│   ├── BIOPHYSICAL_DERIVATION_REPORT.md           # First-principles derivations of fluid shift & ICP models
+│   └── MULTI_MISSION_VALIDATION_REPORT.md         # Empirical validation against Apollo, Shuttle & Artemis data
 │
 ├── X_TEST/                                        # INDEPENDENT VERIFICATION & VALIDATION (IV&V)
 │   ├── test_vitalx_integrated_100.py              # 100 Integrated Stress & Fault-Injection Tests (100% PASS)
@@ -387,35 +381,33 @@ ASTROVITAL_AI_VITALX_CORE_RECREATED/
 │   ├── DO178C_LEVEL_C_ASTRONAUT_COCKPIT_AUDIT_REPORT.md
 │   └── DO178C_LEVEL_C_INTEGRATED_100_TEST_SUITE_AUDIT_REPORT.md
 │
-├── 06_MISSION_REPORTS/                            # MASTER AIRWORTHINESS COMPLIANCE REPORTS
-│   ├── HLR_TRACEABILITY_MATRIX.md                 # Complete Bidirectional HLR-to-LLR Traceability Matrix
-│   └── DO178C_LEVEL_C_EXECUTION_PLAYBOOK.md       # Full Verification Playbook & Quality Plan
-│
-└── 07_ASTRO_DOCS/                                 # FORMAL FLIGHT SPECIFICATION ARCHIVE (MD & RST)
+└── 07_ASTRO_DOCS/                                 # FORMAL FLIGHT SPECIFICATION ARCHIVE (MD & RST DUAL PARITY)
+    ├── 00_MASTER_ASTRO_DOCS_INDEX.md / .rst       # Master flight specification catalog index
+    ├── conf.py                                    # Sphinx documentation configuration
     ├── 01_DATA_VAULT_DOCS/                        # 20 Specifications (.md & .rst for all 8 archives)
-    ├── 02_AI_CORE_DOCS/                           # Formal specifications & test verification reports (Mod 1-5)
-    ├── 03_DECISION_CORE_DOCS/                     # Specifications & audit reports for Biophysical Supreme Head
-    ├── 04_ASTRONAUT_COCKPIT_DOCS/                 # Cockpit HUD & CDSS subsystem specifications (8 docs)
-    ├── 05_VITALX_LAB_DOCS/                        # Research synthesis, cleaning & biomarker divergence reports
-    ├── 06_MISSION_REPORTS_DOCS/                   # 100-Test Integrated IV&V Audit Dossier
-    └── 07_SYSTEM_ARCHITECTURE_DOCS/               # System Architecture LaTeX Dossier & Diagrams
+    ├── 02_AI_CORE_DOCS/                           # Specifications & test verification reports (Mod 1-5, MD & RST)
+    ├── 03_DECISION_CORE_DOCS/                     # Specifications & audit reports for Biophysical Head (MD & RST)
+    ├── 04_ASTRONAUT_COCKPIT_DOCS/                 # Cockpit HUD & CDSS subsystem specifications (8 docs, MD & RST)
+    ├── 05_VITALX_LAB_DOCS/                        # Research synthesis reports (Notebooks 1-5, 20 figures, MD & RST)
+    ├── 06_MISSION_REPORTS_DOCS/                   # 100-Test Integrated IV&V Audit Dossier (MD & RST)
+    └── 07_SYSTEM_ARCHITECTURE_DOCS/               # System Architecture LaTeX Dossier, Diagrams & Specifications
 ```
 
 ---
 
-## ⚖️ 07 — SOVEREIGN AEROSPACE CHARTER & ETHICS STATEMENT
+## ⚖️ 07 — BIO-ASTRONAUTICS ETHICS & OPEN SOURCE CHARTER
 
-### Sovereign Deep-Space Bio-Ethics Directive
+### Deep-Space Bio-Ethics Directive
 1. **Human Sovereignty Over Autonomous Intelligence:** Under no operational condition shall an artificial intelligence algorithm overrule the clinical judgment of the Crew Medical Officer (CMO) or ground Flight Surgeons. The CMO manual override retains absolute, uncompromised supremacy.
 2. **Deterministic Explainability Mandate:** Every diagnostic alert, severity escalation, and countermeasure recommendation generated by ASTROVITAL VITALX CORE is 100% mathematically traceable to first-principles biophysical models or validated clinical guidelines. Black-box unexplainable decisions are strictly prohibited.
-3. **Open Deep-Space Medical Knowledge:** Developed for humanity's safe expansion into the solar system. Licensed under the **Jagannath Sovereign Open Aerospace Charter (JSTIRPL-v1.0)** — freely usable for scientific research, astronaut safety, and civilian space exploration.
+3. **Open Deep-Space Medical Knowledge:** Developed for humanity's safe expansion into the solar system. Licensed under the **NASA Open Source Agreement / MIT License** — freely usable for scientific research, astronaut safety, and civilian space exploration.
 
 ---
 
 <div align="center">
 
-**JAGANNATH COMMAND CENTER (JCC) • CAMPUS 3 (HUMAN SPACEFLIGHT DIVISION)**  
-*Dedicated with eternal reverence to the Lotus Feet of Mahaprabhu Shri Jagannath*  
-*Bhubaneswar, Odisha, Bharat • 14 November 2026*
+**NASA SPACE APPS CHALLENGE 2026 • HUMAN BODY IN DEEP SPACE**  
+*Team VITALX CORE • Lead Architect: Gourgopal Mohapatra*  
+*Autonomous Bio-Astronautic Clinical Decision Support Architecture*
 
 </div>

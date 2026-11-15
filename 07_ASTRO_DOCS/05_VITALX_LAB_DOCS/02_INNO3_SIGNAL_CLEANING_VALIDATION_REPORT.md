@@ -52,11 +52,11 @@ Notebook 02 benchmarks and certifies the signal processing performance of `inno3
 
 ## 3. Generated Publication Figures
 
-- **Figure 1:** [figure_01_baseline_drift_compensation.png](file:///D:/JAGANNATH_CODE_SANCTUM/JCC%20CAMPUS%203%20(HUMAN%20SPACEFLIGHT%20DIVISION)/ASTROVITAL_AI_VITALX_CORE_RECREATED/07_ASTRO_DOCS/05_VITALX_LAB_DOCS/figures/figure_01_baseline_drift_compensation.png)
+- **Figure 1:** [figure_01_baseline_drift_compensation.png](figures/02_figures/figure_01_baseline_drift_compensation.png)
   - Time-domain waveform before and after polynomial baseline drift removal.
-- **Figure 2:** [figure_02_spectral_noise_attenuation.png](file:///D:/JAGANNATH_CODE_SANCTUM/JCC%20CAMPUS%203%20(HUMAN%20SPACEFLIGHT%20DIVISION)/ASTROVITAL_AI_VITALX_CORE_RECREATED/07_ASTRO_DOCS/05_VITALX_LAB_DOCS/figures/figure_02_spectral_noise_attenuation.png)
+- **Figure 2:** [figure_02_spectral_noise_attenuation.png](figures/02_figures/figure_02_spectral_noise_attenuation.png)
   - Power Spectral Density (PSD) showing 60 Hz vehicle electrical hum attenuation.
-- **Figure 3:** [figure_03_motion_cancellation_traces.png](file:///D:/JAGANNATH_CODE_SANCTUM/JCC%20CAMPUS%203%20(HUMAN%20SPACEFLIGHT%20DIVISION)/ASTROVITAL_AI_VITALX_CORE_RECREATED/07_ASTRO_DOCS/05_VITALX_LAB_DOCS/figures/figure_03_motion_cancellation_traces.png)
+- **Figure 3:** [figure_03_motion_cancellation_traces.png](figures/02_figures/figure_03_motion_cancellation_traces.png)
   - Overlay of IMU accelerometer motion reference signal and adaptive cancellation trace.
-- **Figure 4:** [figure_04_sqi_channel_certification.png](file:///D:/JAGANNATH_CODE_SANCTUM/JCC%20CAMPUS%203%20(HUMAN%20SPACEFLIGHT%20DIVISION)/ASTROVITAL_AI_VITALX_CORE_RECREATED/07_ASTRO_DOCS/05_VITALX_LAB_DOCS/figures/figure_04_sqi_channel_certification.png)
+- **Figure 4:** [figure_04_sqi_channel_certification.png](figures/02_figures/figure_04_sqi_channel_certification.png)
   - Radar chart of SQI scores certifying flight readiness across all channels.

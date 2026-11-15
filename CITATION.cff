@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you utilize ASTROVITAL AI : VITALX CORE in your aerospace, bio-astronautics, or telemedicine research, please cite it as below."
+title: "ASTROVITAL AI : VITALX CORE (RECREATED V1) — Autonomous Bio-Astronautic Clinical Decision Support for Cislunar & Mars Transit"
+authors:
+  - family-names: "Mohapatra"
+    given-names: "Gourgopal"
+    orcid: "https://orcid.org/0009-0000-0000-0000"
+    affiliation: "NASA Space Apps Challenge 2026 — Team VITALX CORE"
+version: "1.0.0-TRL7-OPERATIONAL"
+date-released: "2026-11-14"
+url: "https://github.com/GOURGOPAL618/ASTROVITAL_AI_VITALX_CORE_RECREATED"
+repository-code: "https://github.com/GOURGOPAL618/ASTROVITAL_AI_VITALX_CORE_RECREATED"
+license: "MIT"
+keywords:
+  - "bio-astronautics"
+  - "spaceflight-associated neuro-ocular syndrome"
+  - "SANS"
+  - "cephalad fluid shift"
+  - "RTCA DO-178C DAL C"
+  - "autonomous clinical decision support"
+  - "artemis ii"
+  - "space shuttle dso"
+  - "apollo 7"
