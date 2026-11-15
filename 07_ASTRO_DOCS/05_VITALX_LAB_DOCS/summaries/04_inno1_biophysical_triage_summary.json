@@ -1,0 +1,28 @@
+{
+  "notebook": "04_inno1_biophysical_triage_proof.ipynb",
+  "verification_status": "DO-178C_LEVEL_C_VERIFIED",
+  "subsystem": "03_DECISION_CORE",
+  "mission_profile_hours": 72.0,
+  "total_frames_triaged": 4320,
+  "triage_state_counts": {
+    "AMBER": 4320
+  },
+  "latency_benchmark_ms": {
+    "mean_latency_ms": 0.02543995390253797,
+    "max_latency_ms": 0.44949998846277595,
+    "p99_latency_ms": 0.11250001261942089,
+    "is_within_10ms_ceiling": true
+  },
+  "biophysical_proofs": {
+    "cephalad_fluid_shift_monotonic": true,
+    "stroke_volume_exercise_attenuation_verified": true,
+    "cardiovascular_equations_verified": true,
+    "cmo_override_verified": true
+  },
+  "figures_generated": [
+    "figure_01_cephalad_fluid_shift_hydrodynamics.png",
+    "figure_02_cardiac_stroke_volume_atrophy.png",
+    "figure_03_mission_hemodynamic_triage_timeline.png",
+    "figure_04_triage_latency_and_cmo_override.png"
+  ]
+}

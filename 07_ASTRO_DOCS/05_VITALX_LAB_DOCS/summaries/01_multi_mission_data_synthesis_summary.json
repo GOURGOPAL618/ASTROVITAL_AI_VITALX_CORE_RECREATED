@@ -1,0 +1,44 @@
+{
+  "notebook": "01_multi_mission_data_synthesis.ipynb",
+  "verification_status": "DO-178C_LEVEL_C_VERIFIED",
+  "mission_profile": "Artemis Lunar Transit (72.0 Hours)",
+  "total_records": 4320,
+  "channels_12d": [
+    "heart_rate",
+    "blood_pressure_systolic",
+    "blood_pressure_diastolic",
+    "rmssd",
+    "spo2",
+    "core_temp",
+    "blood_glucose",
+    "sleep_deficit_hours",
+    "reaction_latency_ms",
+    "microgravity_days",
+    "cabin_co2_mmhg",
+    "accel_magnitude_g"
+  ],
+  "null_count": 0,
+  "source_datasets": {
+    "artemis_ii": {
+      "records": 75396,
+      "parquet_file": "artemis_ii_cabin_environment.parquet"
+    },
+    "shuttle_dso479": {
+      "records": 600,
+      "parquet_file": "shuttle_dso479_cardiovascular.parquet"
+    },
+    "unified_tensor": {
+      "records": 4320,
+      "parquet_file": "unified_astronaut_telemetry.parquet",
+      "csv_file": "unified_astronaut_telemetry.csv",
+      "csv_sha256": "d43d7a21ba5268e73f8e0dadf0f845fc980aa56587c9f7da5b5be42a08807c9d",
+      "parquet_sha256": "97eef8458604b9ec21023b6fd5f82d5af9ae0fce993c0759125a7dae5062b3db"
+    }
+  },
+  "figures_generated": [
+    "figure_01_artemis_cabin_environment.png",
+    "figure_02_shuttle_dso_cardiovascular.png",
+    "figure_03_master_12channel_telemetry.png",
+    "figure_04_correlation_matrix.png"
+  ]
+}

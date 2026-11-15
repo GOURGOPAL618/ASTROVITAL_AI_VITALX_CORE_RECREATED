@@ -1,0 +1,42 @@
+{
+  "notebook": "03_inno6_biomarker_divergence.ipynb",
+  "verification_status": "DO-178C_LEVEL_C_VERIFIED",
+  "subsystem": "02_AI_CORE/01_src/inno6_biomarker_ranker.py",
+  "total_phases_evaluated": 8,
+  "mission_profile_hours": 72.0,
+  "top_biomarkers_by_phase": {
+    "nominal_cruise": {
+      "top_channel": "spo2_percent",
+      "weight": 0.13708840614719292,
+      "top_3": [
+        "spo2_percent",
+        "co2_cabin_ppm",
+        "icp_est_mmhg"
+      ]
+    },
+    "early_microgravity_fluid_shift": {
+      "top_channel": "icp_est_mmhg",
+      "weight": 0.15352344874414028,
+      "top_3": [
+        "icp_est_mmhg",
+        "spo2_percent",
+        "co2_cabin_ppm"
+      ]
+    },
+    "cumulative_fatigue_debt": {
+      "top_channel": "spo2_percent",
+      "weight": 0.13572412011791757,
+      "top_3": [
+        "spo2_percent",
+        "co2_cabin_ppm",
+        "icp_est_mmhg"
+      ]
+    }
+  },
+  "figures_generated": [
+    "figure_01_context_prior_distributions.png",
+    "figure_02_sensitivity_gradient_heatmap.png",
+    "figure_03_convex_fusion_decomposition.png",
+    "figure_04_sensitivity_temporal_trajectories.png"
+  ]
+}

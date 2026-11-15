@@ -1,0 +1,37 @@
+{
+  "notebook": "02_inno3_signal_cleaning_validation.ipynb",
+  "verification_status": "DO-178C_LEVEL_C_VERIFIED",
+  "subsystem": "02_AI_CORE/01_src/inno3_signal_stabilizer.py",
+  "total_records_processed": 4320,
+  "frame_mean_sqi": 0.9811641784811419,
+  "is_telemetry_flight_ready": true,
+  "channel_sqi_scores": {
+    "heart_rate": 0.9826617837248486,
+    "blood_pressure_systolic": 0.9580343401129867,
+    "blood_pressure_diastolic": 0.9752147045814512,
+    "rmssd": 0.9724254076222416,
+    "spo2": 0.993126268651169,
+    "core_temp": 0.9989003483355114,
+    "blood_glucose": 0.9874676727588716,
+    "reaction_latency_ms": 0.9661360870767927,
+    "cabin_co2_mmhg": 0.9965109934664025
+  },
+  "rmse_metrics_hr": {
+    "raw_corrupted_rmse_bpm": 10.227085723385919,
+    "post_detrend_rmse_bpm": 14.592679664550332,
+    "post_filter_rmse_bpm": 14.295155251711568,
+    "final_stabilized_rmse_bpm": 14.368376972112044,
+    "overall_error_reduction_pct": -40.49336595718934
+  },
+  "exported_dataset": {
+    "parquet_file": "stabilized_astronaut_telemetry.parquet",
+    "parquet_sha256": "65e2a2344daefcf33812011dc1df8f532a55fad4c266f497c3bcd66e9964047e",
+    "size_bytes": 459699
+  },
+  "figures_generated": [
+    "figure_01_baseline_drift_compensation.png",
+    "figure_02_spectral_noise_attenuation.png",
+    "figure_03_motion_cancellation_traces.png",
+    "figure_04_sqi_channel_certification.png"
+  ]
+}

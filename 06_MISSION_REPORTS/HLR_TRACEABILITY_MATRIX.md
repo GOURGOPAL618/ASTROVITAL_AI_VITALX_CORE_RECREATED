@@ -110,6 +110,18 @@ Under RTCA DO-178C / EUROCAE ED-12C Section 5.1, High-Level Requirements define 
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **HLR-BIO-001..004** | `LLR-IVNV-001..010`: 100 integrated stress tests spanning packet intake, motion noise suppression, boundary clamping, sensitivity ranker, hemodynamics, phase transitions, dropouts, fault injection, concurrency, and golden traceability. | Full End-to-End Pipeline Stress & Fault Harness | `X_TEST/test_vitalx_integrated_100.py`<br>(100 test cases) | 100% | **PASS** |
 
+### 2.8 Subsystem 04: Astronaut Cockpit — Flight Deck HUD & CDSS HMI
+
+| HLR Ref | Low-Level Requirement (LLR) | Source Class & Method | Automated Test Suite ID | Statement Coverage | Test Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **HLR-BIO-002** | `LLR-COCKPIT-001`: Master Streamlit application loop, custom glassmorphic CSS injection, and multi-scenario flight harness. | `app.py` | `test_cockpit_app.py`<br>(17 unit tests) | 100% | **PASS** |
+| **HLR-BIO-002** | `LLR-COCKPIT-002`: NASA 3-second alert banner generation, high-contrast tri-color strobes, and acoustic tone frequencies ($1.2\text{ kHz}, 600\text{ Hz}, 0\text{ Hz}$). | `hud_status_banner.py` | `test_hud_status_banner.py`<br>(15 unit tests) | 100% | **PASS** |
+| **HLR-BIO-002** | `LLR-COCKPIT-003`: 12-channel telemetry grid, dynamic trend vectors (▲ ▼ ▶), biophysical physics gauges ($I_{\text{ICP}}, SV$), and Plotly waveforms. | `telemetry_stream_view.py` | `test_telemetry_stream_view.py`<br>(13 unit tests) | 100% | **PASS** |
+| **HLR-BIO-002** | `LLR-COCKPIT-004`: Physical Orion equipment locker routing ($L_1 \dots L_5$), actionable step checklists, and execution countdown timers. | `countermeasure_deck.py` | `test_countermeasure_deck.py`<br>(10 unit tests) | 100% | **PASS** |
+| **HLR-BIO-004** | `LLR-COCKPIT-005`: White-box mathematical trace inspection, ASCII CRT terminal formatting, and SHA-256 JSON telemetry packet serialization. | `audit_trace_terminal.py` | `test_audit_trace_terminal.py`<br>(6 unit tests) | 100% | **PASS** |
+| **HLR-BIO-002** | `LLR-COCKPIT-006`: Sovereign Crew Medical Officer (CMO) role-based authority verification, mandatory rationale logging, and manual state assertion. | `cmo_override_console.py` | `test_cmo_override_console.py`<br>(9 unit tests) | 100% | **PASS** |
+| **HLR-BIO-003** | `LLR-COCKPIT-007`: Thread-safe circular FIFO telemetry ring buffer (120 frames), 4 astronaut baseline profiles, and 6 certified flight scenarios. | `cockpit_state.py` | `test_cockpit_state.py`<br>(14 unit tests) | 100% | **PASS** |
+
 ---
 
 ## 3. Structural Statement Coverage Audit (DO-178C Level C)
@@ -120,28 +132,36 @@ Under DO-178C Level C, 100% statement coverage is mandatory across all productio
 =============================== tests coverage ================================
 _______________ coverage: platform win32, python 3.12.0-final-0 _______________
 
-Name                                                         Stmts   Miss  Cover
---------------------------------------------------------------------------------
-02_AI_CORE\01_src\ingestion_adapter.py                         234      0   100%
-02_AI_CORE\01_src\inno3_signal_stabilizer.py                   377      0   100%
-02_AI_CORE\01_src\sanity_gate.py                               419      0   100%
-02_AI_CORE\01_src\inno6_biomarker_ranker.py                    321      0   100%
-02_AI_CORE\01_src\pipeline_orchestrator.py                     138      0   100%
-03_DECISION_CORE\rule_schema_validator.py                      219      0   100%
-03_DECISION_CORE\biophysical_physics_engine.py                 162      0   100%
-03_DECISION_CORE\triage_model_engine.py                        122      0   100%
-03_DECISION_CORE\cockpit_countermeasure_dispatcher.py           93      0   100%
---------------------------------------------------------------------------------
-TOTAL (ALL 9 PRODUCTION MODULES)                              2085      0   100%
-====================== 514 passed, 3 warnings in 19.05s =======================
+Name                                                          Stmts   Miss  Cover
+---------------------------------------------------------------------------------
+02_AI_CORE\01_src\ingestion_adapter.py                          234      0   100%
+02_AI_CORE\01_src\inno3_signal_stabilizer.py                    377      0   100%
+02_AI_CORE\01_src\sanity_gate.py                                419      0   100%
+02_AI_CORE\01_src\inno6_biomarker_ranker.py                     321      0   100%
+02_AI_CORE\01_src\pipeline_orchestrator.py                      138      0   100%
+03_DECISION_CORE\rule_schema_validator.py                       219      0   100%
+03_DECISION_CORE\biophysical_physics_engine.py                  162      0   100%
+03_DECISION_CORE\triage_model_engine.py                         122      0   100%
+03_DECISION_CORE\cockpit_countermeasure_dispatcher.py            93      0   100%
+04_ASTRONAUT_COCKPIT\01_components\__init__.py                    11      0   100%
+04_ASTRONAUT_COCKPIT\01_components\audit_trace_terminal.py        73      0   100%
+04_ASTRONAUT_COCKPIT\01_components\cmo_override_console.py        83      0   100%
+04_ASTRONAUT_COCKPIT\01_components\cockpit_state.py              135      0   100%
+04_ASTRONAUT_COCKPIT\01_components\countermeasure_deck.py        133      0   100%
+04_ASTRONAUT_COCKPIT\01_components\hud_status_banner.py          123      0   100%
+04_ASTRONAUT_COCKPIT\01_components\telemetry_stream_view.py      218      0   100%
+04_ASTRONAUT_COCKPIT\app.py                                      109      0   100%
+---------------------------------------------------------------------------------
+TOTAL (ALL 17 PRODUCTION MODULES)                               2970      0   100%
+====================== 556 passed, 3 warnings in 28.13s ========================
 ```
 
-- **Total Production Code Statements:** **2,085 statements**  
-- **Exercised Statements:** **2,085 statements**  
+- **Total Production Code Statements:** **2,970 statements**  
+- **Exercised Statements:** **2,970 statements**  
 - **Unexercised Statements (Dead Code):** **0 statements**  
 - **Structural Coverage Percentage:** **100.0% (DO-178C DAL C Certified)**  
-- **Execution Pass Rate:** **514 / 514 Passed (100.0% Pass Rate)**  
-- **Execution Elapsed Time:** **19.05 seconds across all 11 test suites**
+- **Execution Pass Rate:** **556 / 556 Passed (100.0% Pass Rate)**  
+- **Execution Elapsed Time:** **28.13 seconds across all 18 test suites**
 
 ---
 
@@ -152,4 +172,4 @@ I hereby certify that all requirements mapped in this matrix have been formally 
 **Lead Verification Engineer & System Architect:**  
 *Gourgopal Mohapatra*  
 *Team VITALX CORE — NASA Space Apps Bio-Astronautics Division*  
-*Date of Sign-off: November 14, 2026*
+*Date of Sign-off: November 15, 2026*
